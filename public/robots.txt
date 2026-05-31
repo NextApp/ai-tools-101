@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aitoollab.com/sitemap-index.xml
+Sitemap: https://ai-tools-101.com/sitemap-index.xml
