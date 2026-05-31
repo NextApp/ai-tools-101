@@ -1,4 +1,4 @@
-export const GA4_MEASUREMENT_ID = 'G-XXXXXXXXXX';
+export const GA4_MEASUREMENT_ID = 'G-4DXBJ5C3K5';
 
 export const SOCIAL_LINKS = {
   twitter: 'https://twitter.com/AIToolGuide',

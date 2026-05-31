@@ -19,7 +19,7 @@ const fullTitle = title === 'Home' ? siteTitle : `${title} - ${siteTitle}`;
 const siteURL = 'https://ai-tools-101.com';
 const canonicalURL = Astro.url ? new URL(Astro.url.pathname, siteURL).href : siteURL;
 
-const gaEnabled = GA4_MEASUREMENT_ID !== 'G-XXXXXXXXXX';
+const gaEnabled = !!GA4_MEASUREMENT_ID;
 ---
 
 <!doctype html>
