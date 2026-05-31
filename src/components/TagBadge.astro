@@ -10,7 +10,7 @@ const sizeClasses = size === 'md' ? 'px-3 py-1 text-sm' : 'px-2.5 py-0.5 text-xs
 
 <a
   href={`/tags/${tag.toLowerCase().replace(/\s+/g, '-')}`}
-  class={`inline-flex items-center whitespace-nowrap ${sizeClasses} bg-primary/10 text-primary rounded-full font-medium hover:bg-primary/20 transition-colors`}
+  class={`inline-flex items-center whitespace-nowrap ${sizeClasses} bg-primary/10 text-primary rounded-full font-medium leading-none hover:bg-primary/20 transition-colors`}
 >
   {tag}
 </a>

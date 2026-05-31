@@ -18,8 +18,12 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {posts.map((post) => <PostCard post={post} />)}
+    <div class="flex flex-wrap justify-center gap-6">
+      {posts.map((post) => (
+        <div class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
+          <PostCard post={post} />
+        </div>
+      ))}
     </div>
 
     {posts.length === 0 && (
