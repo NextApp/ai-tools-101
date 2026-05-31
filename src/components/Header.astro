@@ -1,0 +1,57 @@
+---
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/tags', label: 'Tags' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+];
+const currentPath = Astro.url.pathname;
+---
+
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="/" class="flex items-center gap-2 text-xl font-bold text-gray-900 hover:text-primary transition-colors">
+        <span class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-mono text-sm">AI</span>
+        AI Tool Guide
+      </a>
+
+      <nav class="hidden sm:flex items-center gap-1">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+              currentPath === link.href
+                ? 'bg-primary/10 text-primary'
+                : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+            }`}
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
+
+      <details class="sm:hidden relative">
+        <summary class="list-none p-2 rounded-lg hover:bg-gray-100 cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </summary>
+        <nav class="absolute right-0 top-full mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-1">
+          {navLinks.map((link) => (
+            <a
+              href={link.href}
+              class={`block px-4 py-2 text-sm ${
+                currentPath === link.href
+                  ? 'bg-primary/10 text-primary'
+                  : 'text-gray-600 hover:bg-gray-50'
+              }`}
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>

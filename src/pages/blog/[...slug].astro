@@ -1,0 +1,55 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import TagBadge from '../../components/TagBadge.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id.replace('.md', '') },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props as { post: CollectionEntry<'posts'> };
+const { title, description, pubDate, tags, heroImage } = post.data;
+
+const relatedPosts = (await getCollection('posts', ({ data }) =>
+  !data.draft && data.title !== title && data.tags.some((t: string) => tags.includes(t))
+)).slice(0, 2);
+---
+
+<Layout title={title} description={description} ogImage={heroImage}>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <header class="mb-8">
+      <div class="flex flex-wrap gap-2 mb-4">
+        {tags.map((tag: string) => <TagBadge tag={tag} size="md" />)}
+      </div>
+      <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+        {title}
+      </h1>
+      <p class="text-lg text-gray-600 mb-4">{description}</p>
+      <time datetime={pubDate.toISOString()} class="text-sm text-gray-400">
+        Published on {pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+      </time>
+    </header>
+
+    <div class="prose max-w-none">
+      <slot />
+    </div>
+
+    {relatedPosts.length > 0 && (
+      <footer class="mt-12 pt-8 border-t border-gray-200">
+        <h3 class="text-lg font-semibold text-gray-900 mb-4">Related Articles</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {relatedPosts.map((rp) => (
+            <a href={`/blog/${rp.id.replace('.md', '')}`} class="block p-4 bg-white border border-gray-200 rounded-lg hover:border-primary/30 hover:shadow-sm transition-all">
+              <h4 class="font-semibold text-gray-900 mb-1">{rp.data.title}</h4>
+              <p class="text-sm text-gray-500 line-clamp-1">{rp.data.description}</p>
+            </a>
+          ))}
+        </div>
+      </footer>
+    )}
+  </article>
+</Layout>
