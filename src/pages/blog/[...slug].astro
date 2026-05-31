@@ -1,17 +1,22 @@
 ---
-import { getCollection, type CollectionEntry } from 'astro:content';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import TagBadge from '../../components/TagBadge.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts', ({ data }) => !data.draft);
-  return posts.map((post) => ({
-    params: { slug: post.id.replace('.md', '') },
-    props: { post },
-  }));
+  return Promise.all(
+    posts.map(async (post) => {
+      const { Content } = await render(post);
+      return {
+        params: { slug: post.id.replace('.md', '') },
+        props: { post, Content },
+      };
+    })
+  );
 }
 
-const { post } = Astro.props as { post: CollectionEntry<'posts'> };
+const { post, Content } = Astro.props as { post: CollectionEntry<'posts'>; Content: any };
 const { title, description, pubDate, tags, heroImage } = post.data;
 
 const relatedPosts = (await getCollection('posts', ({ data }) =>
@@ -35,7 +40,7 @@ const relatedPosts = (await getCollection('posts', ({ data }) =>
     </header>
 
     <div class="prose max-w-none">
-      <slot />
+      <Content />
     </div>
 
     {relatedPosts.length > 0 && (
