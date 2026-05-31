@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="404 - Page Not Found" description="The page you are looking for does not exist. Browse our AI tools tutorials and guides instead.">
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+    <h1 class="text-6xl md:text-8xl font-extrabold text-primary mb-4">404</h1>
+    <h2 class="text-2xl md:text-3xl font-bold text-on-surface mb-4">Page Not Found</h2>
+    <p class="text-on-surface-variant text-lg mb-8 max-w-md mx-auto">
+      The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/" class="inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary-hover transition-colors">
+        Back to Home
+      </a>
+      <a href="/tags" class="inline-flex items-center justify-center px-6 py-3 bg-surface border border-outline-variant rounded-lg font-semibold text-on-surface hover:border-primary/40 transition-colors">
+        Browse Topics
+      </a>
+    </div>
+  </section>
+</Layout>

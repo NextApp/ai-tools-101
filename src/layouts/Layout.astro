@@ -7,11 +7,18 @@ interface Props {
   title: string;
   description: string;
   ogImage?: string;
+  type?: 'website' | 'article';
+  publishedAt?: Date;
+  tags?: string[];
 }
 
-const { title, description, ogImage } = Astro.props;
+const { title, description, ogImage, type = 'website', publishedAt, tags = [] } = Astro.props;
 const siteTitle = 'AI Tool Guide';
 const fullTitle = title === 'Home' ? siteTitle : `${title} - ${siteTitle}`;
+const siteURL = 'https://ai-tools-101.com';
+const canonicalURL = Astro.url ? new URL(Astro.url.pathname, siteURL).href : siteURL;
+
+const gaMeasurementId = 'G-XXXXXXXXXX';
 ---
 
 <!doctype html>
@@ -22,13 +29,79 @@ const fullTitle = title === 'Home' ? siteTitle : `${title} - ${siteTitle}`;
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="google" content="notranslate" />
+
+    <meta name="google-site-verification" content="REPLACE_WITH_YOUR_GSC_VERIFICATION_CODE" />
+
+    <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta property="og:site_name" content={siteTitle} />
+    {ogImage && <meta property="og:image" content={new URL(ogImage, siteURL).href} />}
+    {!ogImage && <meta property="og:image" content={`${siteURL}/favicon.svg`} />}
+
     <meta name="twitter:card" content="summary_large_image" />
-    <title>{fullTitle}</title>
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    {ogImage && <meta name="twitter:image" content={new URL(ogImage, siteURL).href} />}
+    {!ogImage && <meta name="twitter:image" content={`${siteURL}/favicon.svg`} />}
+
+    {
+      type === 'article' ? (
+        <script type="application/ld+json" set:html={JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: title,
+          description: description,
+          ...(ogImage && { image: new URL(ogImage, siteURL).href }),
+          ...(publishedAt && { datePublished: publishedAt.toISOString() }),
+          author: {
+            '@type': 'Organization',
+            name: siteTitle,
+            url: siteURL,
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: siteTitle,
+            url: siteURL,
+          },
+          ...(tags.length > 0 && { keywords: tags.join(', ') }),
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': canonicalURL,
+          },
+        })}>
+        </script>
+      ) : (
+        <script type="application/ld+json" set:html={JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: siteTitle,
+          url: siteURL,
+          description: 'Step-by-step tutorials and guides for the best AI tools. Learn ChatGPT, Midjourney, Copilot, and more.',
+          potentialAction: {
+            '@type': 'SearchAction',
+            target: {
+              '@type': 'EntryPoint',
+              urlTemplate: `${siteURL}/tags/{search_term_string}`,
+            },
+            'query-input': 'required name=search_term_string',
+          },
+        })}>
+        </script>
+      )
+    }
+
+    <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}></script>
+    <script set:html={`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${gaMeasurementId}');`}>
+    </script>
   </head>
   <body class="notranslate min-h-screen flex flex-col">
     <Header />
