@@ -2,46 +2,52 @@
 
 @theme {
   --color-primary: #2563eb;
-  --color-primary-dark: #1d4ed8;
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
   --color-accent: #7c3aed;
-  --color-surface: #f8fafc;
-  --color-muted: #64748b;
 }
 
 body {
   @apply bg-gray-50 text-gray-900 antialiased;
 }
 
+article.prose {
+  @apply text-gray-700 leading-relaxed;
+}
+
 article.prose h2 {
-  @apply text-2xl font-bold mt-8 mb-4 text-gray-900;
+  @apply text-2xl font-bold mt-10 mb-4 text-gray-900;
 }
 
 article.prose h3 {
-  @apply text-xl font-semibold mt-6 mb-3 text-gray-800;
+  @apply text-xl font-semibold mt-8 mb-3 text-gray-800;
 }
 
 article.prose p {
-  @apply mb-4 leading-relaxed text-gray-700;
+  @apply mb-5 leading-relaxed;
 }
 
-article.prose ul, article.prose ol {
-  @apply mb-4 pl-6;
+article.prose ul,
+article.prose ol {
+  @apply mb-5 pl-6;
 }
 
 article.prose li {
-  @apply mb-1 text-gray-700;
+  @apply mb-1.5;
 }
 
 article.prose a {
-  @apply text-primary underline underline-offset-2 hover:text-primary-dark;
+  @apply text-primary underline underline-offset-2 hover:text-primary-700 transition-colors;
 }
 
 article.prose code {
-  @apply bg-gray-100 px-1.5 py-0.5 rounded text-sm text-accent;
+  @apply bg-gray-100 px-1.5 py-0.5 rounded text-sm text-accent font-medium;
 }
 
 article.prose pre {
-  @apply bg-gray-900 text-gray-100 p-4 rounded-lg mb-4 overflow-x-auto;
+  @apply bg-gray-900 text-gray-100 p-4 rounded-lg mb-5 overflow-x-auto text-sm;
 }
 
 article.prose pre code {
@@ -49,5 +55,5 @@ article.prose pre code {
 }
 
 article.prose blockquote {
-  @apply border-l-4 border-primary pl-4 italic text-gray-600 my-4;
+  @apply border-l-4 border-primary/60 pl-4 italic text-gray-500 my-5;
 }
