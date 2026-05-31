@@ -2,15 +2,23 @@
 interface Props {
   tag: string;
   size?: 'sm' | 'md';
+  link?: boolean;
 }
 
-const { tag, size = 'sm' } = Astro.props;
+const { tag, size = 'sm', link = true } = Astro.props;
 const sizeClasses = size === 'md' ? 'px-3 py-1 text-xs' : 'px-2.5 py-0.5 text-[0.7rem]';
+const baseClasses = `inline-flex items-center whitespace-nowrap ${sizeClasses} bg-[#F5F3FF] text-[#7C3AED] rounded-full font-semibold uppercase tracking-wider`;
 ---
 
-<a
-  href={`/tags/${tag.toLowerCase().replace(/\s+/g, '-')}`}
-  class={`inline-flex items-center whitespace-nowrap ${sizeClasses} bg-[#F5F3FF] text-[#7C3AED] rounded-full font-semibold uppercase tracking-wider hover:bg-[#EDE9FE] transition-colors`}
->
-  {tag}
-</a>
+{link ? (
+  <a
+    href={`/tags/${tag.toLowerCase().replace(/\s+/g, '-')}`}
+    class={`${baseClasses} hover:bg-[#EDE9FE] transition-colors`}
+  >
+    {tag}
+  </a>
+) : (
+  <span class={baseClasses}>
+    {tag}
+  </span>
+)}

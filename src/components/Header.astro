@@ -20,7 +20,7 @@ const currentPath = Astro.url.pathname;
             href={link.href}
             class={`px-3 py-1.5 text-sm font-medium transition-colors rounded-md ${
               currentPath === link.href
-                ? 'text-primary border-b-2 border-primary pb-1'
+                ? 'text-primary bg-primary/10'
                 : 'text-on-surface-variant hover:text-primary'
             }`}
           >

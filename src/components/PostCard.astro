@@ -14,7 +14,7 @@ const slug = post.id.replace('.md', '');
 <article class="group bg-surface border border-outline-variant/60 rounded-xl overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full">
   <a href={`/blog/${slug}`} class="flex flex-col p-6 h-full">
     <div class="flex flex-wrap gap-1.5 mb-4">
-      {tags.map((tag: string) => <TagBadge tag={tag} />)}
+      {tags.map((tag: string) => <TagBadge tag={tag} link={false} />)}
     </div>
     <h2 class="text-lg font-bold text-on-surface mb-2 text-truncate-2 leading-snug group-hover:text-primary transition-colors">
       {title}
