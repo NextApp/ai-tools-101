@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Analytics from '@vercel/analytics/astro';
 import '../styles/global.css';
 
 interface Props {
@@ -29,6 +30,7 @@ const fullTitle = title === 'Home' ? siteTitle : `${title} - ${siteTitle}`;
     {ogImage && <meta property="og:image" content={ogImage} />}
     <meta name="twitter:card" content="summary_large_image" />
     <title>{fullTitle}</title>
+    <Analytics />
   </head>
   <body class="notranslate min-h-screen flex flex-col">
     <Header />
