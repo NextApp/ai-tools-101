@@ -139,7 +139,7 @@ def group_by_hour(timestamps: list[str]) -> dict[str, int]:
 
 This pattern holds across my other coding tests: ChatGPT and Claude are roughly tied, with ChatGPT slightly stronger on web dev and Claude slightly stronger on systems-level code. Gemini trails but is catching up fast.
 
-For a focused deep dive into coding with ChatGPT specifically, see our [beginner's guide to ChatGPT for coding]({{article-01-url}}).
+For a focused deep dive into coding with ChatGPT specifically, see our [beginner's guide to ChatGPT for coding](/blog/how-to-use-chatgpt-for-coding).
 
 ### Writing Quality Test
 
@@ -186,10 +186,10 @@ If your work is primarily writing and analysis — reports, proposals, research 
 
 **What about free tiers?** The free landscape in 2026 is genuinely good. Gemini's free tier (Gemini 2.0 Flash) is powerful enough for most casual use. Claude's free Haiku model punches above its weight for writing tasks. ChatGPT's free tier (GPT-4o mini) handles coding and general questions competently. If you're not using AI for professional work, you can get by without paying for any of them.
 
-For an overview of other free AI tools worth checking out, see our [roundup of the best free AI tools in 2026]({{article-07-url}}).
+For an overview of other free AI tools worth checking out, see our [roundup of the best free AI tools in 2026](/blog/best-free-ai-tools-2026).
 
 ## The Real Variable: Your Prompt Quality
 
-One thing I noticed across all three models: prompt quality matters more than model choice. A well-structured prompt on the free Gemini tier produces better output than a vague prompt on Claude Pro. All three models respond to the same prompt structure that we detail in our [prompt engineering guide]({{article-10-url}}).
+One thing I noticed across all three models: prompt quality matters more than model choice. A well-structured prompt on the free Gemini tier produces better output than a vague prompt on Claude Pro. All three models respond to the same prompt structure that we detail in our [prompt engineering guide](/blog/prompt-engineering-guide).
 
 If you're switching between these tools, invest 15 minutes in learning to write good prompts. That alone will produce bigger quality gains than any model upgrade.

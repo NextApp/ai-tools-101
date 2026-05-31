@@ -168,7 +168,7 @@ Write a [document type — blog post / proposal / report / SOP] about [topic].
 - Structure: [optional: specify H2/H3 headings]
 ```
 
-If you're building coding projects alongside your writing, these prompts pair well with the [ChatGPT coding techniques covered in our beginner's guide]({{article-01-url}}).
+If you're building coding projects alongside your writing, these prompts pair well with the [ChatGPT coding techniques covered in our beginner's guide](/blog/how-to-use-chatgpt-for-coding).
 
 **13. Improve Readability of Dense Text**
 
@@ -295,7 +295,7 @@ After testing, I found that the best prompts share a common structure. Every pro
 
 Prompts that missed one of these four elements produced inconsistent or generic output. Role-less prompts drifted into generic advice. Constraint-less prompts ran too long or used the wrong format. Context-less prompts hallucinated.
 
-For a comprehensive breakdown of prompt patterns, see our [full prompt engineering guide]({{article-10-url}}).
+For a comprehensive breakdown of prompt patterns, see our [full prompt engineering guide](/blog/prompt-engineering-guide).
 
 ## Common Prompt Mistakes That Waste Time
 
@@ -321,4 +321,4 @@ If 20 prompts feels overwhelming, start with three:
 
 These three alone save me 4-6 hours a week. The other 17 are for specific situations — use them when you need them.
 
-For more ways to integrate AI into your daily work, see our guide on [practical AI use cases at work]({{article-09-url}}).
+For more ways to integrate AI into your daily work, see our guide on [practical AI use cases at work](/blog/chatgpt-use-cases-for-work).

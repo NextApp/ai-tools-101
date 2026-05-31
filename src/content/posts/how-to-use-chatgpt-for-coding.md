@@ -71,7 +71,7 @@ These tools put ChatGPT directly into your coding environment:
 
 **Raycast + ChatGPT plugin:** If you're on macOS, Raycast's ChatGPT extension lets you highlight code anywhere on your screen and send it to ChatGPT via a keyboard shortcut. Great for quick questions when you're reading docs or code reviews.
 
-For a deeper dive into writing effective instructions for these tools, check out our [prompt engineering guide]({{article-10-url}}).
+For a deeper dive into writing effective instructions for these tools, check out our [prompt engineering guide](/blog/prompt-engineering-guide).
 
 ## 5 Real Coding Projects for Beginners Using ChatGPT
 
@@ -221,7 +221,7 @@ Here's what ChatGPT produces (tested and working):
 
 Save this as `todo.html` and open it in a browser. You have a working, persistent to-do list. Next step — ask ChatGPT to add due dates, categories, or a dark mode toggle.
 
-Once you've mastered building small apps like this, try using [specialized ChatGPT prompts for productivity]({{article-02-url}}) to speed up your development workflow even more.
+Once you've mastered building small apps like this, try using [specialized ChatGPT prompts for productivity](/blog/best-chatgpt-prompts-for-productivity) to speed up your development workflow even more.
 
 ### 2. Write a Python Web Scraper from Scratch
 
@@ -456,10 +456,10 @@ Here's what you can safely offload to ChatGPT:
 
 **The career question.** Will ChatGPT reduce demand for junior developers? The evidence from 2025-2026 suggests the market shifted — companies hire fewer pure "code monkeys" but still desperately need engineers who understand systems, communicate clearly, and solve real business problems. ChatGPT makes the technical bar lower, which means the thinking bar is now higher.
 
-For a broader comparison of AI coding tools beyond ChatGPT, see our [comprehensive comparison of AI coding assistants]({{article-06-url}}).
+For a broader comparison of AI coding tools beyond ChatGPT, see our [comprehensive comparison of AI coding assistants](/blog/github-copilot-vs-cursor-vs-windsurf).
 
 ## Start Here
 
 ChatGPT works best when you treat it as a pair programmer who's fast but occasionally wrong. Start with the To-Do List app above — it takes 30 minutes and you'll have a working product. From there, pick one of the other projects. The key is building things, not just reading about building things.
 
-If you want structured prompts that make ChatGPT more effective for your day-to-day work, grab the [20 best ChatGPT prompts for productivity]({{article-02-url}}) next.
+If you want structured prompts that make ChatGPT more effective for your day-to-day work, grab the [20 best ChatGPT prompts for productivity](/blog/best-chatgpt-prompts-for-productivity) next.

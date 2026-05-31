@@ -7,7 +7,7 @@ tags: ['Ai Agent', 'No-Code', 'Automation', 'Custom Gpt', 'Zapier']
 
 An AI agent is more than a chatbot. It doesn't just answer questions — it takes actions. It reads your email, updates your CRM, scrapes competitor pricing, drafts reports, and posts to Slack. And in 2026, you can build one in an afternoon without touching a terminal.
 
-This guide walks through five no-code platforms, compares them head-to-head, then builds a working customer support agent step by step using Relevance AI. If you'd rather write code instead, start with [our Cursor AI tutorial]({{article-04-url}}). If you want both, they complement each other — use no-code for the prototype, then graduate to a custom build when you hit platform limits.
+This guide walks through five no-code platforms, compares them head-to-head, then builds a working customer support agent step by step using Relevance AI. If you'd rather write code instead, start with [our Cursor AI tutorial](/blog/cursor-ai-tutorial-for-beginners). If you want both, they complement each other — use no-code for the prototype, then graduate to a custom build when you hit platform limits.
 
 ---
 
@@ -88,7 +88,7 @@ The trade-off: Zapier agents follow a more rigid flow than Relevance AI. If you 
 
 ### CrewAI (Low-Code) — For Multi-Agent Systems
 
-CrewAI isn't pure no-code — it's a Python framework for orchestrating multiple agents with distinct roles. But it's worth including because the "no-code" gap is small: most CrewAI setups involve 15-30 lines of Python, and you can use [Cursor AI]({{article-04-url}}) to generate that code from a description.
+CrewAI isn't pure no-code — it's a Python framework for orchestrating multiple agents with distinct roles. But it's worth including because the "no-code" gap is small: most CrewAI setups involve 15-30 lines of Python, and you can use [Cursor AI](/blog/cursor-ai-tutorial-for-beginners) to generate that code from a description.
 
 A typical CrewAI setup defines a "crew" of agents:
 
@@ -159,7 +159,7 @@ Guidelines:
 - End every interaction by asking if the customer needs anything else.
 ```
 
-These instructions are the most important part of your agent. Invest time in them — our [prompt engineering guide]({{article-10-url}}) covers advanced techniques for structuring agent prompts.
+These instructions are the most important part of your agent. Invest time in them — our [prompt engineering guide](/blog/prompt-engineering-guide) covers advanced techniques for structuring agent prompts.
 
 ### Connect Knowledge Base (PDFs, URLs, Docs)
 
@@ -278,7 +278,7 @@ Start with a human-in-the-loop. Let the agent draft responses; have a person app
 
 **2. Vague agent instructions.**
 
-"Help customers with their problems" produces garbage. Specify decision boundaries: "If the customer's subscription is over 12 months old AND they've had fewer than 2 support tickets in the last 90 days, offer up to 15% off their next annual renewal." See [our guide to writing better prompts]({{article-02-url}}) for the full methodology.
+"Help customers with their problems" produces garbage. Specify decision boundaries: "If the customer's subscription is over 12 months old AND they've had fewer than 2 support tickets in the last 90 days, offer up to 15% off their next annual renewal." See [our guide to writing better prompts](/blog/best-chatgpt-prompts-for-productivity) for the full methodology.
 
 **3. Knowledge base as afterthought.**
 
@@ -300,6 +300,6 @@ Pick the platform that matches your use case:
 
 - **Just curious?** Start with an OpenAI Custom GPT. It takes 10 minutes. Upload your company's FAQ and ask it practice questions.
 - **Automating a real workflow?** Use Relevance AI or Zapier. The Zapier path is faster if your workflow is linear (email → classify → reply → log). Relevance is better for branching logic (different paths for different intents).
-- **Building something complex with multiple agents?** Reach for CrewAI. The Python learning curve is real but manageable — especially with [a tool like Cursor]({{article-04-url}}) doing the heavy lifting on code generation.
+- **Building something complex with multiple agents?** Reach for CrewAI. The Python learning curve is real but manageable — especially with [a tool like Cursor](/blog/cursor-ai-tutorial-for-beginners) doing the heavy lifting on code generation.
 
 The gap between "I should automate this" and "this is automated" has never been smaller. Build the first version this week. Ship it. Watch the logs. Iterate. That's the actual path to a useful AI agent — not a perfect spec document, not a six-month build cycle. Just a working agent, deployed, improving every two weeks.

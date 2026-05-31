@@ -37,7 +37,7 @@ Write a 3-level outline for a blog post titled 'How to Reduce AWS Costs Without 
 """
 ```
 
-If you primarily need text generation and web research, the free tier covers 90% of use cases. For heavy daily use — say 50+ messages — you'll want ChatGPT Plus at $20/month. See our [ChatGPT vs Claude vs Gemini comparison]({{article-03-url}}) for a detailed breakdown of when each assistant wins.
+If you primarily need text generation and web research, the free tier covers 90% of use cases. For heavy daily use — say 50+ messages — you'll want ChatGPT Plus at $20/month. See our [ChatGPT vs Claude vs Gemini comparison](/blog/chatgpt-vs-claude-vs-gemini) for a detailed breakdown of when each assistant wins.
 
 #### Claude Free
 
@@ -48,7 +48,7 @@ Anthropic's free tier gives you Sonnet 3.7, which rivals GPT-4o on reasoning, an
 - **What you don't get**: Opus 4 (the top-tier model), Projects, extended thinking for complex reasoning chains, and API access.
 - **Best for**: Long-document analysis, technical writing, legal/contract review, coding with large codebases.
 
-Claude tends to produce more natural prose than ChatGPT and hallucinates less on factual queries, though it lacks built-in web search on the free tier. If you're comparing free tiers head-to-head, see our [full AI assistant comparison]({{article-03-url}}).
+Claude tends to produce more natural prose than ChatGPT and hallucinates less on factual queries, though it lacks built-in web search on the free tier. If you're comparing free tiers head-to-head, see our [full AI assistant comparison](/blog/chatgpt-vs-claude-vs-gemini).
 
 #### Gemini
 
@@ -70,7 +70,7 @@ Leonardo AI gives 150 free daily credits (tokens) with access to their Lightning
 - **What you don't get**: Alchemy refinement, video generation, model training, private generations.
 - **Best for**: Game asset concepts, social media graphics, and learning AI image generation before committing to a paid tool.
 
-For a deeper comparison of image tools including Leonardo's paid tier, see our [AI image generators comparison]({{article-08-url}}).
+For a deeper comparison of image tools including Leonardo's paid tier, see our [AI image generators comparison](/blog/ai-image-generators-comparison).
 
 #### Microsoft Designer
 
@@ -157,7 +157,7 @@ Codeium's Windsurf editor is a VS Code fork with deeply integrated AI — and it
 - **What you don't get**: Premium models (GPT-4.5/Claude Opus), unlimited Cascade, team admin features.
 - **Best for**: Solo developers who want AI pair programming without paying for Copilot.
 
-For a full comparison of coding AI tools including Codeium vs Copilot vs Cursor, check our [coding tools guide]({{article-06-url}}).
+For a full comparison of coding AI tools including Codeium vs Copilot vs Cursor, check our [coding tools guide](/blog/github-copilot-vs-cursor-vs-windsurf).
 
 #### ChatGPT Free (for Coding)
 
@@ -252,7 +252,7 @@ None of the tools on this list require a credit card for the free tier.
 
 **Q: How do I get better results from free AI tools?**
 
-Prompt quality matters more on free tiers. Since you may drop to a weaker model after hitting rate limits, clear, structured prompts produce noticeably better outputs. See our [prompt engineering guide]({{article-10-url}}) for specific techniques.
+Prompt quality matters more on free tiers. Since you may drop to a weaker model after hitting rate limits, clear, structured prompts produce noticeably better outputs. See our [prompt engineering guide](/blog/prompt-engineering-guide) for specific techniques.
 
 ## Keep Learning
 
@@ -260,7 +260,7 @@ You don't need to spend a cent to start getting value from AI in 2026. Start wit
 
 For deeper comparisons of specific tool categories, check out:
 
-- [AI Image Generators: Midjourney vs DALL-E vs Stable Diffusion]({{article-08-url}}) — which image tool fits your workflow
-- [ChatGPT vs Claude vs Gemini: Full Comparison]({{article-03-url}}) — when to use which assistant
-- [Best AI Coding Tools in 2026]({{article-06-url}}) — Codeium, Copilot, Cursor, and more
-- [Prompt Engineering Guide]({{article-10-url}}) — get more from every free tool you use
+- [AI Image Generators: Midjourney vs DALL-E vs Stable Diffusion](/blog/ai-image-generators-comparison) — which image tool fits your workflow
+- [ChatGPT vs Claude vs Gemini: Full Comparison](/blog/chatgpt-vs-claude-vs-gemini) — when to use which assistant
+- [Best AI Coding Tools in 2026](/blog/github-copilot-vs-cursor-vs-windsurf) — Codeium, Copilot, Cursor, and more
+- [Prompt Engineering Guide](/blog/prompt-engineering-guide) — get more from every free tool you use

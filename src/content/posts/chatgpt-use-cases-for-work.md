@@ -35,7 +35,7 @@ Key dates: product v3 launch July 14, industry conference Sept 8-10.
 
 **SEO briefs.** Paste a competitor's top-ranking article URL (via ChatGPT's browsing feature) and ask: "Extract the content structure of this article. What H2s, H3s, keywords, and content angles does it use? Then write an SEO brief that covers the same intent with 20% more depth."
 
-For marketing teams looking to improve AI output quality specifically, our [prompt engineering guide]({{article-10-url}}) covers the template structure that makes these use cases work reliably.
+For marketing teams looking to improve AI output quality specifically, our [prompt engineering guide](/blog/prompt-engineering-guide) covers the template structure that makes these use cases work reliably.
 
 ### Sales — Cold Email Drafting, Objection Handling Scripts
 
@@ -87,7 +87,7 @@ Be specific — cite line numbers from the diff.
 
 **Documentation from code.** Paste a function or module, ask for a docstring, README section, or API endpoint documentation. It produces 80%-ready docs that an engineer polishes in 5 minutes instead of writing from scratch in 30.
 
-For a broader look at AI coding tools beyond ChatGPT, see our [coding tools guide]({{article-06-url}}) which covers Copilot, Cursor, Codeium, and how they compare to ChatGPT for development work.
+For a broader look at AI coding tools beyond ChatGPT, see our [coding tools guide](/blog/github-copilot-vs-cursor-vs-windsurf) which covers Copilot, Cursor, Codeium, and how they compare to ChatGPT for development work.
 
 ### Customer Support — FAQ Generator, Response Templates
 
@@ -237,6 +237,6 @@ ChatGPT is the most versatile AI work tool in 2026, but it's only as effective a
 
 For more practical guides to get more from AI tools:
 
-- [Best ChatGPT Prompts for Every Task]({{article-02-url}}) — 50 ready-to-use prompts organized by job function
-- [ChatGPT for Coding: Developer's Guide]({{article-01-url}}) — code generation, debugging, and architecture with ChatGPT
-- [Prompt Engineering Guide]({{article-10-url}}) — the techniques that make these use cases 2× more effective
+- [Best ChatGPT Prompts for Every Task](/blog/best-chatgpt-prompts-for-productivity) — 50 ready-to-use prompts organized by job function
+- [ChatGPT for Coding: Developer's Guide](/blog/how-to-use-chatgpt-for-coding) — code generation, debugging, and architecture with ChatGPT
+- [Prompt Engineering Guide](/blog/prompt-engineering-guide) — the techniques that make these use cases 2× more effective

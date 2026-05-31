@@ -107,7 +107,7 @@ Common guardrails worth using:
 - **Limit scope:** "Only discuss features available as of June 2026"
 - **Restrict tone:** "No marketing language. No exclamation points. No emojis."
 
-For image generation prompts, constraints are equally important — see our [image generator comparison guide]({{article-08-url}}) for tool-specific image prompt techniques.
+For image generation prompts, constraints are equally important — see our [image generator comparison guide](/blog/ai-image-generators-comparison) for tool-specific image prompt techniques.
 
 ### 6. Examples / Few-Shot Prompting
 
@@ -386,7 +386,7 @@ Rewrite this text in 3 different tones:
 ---
 ```
 
-For more ready-to-use prompts across specific job functions, see our [best ChatGPT prompts collection]({{article-02-url}}).
+For more ready-to-use prompts across specific job functions, see our [best ChatGPT prompts collection](/blog/best-chatgpt-prompts-for-productivity).
 
 ## Prompt Engineering for Different AI Tools
 
@@ -424,7 +424,7 @@ Output as a JSON array of objects with keys: "date", "amount", "party".
 </format>
 ```
 
-For a detailed comparison of when to use ChatGPT vs Claude, see our [AI assistant comparison guide]({{article-03-url}}).
+For a detailed comparison of when to use ChatGPT vs Claude, see our [AI assistant comparison guide](/blog/chatgpt-vs-claude-vs-gemini).
 
 ### Image Generators (Midjourney / DALL-E)
 
@@ -442,7 +442,7 @@ A [adjective] [style] of [subject], [composition details], [lighting], [mood/atm
 
 DALL-E reads prompts like natural language — write complete sentences. Midjourney prefers keyword-dense, comma-separated descriptors. Using DALL-E's conversational style with Midjourney produces worse results, and vice versa.
 
-For a deeper dive into image generation tools and prompt techniques for each, see our [image generators comparison]({{article-08-url}}).
+For a deeper dive into image generation tools and prompt techniques for each, see our [image generators comparison](/blog/ai-image-generators-comparison).
 
 ## Common Prompt Mistakes and How to Fix Them
 
@@ -464,8 +464,8 @@ The best way to improve: for the next week, write every prompt twice. First your
 
 For more practical guides:
 
-- [12 Best Free AI Tools in 2026]({{article-07-url}}) — put your prompt skills to work with free tools
-- [AI Image Generators: Midjourney vs DALL-E vs Stable Diffusion]({{article-08-url}}) — apply image prompt techniques from this guide
-- [ChatGPT vs Claude vs Gemini: Full Comparison]({{article-03-url}}) — different tools need different prompting strategies
-- [Best ChatGPT Prompts for Every Task]({{article-02-url}}) — 50 copy-paste prompts for work
-- [ChatGPT for Coding: Developer's Guide]({{article-01-url}}) — prompt engineering for software development
+- [12 Best Free AI Tools in 2026](/blog/best-free-ai-tools-2026) — put your prompt skills to work with free tools
+- [AI Image Generators: Midjourney vs DALL-E vs Stable Diffusion](/blog/ai-image-generators-comparison) — apply image prompt techniques from this guide
+- [ChatGPT vs Claude vs Gemini: Full Comparison](/blog/chatgpt-vs-claude-vs-gemini) — different tools need different prompting strategies
+- [Best ChatGPT Prompts for Every Task](/blog/best-chatgpt-prompts-for-productivity) — 50 copy-paste prompts for work
+- [ChatGPT for Coding: Developer's Guide](/blog/how-to-use-chatgpt-for-coding) — prompt engineering for software development

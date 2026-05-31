@@ -153,7 +153,7 @@ Stable Diffusion's result: With the right model and careful negative prompting, 
 
 ## Honorable Mentions
 
-Three other generators deserve attention, especially if you're using the [free AI tools we've previously covered]({{article-07-url}}).
+Three other generators deserve attention, especially if you're using the [free AI tools we've previously covered](/blog/best-free-ai-tools-2026).
 
 | Tool | Best For | Free Tier | Key Differentiator |
 |------|----------|-----------|-------------------|
@@ -161,7 +161,7 @@ Three other generators deserve attention, especially if you're using the [free A
 | Adobe Firefly | Commercial-safe generation, Photoshop integration | 25 credits/month | Trained only on licensed/Adobe Stock images — legally safest for commercial use |
 | Ideogram | Text-in-image, typography, logo concepts | 10 slow generations/day | The only generator that reliably produces correct text in images |
 
-For a deeper look at Leonardo and Firefly's free plans, see our [free AI tools guide]({{article-07-url}}).
+For a deeper look at Leonardo and Firefly's free plans, see our [free AI tools guide](/blog/best-free-ai-tools-2026).
 
 ## Which Generator Is Right for Your Use Case?
 
@@ -191,7 +191,7 @@ For a deeper look at Leonardo and Firefly's free plans, see our [free AI tools g
 - Commercial licensing safety is your top concern
 - You already use Photoshop or Illustrator
 
-If you're also comparing AI chatbots for text-to-image prompting (ChatGPT generates DALL-E images, Claude can't generate images at all), see our [AI assistant comparison guide]({{article-03-url}}). And for techniques on writing better image prompts across all these tools, check our [prompt engineering guide]({{article-10-url}}).
+If you're also comparing AI chatbots for text-to-image prompting (ChatGPT generates DALL-E images, Claude can't generate images at all), see our [AI assistant comparison guide](/blog/chatgpt-vs-claude-vs-gemini). And for techniques on writing better image prompts across all these tools, check our [prompt engineering guide](/blog/prompt-engineering-guide).
 
 ## Keep Learning
 
@@ -201,6 +201,6 @@ Start with the one that matches your primary use case, and add tools as your nee
 
 For more AI tool comparisons and practical guides:
 
-- [12 Best Free AI Tools in 2026]({{article-07-url}}) — start generating without spending
-- [ChatGPT vs Claude vs Gemini]({{article-03-url}}) — which assistant to use for prompt ideation
-- [Prompt Engineering Guide]({{article-10-url}}) — write prompts that get better results from all image generators
+- [12 Best Free AI Tools in 2026](/blog/best-free-ai-tools-2026) — start generating without spending
+- [ChatGPT vs Claude vs Gemini](/blog/chatgpt-vs-claude-vs-gemini) — which assistant to use for prompt ideation
+- [Prompt Engineering Guide](/blog/prompt-engineering-guide) — write prompts that get better results from all image generators

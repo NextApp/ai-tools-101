@@ -21,7 +21,7 @@ Three things set it apart from pasting prompts into ChatGPT:
 2. **Inline editing.** You don't copy-paste code. Cursor writes the diff directly into your file, showing you exactly what changes. You accept with Tab or reject with Escape.
 3. **Multi-file generation.** Ask Cursor to "add a contact form to my blog," and it creates the component file, wires up the route, adds the navigation link, and writes the server handler — in one prompt.
 
-If you're exploring no-code tools, [building an AI agent without coding]({{article-05-url}}) might be a better starting point. But if you want to create real applications — websites, dashboards, automation scripts — while learning to code along the way, Cursor hits the sweet spot.
+If you're exploring no-code tools, [building an AI agent without coding](/blog/build-ai-agent-without-coding) might be a better starting point. But if you want to create real applications — websites, dashboards, automation scripts — while learning to code along the way, Cursor hits the sweet spot.
 
 ---
 
@@ -249,7 +249,7 @@ For more complex projects, Cursor has a built-in terminal debugger. Set a breakp
 
 ## Cursor AI vs GitHub Copilot vs Windsurf: Quick Comparison
 
-We have a [full comparison of these three tools]({{article-06-url}}), but here's the short version for beginners choosing their first AI editor:
+We have a [full comparison of these three tools](/blog/github-copilot-vs-cursor-vs-windsurf), but here's the short version for beginners choosing their first AI editor:
 
 | Feature | Cursor AI | GitHub Copilot | Windsurf (Codeium) |
 |---------|-----------|----------------|---------------------|
@@ -299,7 +299,7 @@ Each prompt is scoped, testable, and less likely to produce hallucinated code.
 
 **4. Learn to craft effective prompts.**
 
-The quality of Cursor's output scales directly with prompt quality. For a deep dive, check our [prompt engineering guide]({{article-10-url}}). The short version: be specific about technologies, file structure, and desired behavior. Include error messages verbatim. Reference existing files with `@file`.
+The quality of Cursor's output scales directly with prompt quality. For a deep dive, check our [prompt engineering guide](/blog/prompt-engineering-guide). The short version: be specific about technologies, file structure, and desired behavior. Include error messages verbatim. Reference existing files with `@file`.
 
 **5. Use version control from the start.**
 
@@ -324,6 +324,6 @@ You now have:
 
 From here, pick your next step:
 
-- **Want to keep coding?** Try [building an AI agent without code]({{article-05-url}}) — a different approach that skips programming entirely.
-- **Curious about other tools?** Read our [head-to-head comparison of Copilot, Cursor, and Windsurf]({{article-06-url}}).
+- **Want to keep coding?** Try [building an AI agent without code](/blog/build-ai-agent-without-coding) — a different approach that skips programming entirely.
+- **Curious about other tools?** Read our [head-to-head comparison of Copilot, Cursor, and Windsurf](/blog/github-copilot-vs-cursor-vs-windsurf).
 - **Ready to dig deeper into Cursor?** Add a comments system, deploy to Vercel, or switch the blog to use a headless CMS. Cursor can walk you through every step — just ask.

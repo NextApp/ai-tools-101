@@ -96,7 +96,7 @@ Copilot correctly inferred the Stripe integration pattern, added input validatio
 
 ### Cursor AI — The Context-Aware Challenger
 
-Cursor forked VS Code and rebuilt it around AI. It's not an extension — it's an entire editor purpose-built for interacting with language models. For a full hands-on guide, see [our Cursor AI tutorial for beginners]({{article-04-url}}).
+Cursor forked VS Code and rebuilt it around AI. It's not an extension — it's an entire editor purpose-built for interacting with language models. For a full hands-on guide, see [our Cursor AI tutorial for beginners](/blog/cursor-ai-tutorial-for-beginners).
 
 **Where Cursor excels:**
 
@@ -251,7 +251,7 @@ Test date: May 2026. Models: Copilot (GPT-4o), Cursor (Claude 3.5 Sonnet), Winds
 
 If budget is $0, Windsurf gives you unlimited completions and basic chat — enough to learn programming with AI assistance. The speed of completions is a real advantage when you're still building muscle memory for syntax.
 
-If you can spend $20/month, Cursor's Composer is the better teacher. It explains what it's doing as it generates multi-file features. You see the diff, understand the changes, and learn faster than from isolated autocomplete suggestions. See also [our guide to using ChatGPT for coding]({{article-01-url}}) if you're still deciding between standalone chat and in-editor AI.
+If you can spend $20/month, Cursor's Composer is the better teacher. It explains what it's doing as it generates multi-file features. You see the diff, understand the changes, and learn faster than from isolated autocomplete suggestions. See also [our guide to using ChatGPT for coding](/blog/how-to-use-chatgpt-for-coding) if you're still deciding between standalone chat and in-editor AI.
 
 ### For Professional Developers
 
@@ -304,4 +304,4 @@ All three tools share a trajectory: from autocomplete to pair programmer to auto
 
 ---
 
-*Last updated: May 31, 2026. Prices and feature availability change frequently — check each vendor's website for current details. We retest these tools quarterly; follow our updates or check our [Cursor AI tutorial]({{article-04-url}}) and [no-code AI agent guide]({{article-05-url}}) for related hands-on content.*
+*Last updated: May 31, 2026. Prices and feature availability change frequently — check each vendor's website for current details. We retest these tools quarterly; follow our updates or check our [Cursor AI tutorial](/blog/cursor-ai-tutorial-for-beginners) and [no-code AI agent guide](/blog/build-ai-agent-without-coding) for related hands-on content.*
