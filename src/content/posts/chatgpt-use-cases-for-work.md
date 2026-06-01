@@ -201,7 +201,7 @@ strategy_memo_prompt = exec_prompt_template.format(
 
 ## ChatGPT for Teams: Multi-User Features & Enterprise Plan
 
-OpenAI's Team plan ($25/user/month, annual) adds shared custom GPTs, higher message limits (100+ messages per 3 hours), and a workspace admin console. The Enterprise plan ($60/user/month) adds SAML SSO, domain verification, data encryption, and a contractual commitment that OpenAI won't train on your data.
+OpenAI's Team plan ($25/user/month, annual) adds shared custom GPTs, higher message limits, and a workspace admin console. The Enterprise plan (custom pricing) adds SAML SSO, domain verification, data encryption, and a contractual commitment that OpenAI won't train on your data.
 
 The real value of the Team plan is shared custom GPTs. Your director of marketing builds a "Brand Voice Guardian" GPT with your style guide baked in. Every marketer uses it. Consistency across a 10-person team without endless Slack debates about whether to use "leverage" or "use."
 
@@ -217,7 +217,7 @@ The real value of the Team plan is shared custom GPTs. Your director of marketin
 
 **Q: Can I use ChatGPT Free for business tasks?**
 
-Yes, for most of the workflows described here. The message cap (~16 GPT-4o messages every 3 hours) is the main limitation. If you're doing 2–3 focused ChatGPT sessions per day, the free tier covers it. For team-wide usage, a paid plan is worth it.
+Yes, for most of the workflows described here. The message cap (GPT-5.5 messages, limited per 5-hour session) is the main limitation. If you're doing 2–3 focused ChatGPT sessions per day, the free tier covers it. For team-wide usage, a paid plan is worth it.
 
 **Q: Which department benefits most from ChatGPT?**
 
@@ -240,3 +240,5 @@ For more practical guides to get more from AI tools:
 - [Best ChatGPT Prompts for Every Task](/blog/best-chatgpt-prompts-for-productivity) — 50 ready-to-use prompts organized by job function
 - [ChatGPT for Coding: Developer's Guide](/blog/how-to-use-chatgpt-for-coding) — code generation, debugging, and architecture with ChatGPT
 - [Prompt Engineering Guide](/blog/prompt-engineering-guide) — the techniques that make these use cases 2× more effective
+
+*Fact-checked: 2026-06-01 against official sources (OpenAI Help Center)*

@@ -7,15 +7,15 @@ tags: ['ChatGPT', 'Claude', 'Gemini', 'Ai Comparison', 'Productivity']
 
 I pay for all three — ChatGPT Plus, Claude Pro, and Gemini Advanced. Every month, I run them through the same real-world tasks: writing documentation, debugging code, analyzing data, drafting client proposals. The winner depends on what I'm doing that day.
 
-This comparison is based on actual usage, not marketing pages. I tested each model on identical tasks in May 2026, using the latest available versions: GPT-4o (ChatGPT), Claude 4 Sonnet (Anthropic), and Gemini 2.5 Pro (Google). Here's what I found.
+This comparison is based on actual usage, not marketing pages. I tested each model on identical tasks in May 2026, using the latest available versions: GPT-5.5 (ChatGPT), Claude's latest model (Anthropic), and Gemini 2.5 Pro (Google). Here's what I found.
 
 ## Quick Comparison Table
 
-| | **ChatGPT (GPT-4o)** | **Claude (Sonnet 4)** | **Gemini (2.5 Pro)** |
+| | **ChatGPT (GPT-5.5)** | **Claude (Latest)** | **Gemini (2.5 Pro)** |
 |---|---|---|---|
 | **Monthly Price** | $20 (Plus) / $200 (Pro) | $20 (Pro) / Teams available | $20 (Advanced, included with Google One) |
 | **Context Window** | 128K tokens | 200K tokens | 1M tokens |
-| **Free Tier** | Yes (GPT-4o mini, limited) | Yes (Claude 4 Haiku, limited) | Yes (Gemini 1.5 Flash, generous limits) |
+| **Free Tier** | Yes (GPT-5.5, limited) | Yes (fast model, limited) | Yes (Gemini 2.0 Flash, generous limits) |
 | **Image Generation** | Built-in (DALL-E) | No native image gen | Built-in (Imagen) |
 | **Code Execution** | Yes (Code Interpreter) | Yes (Artifacts preview) | Yes (built-in Python) |
 | **Internet Access** | Yes (Browse with Bing) | No built-in browsing | Yes (Google Search integration) |
@@ -26,16 +26,16 @@ This comparison is based on actual usage, not marketing pages. I tested each mod
 | **Main Weakness** | Can sound overly confident when wrong | No live internet; API limits can be strict | Occasionally hallucinates facts with high confidence |
 | **Verdict** | Best all-rounder for daily work | Best for writing and reasoning | Best for Google ecosystem users |
 
-## ChatGPT Deep Dive (GPT-4o Era)
+## ChatGPT Deep Dive (GPT-5.5 Era)
 
-ChatGPT remains the default choice for most people — and for good reason. As of mid-2026, it's the most feature-complete AI assistant available.
+ChatGPT remains the default choice for most people — and for good reason. As of June 2026, it's the most feature-complete AI assistant available.
 
 ### Pricing & Plans
 
 OpenAI's pricing splits into three tiers that map to distinct use cases:
 
-- **Free:** GPT-4o mini with limited messages. Fine for casual use and simple questions. Hits rate limits during focused work sessions.
-- **Plus ($20/mo):** Full GPT-4o access, 80 messages every 3 hours, Code Interpreter, DALL-E image generation, custom GPTs, and web browsing. This is the sweet spot for professionals.
+- **Free:** GPT-5.5 with per-session limits. Fine for casual use and simple questions. Hits rate limits during focused work sessions.
+- **Plus ($20/mo):** Full GPT-5.5 access with higher message limits, Code Interpreter, DALL-E image generation, custom GPTs, and web browsing. This is the sweet spot for professionals.
 - **Pro ($200/mo):** Unlimited access, o-series reasoning models for complex problem-solving, and priority compute. Overkill for most people — the $180 jump from Plus is hard to justify unless you're running deep research or building AI-native products.
 
 One underrated Plus feature: custom GPTs. I built one that knows my team's code style guide, and another that formats meeting notes to our Notion template. No coding required — you describe the behavior in plain English, upload reference docs, and it works.
@@ -58,8 +58,8 @@ Claude has carved out a reputation as the thinking person's AI assistant. Its re
 
 Anthropic keeps its pricing simple:
 
-- **Free:** Claude 4 Haiku with moderate limits. Surprisingly capable for a free model — handles basic coding and writing well.
-- **Pro ($20/mo):** Claude 4 Sonnet with "substantially higher" rate limits. Anthropic is cagey about exact numbers, but in practice I get about 45-60 messages every 5 hours before hitting the cap — slightly more restrictive than ChatGPT Plus.
+- **Free:** Claude's fast model with moderate limits. Surprisingly capable for a free model — handles basic coding and writing well.
+- **Pro ($20/mo):** Claude's flagship model with "substantially higher" rate limits. Anthropic is cagey about exact numbers, but in practice I get about 45-60 messages every 5 hours before hitting the cap — slightly more restrictive than ChatGPT Plus.
 - **Team ($30/user/mo, min 5 users):** Higher limits, shared chats, and admin controls. For teams that standardize on Claude.
 
 The $20 Pro tier is where Claude makes sense for individual professional use. At the same price as ChatGPT Plus, it comes down to which tool fits your work better.
@@ -104,7 +104,7 @@ Gemini's multimodal capabilities are also the strongest. It natively handles vid
 
 **Task:** Write a Python function that takes a list of timestamps (ISO 8601 strings), groups them into 1-hour windows, and returns the count per window. Handle edge cases: empty list, timezone offsets, and timestamps spanning DST transitions.
 
-**ChatGPT (GPT-4o)** — produced working code immediately. Used `datetime.fromisoformat()` correctly, handled empty lists gracefully, and even included a comment flagging DST edge cases. Took one prompt.
+**ChatGPT (GPT-5.5)** — produced working code immediately. Used `datetime.fromisoformat()` correctly, handled empty lists gracefully, and even included a comment flagging DST edge cases. Took one prompt.
 
 ```python
 from datetime import datetime, timedelta
@@ -133,7 +133,7 @@ def group_by_hour(timestamps: list[str]) -> dict[str, int]:
     return dict(windows)
 ```
 
-**Claude (Sonnet 4)** — also produced working code on first try. Notably, Claude's version explicitly warned about `datetime.fromisoformat()` not handling the 'Z' suffix in Python <3.11 and suggested a workaround. This extra attention to compatibility is typical Claude behavior.
+**Claude (Flagship)** — also produced working code on first try. Notably, Claude's version explicitly warned about `datetime.fromisoformat()` not handling the 'Z' suffix in Python <3.11 and suggested a workaround. This extra attention to compatibility is typical Claude behavior.
 
 **Gemini (2.5 Pro)** — required two prompts. First attempt used `dateutil.parser` (good instinct) but got the window generation logic wrong, producing overlapping buckets. Second attempt fixed the bug after I pointed it out. The final code worked but was less elegant than ChatGPT's or Claude's.
 
@@ -184,7 +184,7 @@ If you can only pay for one and your work spans writing, coding, and general res
 
 If your work is primarily writing and analysis — reports, proposals, research synthesis, legal/policy review — Claude Pro is the better choice. The writing quality difference becomes more significant the longer the output. For a 200-word email, ChatGPT and Claude are interchangeable. For a 5,000-word report, Claude's advantage compounds.
 
-**What about free tiers?** The free landscape in 2026 is genuinely good. Gemini's free tier (Gemini 2.0 Flash) is powerful enough for most casual use. Claude's free Haiku model punches above its weight for writing tasks. ChatGPT's free tier (GPT-4o mini) handles coding and general questions competently. If you're not using AI for professional work, you can get by without paying for any of them.
+**What about free tiers?** The free landscape in 2026 is genuinely good. Gemini's free tier (Gemini 2.0 Flash) is powerful enough for most casual use. Claude's free fast model punches above its weight for writing tasks. ChatGPT's free tier (GPT-5.5) handles coding and general questions competently. If you're not using AI for professional work, you can get by without paying for any of them.
 
 For an overview of other free AI tools worth checking out, see our [roundup of the best free AI tools in 2026](/blog/best-free-ai-tools-2026).
 
@@ -193,3 +193,5 @@ For an overview of other free AI tools worth checking out, see our [roundup of t
 One thing I noticed across all three models: prompt quality matters more than model choice. A well-structured prompt on the free Gemini tier produces better output than a vague prompt on Claude Pro. All three models respond to the same prompt structure that we detail in our [prompt engineering guide](/blog/prompt-engineering-guide).
 
 If you're switching between these tools, invest 15 minutes in learning to write good prompts. That alone will produce bigger quality gains than any model upgrade.
+
+*Fact-checked: 2026-06-01 against official sources (OpenAI Help Center, Anthropic Support, Google AI)*

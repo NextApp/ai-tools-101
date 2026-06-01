@@ -42,7 +42,7 @@ The common thread: these aren't side projects by AI researchers. They're built b
 
 | Platform | Price (from) | Best For | Key Strength | Limitations |
 |----------|-------------|----------|--------------|-------------|
-| **OpenAI Custom GPTs** | Free (ChatGPT Plus: $20/mo) | Beginners, solo projects | Easiest setup; GPT-4o powered | No API integrations; browser-only |
+| **OpenAI Custom GPTs** | Free (ChatGPT Plus: $20/mo) | Beginners, solo projects | Easiest setup; GPT-5.5 powered | No API integrations; browser-only |
 | **Relevance AI** | Free tier; Pro $19/mo | Business workflows, teams | Visual builder, CRM integrations, bulk runs | Learning curve for automations |
 | **Zapier AI Agents** | Free tier; $19.99/mo | Automation-heavy use cases, triggers | 6,000+ app integrations; built-in scheduling | Less flexible for complex reasoning |
 | **CrewAI (Low-Code)** | Open source; Enterprise pricing | Multi-agent systems | Python-based orchestration of multiple agents | Requires basic Python; not pure no-code |
@@ -303,3 +303,5 @@ Pick the platform that matches your use case:
 - **Building something complex with multiple agents?** Reach for CrewAI. The Python learning curve is real but manageable — especially with [a tool like Cursor](/blog/cursor-ai-tutorial-for-beginners) doing the heavy lifting on code generation.
 
 The gap between "I should automate this" and "this is automated" has never been smaller. Build the first version this week. Ship it. Watch the logs. Iterate. That's the actual path to a useful AI agent — not a perfect spec document, not a six-month build cycle. Just a working agent, deployed, improving every two weeks.
+
+*Fact-checked: 2026-06-01 against official sources (OpenAI Help Center, Relevance AI, Zapier, CrewAI documentation)*

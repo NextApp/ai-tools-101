@@ -15,7 +15,7 @@ This guide walks the line between those two realities. You'll learn what ChatGPT
 
 ### Understanding ChatGPT's Coding Capabilities
 
-ChatGPT handles a surprisingly broad range of programming tasks. Here's what the current models (GPT-4o and o-series) can do reliably:
+ChatGPT handles a surprisingly broad range of programming tasks. Here's what GPT-5.5 can do reliably:
 
 | Task | Reliability | Notes |
 |------|-------------|-------|
@@ -36,13 +36,13 @@ ChatGPT knows Python, JavaScript, TypeScript, HTML/CSS, SQL, Bash, and Ruby part
 - Guarantee security best practices (never trust it for auth code without review)
 - Predict how changes will affect production systems with real users
 
-**The model matters.** The free tier (GPT-4o mini) handles boilerplate and syntax questions fine but struggles with multi-step logic. The paid GPT-4o model handles complex refactors and catches subtle bugs that the free tier misses. If you're coding daily, the $20/month Plus plan pays for itself within the first debugging session.
+**The model matters.** The free tier (GPT-5.5 (free tier)) handles boilerplate and syntax questions fine but struggles with multi-step logic. The paid GPT-5.5 model handles complex refactors and catches subtle bugs that the free tier misses. If you're coding daily, the $20/month Plus plan pays for itself within the first debugging session.
 
 ### ChatGPT Free vs Plus vs Pro for Coding — Which Tier Do You Need?
 
-| Feature | Free (GPT-4o mini) | Plus ($20/mo) | Pro ($200/mo) |
+| Feature | Free (GPT-5.5 (free tier)) | Plus ($20/mo) | Pro ($200/mo) |
 |---------|-------------------|---------------|---------------|
-| Code quality | Good for snippets | Solid for full features | Excellent, with o-series reasoning |
+| Code quality | Good for snippets | Solid for full features | Excellent, with advanced reasoning |
 | Context window | 8K tokens | 32K tokens | 128K tokens |
 | File uploads | Images only | Code files, images, PDFs | Everything, plus large repos |
 | Code interpreter | No | Yes (analyzes CSVs, runs code) | Yes (advanced) |
@@ -428,7 +428,7 @@ Run with `pip install pandas openpyxl` then `python excel_to_sql.py`. You can no
 
 **3. Not providing enough context.** "Fix my code" with no error message, no expected behavior, no stack trace is useless. Give ChatGPT: what you tried, what you expected, what actually happened, and the error message. The quality of the fix correlates directly with the quality of your problem description.
 
-**4. Using an outdated model.** Free-tier GPT-4o mini will sometimes suggest deprecated library versions or removed APIs. If ChatGPT suggests `create-react-app` in 2026, it's behind the times. Always check the official docs of whatever library it recommends.
+**4. Using an outdated model.** Free-tier GPT-5.5 (free tier) will sometimes suggest deprecated library versions or removed APIs. If ChatGPT suggests `create-react-app` in 2026, it's behind the times. Always check the official docs of whatever library it recommends.
 
 **5. Expecting it to design architecture.** ChatGPT can write a function. It cannot design a system that handles 10,000 requests per second, manages distributed state, and fails gracefully under load. That requires human judgment.
 
@@ -463,3 +463,5 @@ For a broader comparison of AI coding tools beyond ChatGPT, see our [comprehensi
 ChatGPT works best when you treat it as a pair programmer who's fast but occasionally wrong. Start with the To-Do List app above — it takes 30 minutes and you'll have a working product. From there, pick one of the other projects. The key is building things, not just reading about building things.
 
 If you want structured prompts that make ChatGPT more effective for your day-to-day work, grab the [20 best ChatGPT prompts for productivity](/blog/best-chatgpt-prompts-for-productivity) next.
+
+*Fact-checked: 2026-06-01 against official sources (OpenAI Help Center)*

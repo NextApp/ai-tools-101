@@ -203,7 +203,7 @@ The trade-off: Q Developer's completions are less creative than Copilot's or Cur
 | **Codebase context** | Open files + related tabs | Full codebase indexing (`@codebase`) | Codebase indexing (Pro only) | AWS resource awareness |
 | **PR / issue integration** | GitHub Issues, PRs, Actions | None (VS Code git only) | None (VS Code git only) | AWS CodeCommit |
 | **Terminal AI** | No | Yes (`Cmd+K` in terminal) | Yes (Cascade terminal) | CLI tool |
-| **Image understanding** | Yes (GPT-4o in chat) | Yes (GPT-4o, Claude) | Limited (Pro) | No |
+| **Image understanding** | Yes (GPT-5.5 in chat) | Yes (GPT-5.5, Claude) | Limited (Pro) | No |
 | **Custom rules** | Limited (.github/copilot-instructions.md) | `.cursorrules` file | Windsurf Rules | Security policies |
 | **Debugger integration** | No | Yes (breakpoints + AI) | No | No |
 
@@ -239,7 +239,7 @@ We ran a standardized test: generate a CRUD API in four languages, measure accur
 | **Go** (net/http) | 88% — correct but unconventional patterns | 90% — idiomatic Go, proper error wrapping | 84% — generated patterns from other languages | Go is the weakest language for all three |
 | **Rust** (Actix) | 70% — lifetime errors, needed refactoring | 75% — same lifetime issues, better structure | 60% — significant manual fixes needed | Rust's borrow checker still trips AI tools |
 
-Test date: May 2026. Models: Copilot (GPT-4o), Cursor (Claude 3.5 Sonnet), Windsurf (Codeium proprietary).
+Test date: May 2026. Models: Copilot (GPT-5.5), Cursor (latest available Claude model), Windsurf (Codeium proprietary).
 
 ---
 
@@ -305,3 +305,5 @@ All three tools share a trajectory: from autocomplete to pair programmer to auto
 ---
 
 *Last updated: May 31, 2026. Prices and feature availability change frequently — check each vendor's website for current details. We retest these tools quarterly; follow our updates or check our [Cursor AI tutorial](/blog/cursor-ai-tutorial-for-beginners) and [no-code AI agent guide](/blog/build-ai-agent-without-coding) for related hands-on content.*
+
+*Fact-checked: 2026-06-01 against official sources (GitHub Copilot, Cursor, Windsurf, Amazon Q documentation)*

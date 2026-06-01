@@ -322,3 +322,5 @@ If 20 prompts feels overwhelming, start with three:
 These three alone save me 4-6 hours a week. The other 17 are for specific situations — use them when you need them.
 
 For more ways to integrate AI into your daily work, see our guide on [practical AI use cases at work](/blog/chatgpt-use-cases-for-work).
+
+*Fact-checked: 2026-06-01 against official sources (OpenAI Help Center)*

@@ -43,7 +43,7 @@ After installation, Cursor asks if you want to import settings from VS Code. Say
 
 Cursor offers two ways to use AI features:
 
-- **Cursor Pro ($20/month):** Built-in models (GPT-4o, Claude 3.5 Sonnet, Cursor's own model), unlimited completions, 500 fast premium requests per month. No API key needed. This is the recommended path for beginners — just sign up, pay, and go.
+- **Cursor Pro ($20/month):** Built-in models (GPT-5.5, the latest Claude models, Cursor's own model), unlimited completions, 500 fast premium requests per month. No API key needed. This is the recommended path for beginners — just sign up, pay, and go.
 
 - **BYO API Key:** If you already pay for an OpenAI or Anthropic account, you can paste your API key in Settings > Models. Use this if you need specific models or have usage credits you'd like to burn.
 
@@ -327,3 +327,5 @@ From here, pick your next step:
 - **Want to keep coding?** Try [building an AI agent without code](/blog/build-ai-agent-without-coding) — a different approach that skips programming entirely.
 - **Curious about other tools?** Read our [head-to-head comparison of Copilot, Cursor, and Windsurf](/blog/github-copilot-vs-cursor-vs-windsurf).
 - **Ready to dig deeper into Cursor?** Add a comments system, deploy to Vercel, or switch the blog to use a headless CMS. Cursor can walk you through every step — just ask.
+
+*Fact-checked: 2026-06-01 against official sources (Cursor, Windsurf, GitHub Copilot documentation)*

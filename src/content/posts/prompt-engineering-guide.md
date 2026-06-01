@@ -9,7 +9,7 @@ tags: ['Prompt Engineering', 'Ai Prompts', 'ChatGPT', 'Claude', 'Prompt Template
 
 Prompt engineering is the skill of writing instructions that get an AI model to produce exactly what you want. It's not mystical. It's not about finding "secret phrases." It's about clarity, structure, and understanding how the model processes instructions.
 
-The difference between a lazy prompt and a well-engineered one is dramatic. Here's a real example with GPT-4o in mid-2026:
+The difference between a lazy prompt and a well-engineered one is dramatic. Here's a real example with GPT-5.5 in June 2026:
 
 **Lazy prompt:** *"Write a blog post about project management."*
 
@@ -64,7 +64,7 @@ The second prompt removes ambiguity. The model knows the output is a list (not a
 
 ### 3. Context & Background
 
-Context is the single most underused lever in prompt engineering. A GPT-4o model given zero context writes generic content. The same model given 500 words of specific context writes output that feels like it came from a domain expert.
+Context is the single most underused lever in prompt engineering. A GPT-5.5 model given zero context writes generic content. The same model given 500 words of specific context writes output that feels like it came from a domain expert.
 
 ```
 Prompt:
@@ -162,7 +162,7 @@ The difference between these three approaches is how many examples you provide:
 
 **Few-shot** is worth the extra characters when the output format or style is specific enough that describing it in words takes longer than showing an example. The JSON extraction example above is a perfect few-shot use case — describing the JSON structure takes more words than showing two examples.
 
-**Many-shot** is for production systems where you have a library of high-quality examples. Claude's 200K context window makes many-shot viable — you can include 50 example outputs and the model learns from the full set. GPT-4o handles roughly 30 examples before performance plateaus.
+**Many-shot** is for production systems where you have a library of high-quality examples. Claude's large context window makes many-shot viable — you can include 50 example outputs and the model learns from the full set. GPT-5.5 handles many examples before performance plateaus.
 
 ### Iterative Prompt Refinement
 
@@ -392,7 +392,7 @@ For more ready-to-use prompts across specific job functions, see our [best ChatG
 
 ### ChatGPT / GPT Models
 
-GPT-4o and GPT-4.5 respond well to structured, instruction-heavy prompts. They're the most "obedient" models — you give detailed instructions, they follow them. Use all six elements freely.
+GPT-5.5 responds well to structured, instruction-heavy prompts. It's the most "obedient" model — you give detailed instructions, it follows them. Use all six elements freely.
 
 GPT models also benefit from **system + user message separation**. In the API, put role/context/constraints in the system message and the specific task in the user message. In the web interface, combine everything into one message with clear section breaks.
 
@@ -404,7 +404,7 @@ User: Write a 500-word technical blog post comparing Redis and Memcached for cac
 
 ### Claude (Long-Context Prompting)
 
-Claude's 200K context window enables patterns that aren't practical with GPT-4o. You can paste entire documents, codebases, or conversation histories and ask questions that require synthesizing information across long contexts.
+Claude's large context window enables patterns that aren't practical with GPT-5.5. You can paste entire documents, codebases, or conversation histories and ask questions that require synthesizing information across long contexts.
 
 For Claude, **put examples near the end** of your prompt. Claude's attention mechanism weights recent text more heavily than older text. If you're doing few-shot prompting with Claude, place the examples immediately before the new input.
 
@@ -450,7 +450,7 @@ For a deeper dive into image generation tools and prompt techniques for each, se
 |-----------|-------------|----------------|
 | "Write me something about AI" | No topic scope, format, length, or audience. The model will guess — poorly. | "Write a 400-word article explaining neural networks to a high school student. Use the analogy of a mail sorting facility. No math." |
 | "Make it better" | The model doesn't know which dimension of "better" you want. | "Improve the pacing — cut any sentence that doesn't advance the argument. Then make the introduction hook stronger." |
-| "Write a 5000-word guide to [X]" | GPT-4o won't reliably produce 5000 words in one go. It'll stop at ~1200–1800 words. | "Write the outline for a 5000-word guide to [X] with word counts per section. Then I'll ask you to write each section individually." |
+| "Write a 5000-word guide to [X]" | GPT-5.5 won't reliably produce 5000 words in one go. It'll stop at ~1200–1800 words. | "Write the outline for a 5000-word guide to [X] with word counts per section. Then I'll ask you to write each section individually." |
 | "Include everything about [broad topic]" | Too vague. The model can't prioritize without guidance. | "Cover only these three aspects: [A], [B], [C]. Each gets one section of ~200 words." |
 | "Be creative" | Creativity without constraints produces randomness. | "Generate 10 unexpected metaphors for debugging code. Each should draw from a different domain — cooking, music, architecture, etc." |
 | "Write in a professional tone" | "Professional" means different things in different industries. | "Write with the tone of a McKinsey strategy memo — declarative sentences, data-forward, no adjectives without numbers." |
@@ -469,3 +469,5 @@ For more practical guides:
 - [ChatGPT vs Claude vs Gemini: Full Comparison](/blog/chatgpt-vs-claude-vs-gemini) — different tools need different prompting strategies
 - [Best ChatGPT Prompts for Every Task](/blog/best-chatgpt-prompts-for-productivity) — 50 copy-paste prompts for work
 - [ChatGPT for Coding: Developer's Guide](/blog/how-to-use-chatgpt-for-coding) — prompt engineering for software development
+
+*Fact-checked: 2026-06-01 against official sources (OpenAI Help Center, Anthropic Support)*

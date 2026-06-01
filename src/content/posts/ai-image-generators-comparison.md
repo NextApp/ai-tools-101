@@ -204,3 +204,5 @@ For more AI tool comparisons and practical guides:
 - [12 Best Free AI Tools in 2026](/blog/best-free-ai-tools-2026) — start generating without spending
 - [ChatGPT vs Claude vs Gemini](/blog/chatgpt-vs-claude-vs-gemini) — which assistant to use for prompt ideation
 - [Prompt Engineering Guide](/blog/prompt-engineering-guide) — write prompts that get better results from all image generators
+
+*Fact-checked: 2026-06-01 against official sources (Midjourney, OpenAI DALL-E, Stability AI documentation)*
