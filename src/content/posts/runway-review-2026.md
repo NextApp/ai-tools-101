@@ -1,6 +1,6 @@
 ---
 title: "Runway Review 2026: The Best AI Video Generator for Creative Professionals"
-description: "Comprehensive Runway review covering Gen-3 video generation, text-to-video, image-to-video, pricing, and comparison with Pika and Synthesia. Is Runway worth it in 2026?"
+description: "Runway review: Gen-3 video generation, text-to-video, image-to-video, pricing, and comparison with Pika and Synthesia. Is Runway worth the subscription in 2026?"
 pubDate: 2026-06-06
 updatedDate: 2026-06-06
 tags: ["Runway", "AI Video", "Video Generation", "Creative Tools", "Review"]

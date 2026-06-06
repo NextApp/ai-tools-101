@@ -1,6 +1,6 @@
 ---
 title: "Cursor Review 2026: The AI-First Code Editor That's Replacing VS Code"
-description: "In-depth Cursor review covering AI code completion, multi-file refactoring, debugging, and how it compares to GitHub Copilot. Is Cursor worth switching from VS Code?"
+description: "Cursor review: AI code completion, multi-file refactoring, debugging, and how it compares to Copilot. Is the AI-first editor worth switching from VS Code?"
 pubDate: 2026-06-06
 updatedDate: 2026-06-06
 tags: ["Cursor", "AI Coding", "Code Assistant", "Developer Tools", "Review"]
