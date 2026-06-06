@@ -12,20 +12,27 @@ ChatGPT remains the most widely used AI assistant in the world—over 300 millio
 
 ## What Is ChatGPT?
 
-ChatGPT is OpenAI's conversational AI assistant, available through web, mobile apps, and desktop applications. It runs on GPT-5.5 for text and DALL-E 3 for images, with additional capabilities including web browsing, code execution (Advanced Data Analysis), file uploads, and custom GPTs.
+ChatGPT is OpenAI's conversational AI assistant, available through web, mobile apps, and desktop applications. It runs on GPT-5.5, OpenAI's most advanced model as of June 2026, with DALL-E 4 for images, plus integrated capabilities including web browsing, Codex for code execution and agentic work, file uploads, and custom GPTs.
 
-The free tier now provides access to GPT-5.5, which represents a dramatic democratization of AI capability—the same model that powers Plus is available to anyone with an internet connection, albeit with usage limits.
+The free tier provides access to GPT-5.5 with usage limits, while Plus ($20/month) and Pro ($200/month) unlock higher caps, priority access, and advanced features like Codex integration. GPT-5.5 launched in April 2026 and represents a step change in agentic capability—it can plan, use tools, check its own work, and persist through multi-step tasks that previous models couldn't handle.
 
 ## Key Features
 
-### GPT-5.5: Multimodal and Fast
+### GPT-5.5: Agentic Intelligence
 
-GPT-5.5 is OpenAI's flagship model, and it's genuinely impressive. Key capabilities:
+GPT-5.5 is OpenAI's most capable model, launched in April 2026. It's not just a faster GPT-5.4—it's a fundamentally more agentic system that can plan, use tools, check its own work, and persist through complex multi-step tasks. Key capabilities:
 
-- **Multimodal input**: Understands images, audio, and text in a single conversation. You can upload a photo of a whiteboard, ask questions about it, and get responses in seconds.
-- **Near-instant responses**: GPT-5.5 processes audio input in as little as 232ms, making voice conversations feel almost human-speed.
-- **Strong reasoning**: Handles complex multi-step problems across math, logic, and analysis. On the GPQA benchmark, GPT-5.5 scores competitively with Claude 4 and Gemini 3.0.
-- **128K context window**: Long enough for entire books, lengthy codebases, or multi-hour conversation histories.
+- **Agentic coding with Codex**: GPT-5.5 achieves 82.7% on Terminal-Bench 2.0 and 58.6% on SWE-Bench Pro, solving real GitHub issues end-to-end. It can write, debug, refactor, and test code across entire codebases with minimal supervision.
+- **Computer use**: On OSWorld-Verified, GPT-5.5 scores 78.7%, meaning it can operate real software interfaces—clicking, typing, navigating—like a human user.
+- **Knowledge work**: Scores 84.9% on GDPval, which tests agent performance across 44 professional occupations. It generates documents, spreadsheets, and presentations from natural language.
+- **400K context window in Codex**: Enough for entire codebases, research papers, or multi-hour work sessions.
+- **GPT-5.5 Thinking**: A reasoning mode that produces smarter, more concise answers for hard problems like coding, research, and document analysis.
+
+### Codex: Beyond Chat
+
+Codex is OpenAI's workspace environment where GPT-5.5 truly shines. Unlike the standard ChatGPT interface, Codex gives the model access to a file system, terminal, and browser—turning it from a conversational assistant into an autonomous worker. More than 85% of OpenAI employees now use Codex weekly across engineering, finance, communications, and product teams.
+
+For developers, this means GPT-5.5 can scaffold entire projects, write tests, debug across multiple files, and deploy—not just suggest code snippets. For knowledge workers, it can analyze spreadsheets, generate reports, and automate repetitive workflows without requiring step-by-step instructions.
 
 ### Advanced Data Analysis (Code Interpreter)
 
@@ -37,7 +44,7 @@ For non-programmers, this is transformative. A marketing manager can upload camp
 
 The GPT Store hosts thousands of specialized AI assistants built by the community. These range from practical tools (resume reviewer, language tutor, meal planner) to creative experiments. For power users, creating a custom GPT with specific instructions, knowledge files, and tool configurations provides a tailored experience that generic chatbots can't match.
 
-### DALL-E 3 Integration
+### DALL-E 4 Integration
 
 Image generation is seamlessly integrated into the chat interface. Describe an image, and ChatGPT generates it within the conversation. You can then iterate with natural language feedback: "Make the background darker" or "Change the art style to watercolor." This conversational approach to image generation is more intuitive than Discord-based tools like Midjourney.
 
@@ -49,9 +56,11 @@ ChatGPT can search the web for current information, providing citations and link
 
 | Tier | Price | Key Features |
 |------|-------|-------------|
-| Free | $0 | GPT-5.5 access with usage limits, basic features |
-| Plus | $20/month | 5x higher usage limits, priority access, Advanced Data Analysis, DALL-E, custom GPTs |
-| Pro | $200/month | Unlimited access, priority during peak times, extended features |
+| Free | $0 | GPT-5.5 with usage limits, basic features, DALL-E 4 |
+| Plus | $20/month | 5x higher limits, priority access, Codex, Advanced Data Analysis, custom GPTs |
+| Pro | $200/month | Unlimited access, GPT-5.5 Pro model, priority during peak times |
+
+For developers, the GPT-5.5 API is priced at $5 per 1M input tokens and $30 per 1M output tokens—more expensive than GPT-5.4 but significantly more token-efficient, often producing better results with fewer tokens. GPT-5.5 Pro is available at $30/1M input, $180/1M output.
 
 For most users, the Free tier is genuinely good. GPT-5.5 is the same model across tiers; the difference is usage caps and advanced features. If you use ChatGPT daily for professional work, Plus at $20/month is a straightforward value proposition.
 
@@ -89,14 +98,15 @@ ChatGPT produced an engaging story with a clear premise, emotional stakes, and a
 
 ## ChatGPT vs Claude vs Gemini
 
-| Feature | ChatGPT (GPT-5.5) | Claude (3.5) | Gemini (2.0) |
+| Feature | ChatGPT (GPT-5.5) | Claude (Opus 4.8) | Gemini (3.1 Pro) |
 |---------|-----------------|-------------|-------------|
 | Writing quality | Strong structure, clear | Best prose, more literary | Good, Google Docs integration |
-| Coding | Excellent, broad language coverage | Very good, strong on reasoning | Good, Google Cloud integration |
-| Multimodal | Images, audio | Images only | Images, audio, video |
-| Web browsing | Yes, with citations | Limited | Yes, with Google integration |
+| Coding | Excellent, agentic via Codex | Very good, strong on reasoning | Good, Google Cloud integration |
+| Multimodal | Images, audio, video | Images only | Images, audio, video |
+| Web browsing | Yes, with citations | Available | Yes, native Google integration |
+| Agentic capabilities | Codex (terminal, browser, files) | Claude Code (terminal only) | Limited |
 | Price (paid) | $20/month | $20/month | $20/month (Google One) |
-| Best for | General-purpose, coding, research | Writing, analysis, long documents | Google ecosystem users |
+| Best for | General-purpose, agentic coding, research | Writing, analysis, long documents | Google ecosystem users |
 
 ## Pros and Cons
 
@@ -131,11 +141,11 @@ Consider alternatives if:
 
 ## The Verdict
 
-ChatGPT remains the most well-rounded AI assistant in 2026. It's not the best at any single task—Claude writes better prose, Cursor codes better, Perplexity researches better—but it's excellent at everything, and that versatility is its true value.
+ChatGPT remains the most well-rounded AI assistant in 2026, and with GPT-5.5's launch in April, it has opened a meaningful lead in agentic capabilities. It's not the best at every single task—Claude writes better prose, Perplexity researches more transparently—but Codex gives it a capability dimension that competitors haven't matched: the ability to actually do work, not just talk about it.
 
-The free tier running GPT-5.5 is a remarkable offering that makes powerful AI accessible to everyone. For $20/month, Plus unlocks enough additional capability to justify the cost for professional users. The $200/month Pro tier is harder to recommend unless you're a genuine power user or organization.
+The free tier running GPT-5.5 is remarkable value. For $20/month, Plus unlocks Codex and higher limits—enough to justify the cost for anyone who uses AI for professional work. The $200/month Pro tier with GPT-5.5 Pro is for serious power users and teams who need the highest accuracy on the hardest problems.
 
-If you're only going to subscribe to one AI tool, ChatGPT is still the safest bet. If you're willing to use multiple tools for different tasks, complementing ChatGPT with Claude for writing and Perplexity for research creates a more powerful overall stack.
+If you're only going to use one AI tool, ChatGPT is still the safest bet. If you want the strongest agentic coding experience, GPT-5.5 via Codex is currently unmatched. And if you use multiple tools, pairing ChatGPT with Claude for writing and Perplexity for research creates a powerful stack.
 
 **Rating: 4.8/5**
 
