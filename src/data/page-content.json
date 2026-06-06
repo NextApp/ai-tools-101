@@ -1,0 +1,298 @@
+{
+  "tools": {
+    "page": "/tools",
+    "seo_title": "Best AI Tools Directory 2026 — Browse 50+ Tools by Category | AI Tool Guide",
+    "seo_description": "Discover the best AI tools in 2026. Browse 50+ hand-picked AI writing, image, coding, video, chat, voice, productivity, and research tools with honest reviews.",
+    "hero_title": "Discover the Best AI Tools",
+    "hero_subtitle": "Hand-picked and honestly reviewed. Find the right AI tool for your workflow — from writing and coding to image generation and research.",
+    "hero_badge": "50+ Tools • Updated June 2026",
+    "search_placeholder": "Search AI tools by name, category, or use case...",
+    "filter_all_label": "All Tools",
+    "no_results_title": "No tools found",
+    "no_results_description": "Try adjusting your search or browse by category below.",
+    "section_featured_title": "Editor's Picks",
+    "section_featured_subtitle": "Top-rated tools our team actually uses and recommends.",
+    "section_all_title": "All Tools",
+    "section_all_subtitle": "Browse the complete collection sorted by rating.",
+    "cta_visit_website": "Visit Website",
+    "cta_read_review": "Read Full Review",
+    "affiliate_disclosure": "Some links on this page are affiliate links. We may earn a commission if you make a purchase, at no extra cost to you."
+  },
+
+  "categories": {
+    "ai-writing": {
+      "name": "AI Writing Tools",
+      "slug": "ai-writing",
+      "seo_title": "Best AI Writing Tools 2026 — AI Content Generators & Writing Assistants | AI Tool Guide",
+      "seo_description": "Compare the best AI writing tools in 2026. Jasper, Copy.ai, Rytr, Grammarly and more — find the perfect AI content generator for blogs, marketing, and creative writing.",
+      "heading": "AI Writing Tools",
+      "description": "Generate blog posts, marketing copy, social media content, and more with AI. From full-featured content platforms like Jasper to budget-friendly assistants like Rytr, these tools help you write faster and better.",
+      "subcategory_descriptions": {
+        "Marketing Copy": "AI tools specialized in generating high-converting marketing content, ad copy, email campaigns, and sales collateral.",
+        "General Writing": "Versatile writing assistants for everyday content needs — blog posts, articles, social media, and creative writing.",
+        "Paraphrasing": "Tools focused on rewriting, rephrasing, and improving existing text while preserving the original meaning.",
+        "Grammar & Editing": "AI-powered proofreading and editing tools that catch errors, improve clarity, and polish your writing."
+      }
+    },
+    "ai-image": {
+      "name": "AI Image Tools",
+      "slug": "ai-image",
+      "seo_title": "Best AI Image Generators 2026 — AI Art & Image Creation Tools | AI Tool Guide",
+      "seo_description": "Discover the best AI image generators and art creation tools. Compare Midjourney, DALL-E 3, Stable Diffusion, Leonardo AI, Canva AI, and Adobe Firefly for quality and ease of use.",
+      "heading": "AI Image Tools",
+      "description": "Create stunning visuals with AI. Whether you need photorealistic images, digital art, marketing graphics, or design assets, these AI image generators have you covered — from professional-grade tools to free options for beginners.",
+      "subcategory_descriptions": {}
+    },
+    "ai-coding": {
+      "name": "AI Coding Tools",
+      "slug": "ai-coding",
+      "seo_title": "Best AI Coding Assistants 2026 — AI Code Generators & Developer Tools | AI Tool Guide",
+      "seo_description": "Boost your development workflow with the best AI coding tools. Compare Cursor, GitHub Copilot, Claude Code, Windsurf, Replit AI, and more for code generation and assistance.",
+      "heading": "AI Coding Tools",
+      "description": "Write code faster and smarter with AI. From IDE-integrated assistants like GitHub Copilot and Cursor to standalone code generators like Bolt.new and v0.dev, these tools supercharge your development workflow.",
+      "subcategory_descriptions": {
+        "IDE Assistant": "AI coding assistants that integrate directly into your editor for real-time suggestions and code completion.",
+        "Agentic Coding": "Autonomous AI agents that can understand requirements, plan solutions, and write complete codebases.",
+        "No-Code Builder": "Tools that generate full applications from natural language descriptions — no coding required.",
+        "Platform": "Browser-based AI development platforms that combine coding, hosting, and collaboration."
+      }
+    },
+    "ai-video": {
+      "name": "AI Video Tools",
+      "slug": "ai-video",
+      "seo_title": "Best AI Video Generators & Editing Tools 2026 | AI Tool Guide",
+      "seo_description": "Create and edit videos with AI. Compare Runway, Pika, HeyGen, Synthesia, CapCut, Luma AI, and Descript — the top AI video tools for content creators and professionals.",
+      "heading": "AI Video Tools",
+      "description": "Generate, edit, and enhance video content with artificial intelligence. From text-to-video generation to AI-powered editing and avatar creation, these tools are transforming video production for creators and businesses alike.",
+      "subcategory_descriptions": {
+        "Video Generation": "AI-powered tools that create videos from text prompts, images, or storyboards.",
+        "AI Avatars": "Platforms for creating professional videos with AI-generated presenters and voiceovers.",
+        "Video Editing": "AI-enhanced video editing tools with automated features like transcription, effects, and clip generation."
+      }
+    },
+    "ai-productivity": {
+      "name": "AI Productivity Tools",
+      "slug": "ai-productivity",
+      "seo_title": "Best AI Productivity Apps 2026 — AI Tools for Work Efficiency | AI Tool Guide",
+      "seo_description": "Work smarter with the best AI productivity tools. Compare Beautiful.ai, Gamma, Tome, Mem, and Claude Projects for presentations, note-taking, and knowledge management.",
+      "heading": "AI Productivity Tools",
+      "description": "Transform how you work with AI-powered productivity tools. Create presentations in minutes, organize knowledge, take smarter notes, and automate your workflow — all with the help of artificial intelligence.",
+      "subcategory_descriptions": {
+        "Presentations": "AI tools that turn ideas into professional slide decks and visual presentations automatically.",
+        "Knowledge Management": "AI-powered workspaces for organizing, retrieving, and connecting your ideas and information."
+      }
+    },
+    "ai-chat": {
+      "name": "AI Chat Tools",
+      "slug": "ai-chat",
+      "seo_title": "Best AI Chatbots & Conversational AI Tools 2026 | AI Tool Guide",
+      "seo_description": "Compare the top AI chatbots in 2026. ChatGPT, Claude, Gemini, Perplexity, Poe, and HuggingChat — find the best conversational AI for your needs.",
+      "heading": "AI Chat Tools",
+      "description": "The front door to AI. These conversational AI platforms let you ask questions, generate content, analyze data, and brainstorm ideas. Each has unique strengths — from ChatGPT's versatility to Claude's reasoning and Perplexity's real-time research.",
+      "subcategory_descriptions": {
+        "General Assistant": "Versatile AI chatbots for everyday tasks — writing, coding, research, and creative work.",
+        "Research Assistant": "AI chat tools optimized for factual accuracy, web search integration, and research workflows.",
+        "Multi-Model": "Platforms that give you access to multiple AI models through a single interface."
+      }
+    },
+    "ai-voice": {
+      "name": "AI Voice Tools",
+      "slug": "ai-voice",
+      "seo_title": "Best AI Voice Generators & Text-to-Speech Tools 2026 | AI Tool Guide",
+      "seo_description": "Discover the best AI voice and text-to-speech tools. Compare ElevenLabs, Murf AI, PlayHT, Speechify, and Suno for voice generation, cloning, and AI music creation.",
+      "heading": "AI Voice Tools",
+      "description": "Generate lifelike speech, clone voices, create audiobooks, and even compose AI music. These tools bring audio content creation within everyone's reach — from content creators to enterprises.",
+      "subcategory_descriptions": {
+        "Voice Generation": "AI platforms for creating natural-sounding voiceovers, narration, and speech synthesis.",
+        "AI Music": "Tools that generate original music and songs from text descriptions using artificial intelligence."
+      }
+    },
+    "ai-research": {
+      "name": "AI Research Tools",
+      "slug": "ai-research",
+      "seo_title": "Best AI Research Assistants 2026 — Academic & Scientific AI Tools | AI Tool Guide",
+      "seo_description": "Accelerate your research with AI. Compare Perplexity, Elicit, Consensus, Scite, and OpenAI Deep Research — the best AI tools for literature review, paper analysis, and scientific discovery.",
+      "heading": "AI Research Tools",
+      "description": "Supercharge your research workflow with AI. These tools help you find relevant papers, extract key findings, analyze citations, and synthesize insights — turning days of literature review into hours.",
+      "subcategory_descriptions": {
+        "Literature Review": "AI tools that search, summarize, and synthesize academic papers and research literature.",
+        "Citation Analysis": "Platforms for analyzing citation networks, verifying claims, and understanding research impact."
+      }
+    }
+  },
+
+  "compare": {
+    "page": "/compare",
+    "seo_title": "AI Tool Comparison — Compare Features, Pricing & Reviews Side by Side | AI Tool Guide",
+    "seo_description": "Compare AI tools side by side. Pick any two tools to see features, pricing, pros and cons, and honest reviews. Make informed decisions about which AI tool fits your needs.",
+    "hero_title": "Compare AI Tools",
+    "hero_subtitle": "Pick any two tools and see how they stack up. Features, pricing, pros and cons — all side by side.",
+    "select_tool_placeholder": "Select a tool...",
+    "select_tool_1_label": "Tool 1",
+    "select_tool_2_label": "Tool 2",
+    "no_tools_selected_title": "Select two tools to compare",
+    "no_tools_selected_description": "Choose two AI tools from the dropdown menus above to see a detailed side-by-side comparison of their features, pricing, pros, cons, and more.",
+    "comparison_table_headers": {
+      "overview": "Overview",
+      "pricing": "Pricing",
+      "features": "Key Features",
+      "pros": "Pros",
+      "cons": "Cons",
+      "best_for": "Best For",
+      "rating": "Rating"
+    },
+    "cta_visit_website": "Visit Website",
+    "cta_view_details": "View Full Details",
+    "popular_comparisons_title": "Popular Comparisons",
+    "popular_comparisons_subtitle": "See how the most-compared tools measure up.",
+    "popular_comparisons": [
+      { "tool1": "chatgpt", "tool2": "claude" },
+      { "tool1": "cursor", "tool2": "github-copilot" },
+      { "tool1": "midjourney", "tool2": "dall-e" },
+      { "tool1": "gemini", "tool2": "chatgpt" },
+      { "tool1": "jasper", "tool2": "copy-ai" },
+      { "tool1": "elevenlabs", "tool2": "murf" }
+    ]
+  },
+
+  "which-ai-tool": {
+    "page": "/which-ai-tool",
+    "seo_title": "Which AI Tool Should I Use? — Interactive AI Tool Recommendation Quiz | AI Tool Guide",
+    "seo_description": "Not sure which AI tool to pick? Answer 3 quick questions about your needs, budget, and skill level. Get personalized AI tool recommendations in seconds — free and no sign-up required.",
+    "hero_title": "Which AI Tool Should You Use?",
+    "hero_subtitle": "Answer 3 quick questions and we'll match you with the perfect AI tools for your needs. No sign-up required.",
+    "quiz_description": "With hundreds of AI tools out there, choosing the right one can be overwhelming. This quick quiz narrows it down based on what you actually need.",
+    "questions": [
+      {
+        "id": "use_case",
+        "question": "What do you need AI for?",
+        "description": "Pick the primary task you want AI to help with.",
+        "options": [
+          {
+            "value": "writing",
+            "label": "Writing & Content Creation",
+            "description": "Blogs, marketing copy, emails, social media posts"
+          },
+          {
+            "value": "coding",
+            "label": "Coding & Development",
+            "description": "Writing code, debugging, building applications"
+          },
+          {
+            "value": "design",
+            "label": "Design & Images",
+            "description": "Generating images, graphics, art, or visual content"
+          },
+          {
+            "value": "video",
+            "label": "Video Creation & Editing",
+            "description": "Making videos, editing footage, creating animations"
+          },
+          {
+            "value": "research",
+            "label": "Research & Analysis",
+            "description": "Finding information, analyzing data, reviewing literature"
+          },
+          {
+            "value": "productivity",
+            "label": "Productivity & Workflow",
+            "description": "Presentations, note-taking, task automation"
+          }
+        ]
+      },
+      {
+        "id": "budget",
+        "question": "What's your budget?",
+        "description": "How much are you willing to spend per month?",
+        "options": [
+          {
+            "value": "free",
+            "label": "Free Only",
+            "description": "I'm looking for completely free tools"
+          },
+          {
+            "value": "budget",
+            "label": "Under $20/month",
+            "description": "I can pay a little for premium features"
+          },
+          {
+            "value": "mid",
+            "label": "$20–50/month",
+            "description": "I'm ready to invest in a solid tool"
+          },
+          {
+            "value": "enterprise",
+            "label": "Enterprise / No Limit",
+            "description": "Budget isn't a concern — I want the best"
+          }
+        ]
+      },
+      {
+        "id": "skill_level",
+        "question": "What's your skill level?",
+        "description": "How comfortable are you with technology and AI tools?",
+        "options": [
+          {
+            "value": "beginner",
+            "label": "Beginner",
+            "description": "I'm new to AI tools and want something simple"
+          },
+          {
+            "value": "intermediate",
+            "label": "Intermediate",
+            "description": "I've used a few AI tools and can handle some complexity"
+          },
+          {
+            "value": "advanced",
+            "label": "Advanced / Professional",
+            "description": "I need powerful tools with advanced features"
+          }
+        ]
+      }
+    ],
+    "results_title": "Your Top 3 AI Tool Matches",
+    "results_subtitle": "Based on your needs, here are the tools we recommend. Click any tool to see full details.",
+    "results_feature_bullet": "Why it's a match:",
+    "results_cta": "View Tool Details",
+    "restart_button": "Take the Quiz Again",
+    "share_title": "Share Your Results",
+    "matching_reasons": {
+      "writing_free_beginner": "Rytr is the most affordable AI writing tool with a generous free tier and simple interface — perfect for beginners.",
+      "writing_budget_beginner": "Writesonic balances affordability with powerful features, offering an easy learning curve for new users.",
+      "writing_mid_intermediate": "Jasper provides professional-grade marketing copy with brand voice features that growing businesses need.",
+      "coding_free_beginner": "Replit AI offers a complete browser-based coding environment with AI assistance — no setup required.",
+      "coding_budget_intermediate": "GitHub Copilot is the industry standard for AI code completion, now with a free tier and deep editor integration.",
+      "coding_mid_advanced": "Cursor combines the power of Claude and GPT models in a VS Code-based editor with agentic coding capabilities.",
+      "design_free_beginner": "Canva AI makes AI image generation accessible to everyone with an intuitive drag-and-drop interface.",
+      "design_mid_intermediate": "Leonardo AI offers professional-quality image generation with fine-tuning controls at a reasonable price.",
+      "design_enterprise_advanced": "Midjourney delivers the highest quality AI art generation with unmatched aesthetic control for professionals.",
+      "chat_free_beginner": "ChatGPT's free tier provides an excellent introduction to AI with a friendly interface and broad capabilities.",
+      "chat_mid_intermediate": "Claude excels at reasoning, long-form content, and nuanced analysis — ideal for professional work.",
+      "chat_enterprise_advanced": "Perplexity Pro combines multiple AI models with real-time web search for the most comprehensive research.",
+      "default_recommendation_reason": "Based on your preferences, this tool offers the best balance of features, price, and ease of use.",
+      "no_match_title": "Let's broaden your options",
+      "no_match_description": "Your current preferences are quite specific. Try adjusting one of your answers to see more matching tools."
+    },
+    "no_results_title": "No results?",
+    "no_results_description": "Try adjusting your selections or browse our full tools directory.",
+    "no_results_browse": "Browse All Tools"
+  },
+
+  "global": {
+    "site_name": "AI Tool Guide",
+    "site_description": "Honest reviews and comparisons of the best AI tools. Find the right AI for writing, coding, design, video, research, and more.",
+    "site_url": "https://ai-tools-101.com",
+    "nav_tools": "Tools",
+    "nav_compare": "Compare",
+    "nav_quiz": "Which AI Tool?",
+    "breadcrumb_home": "Home",
+    "breadcrumb_tools": "Tools",
+    "footer_tagline": "Helping you find the best AI tools since 2025. Honest reviews, no hype.",
+    "pricing_labels": {
+      "Free": "Free",
+      "Freemium": "Freemium",
+      "Paid": "Paid",
+      "Free Trial": "Free Trial"
+    }
+  }
+}

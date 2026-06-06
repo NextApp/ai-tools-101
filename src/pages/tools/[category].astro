@@ -1,0 +1,84 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ToolCard from '../../components/ToolCard.astro';
+import CategoryFilter from '../../components/CategoryFilter.astro';
+import toolsData from '../../data/tools.json';
+import pageContent from '../../data/page-content.json';
+
+export function getStaticPaths() {
+  const slugs = [
+    'ai-writing', 'ai-image', 'ai-coding', 'ai-video',
+    'ai-productivity', 'ai-chat', 'ai-voice', 'ai-research',
+  ];
+  return slugs.map((slug) => ({ params: { category: slug } }));
+}
+
+const { category } = Astro.params;
+
+const tools = toolsData as any[];
+const pc = pageContent as any;
+
+const catMapping: Record<string, string> = {
+  'ai-writing': 'AI Writing',
+  'ai-image': 'AI Image',
+  'ai-coding': 'AI Coding',
+  'ai-video': 'AI Video',
+  'ai-productivity': 'AI Productivity',
+  'ai-chat': 'AI Chat',
+  'ai-voice': 'AI Voice',
+  'ai-research': 'AI Research',
+};
+
+const catName = catMapping[category] || category;
+const catInfo = pc.categories[category] || { name: catName, description: '', seo_title: `${catName} — AI Tool Guide`, seo_description: '' };
+
+const filtered = tools.filter((t: any) => {
+  const toolCat = Object.keys(catMapping).find(k => catMapping[k] === t.category);
+  return toolCat === category;
+}).sort((a: any, b: any) => b.rating - a.rating);
+
+const categoryCounts: Record<string, number> = {};
+for (const [slug, name] of Object.entries(catMapping)) {
+  categoryCounts[slug] = tools.filter((t: any) => {
+    const toolCat = Object.keys(catMapping).find(k => catMapping[k] === t.category);
+    return toolCat === slug;
+  }).length;
+}
+
+const categories = Object.entries(catMapping).map(([slug, name]) => ({
+  slug,
+  name: name.replace('AI ', ''),
+  count: categoryCounts[slug] || 0,
+}));
+---
+
+<Layout title={catInfo.seo_title.split(' — ')[0]} description={catInfo.seo_description}>
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6">
+    <nav class="flex items-center gap-2 text-sm text-on-surface-variant mb-6">
+      <a href="/" class="hover:text-primary transition-colors">Home</a>
+      <span>/</span>
+      <a href="/tools" class="hover:text-primary transition-colors">Tools</a>
+      <span>/</span>
+      <span class="text-on-surface font-medium">{catName.replace('AI ', '')}</span>
+    </nav>
+
+    <h1 class="text-3xl md:text-4xl font-extrabold text-on-surface mb-4">{catInfo.heading || catName}</h1>
+    <p class="text-base text-on-surface-variant max-w-3xl leading-relaxed mb-8">{catInfo.description}</p>
+
+    <div class="mb-8">
+      <CategoryFilter categories={categories} currentCategory={category} />
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24">
+    {filtered.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filtered.map((tool: any) => (
+          <ToolCard tool={tool} />
+        ))}
+      </div>
+    ) : (
+      <p class="text-center text-on-surface-variant py-16">No tools found in this category.</p>
+    )}
+  </section>
+</Layout>

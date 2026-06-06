@@ -1,0 +1,56 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PromptCard from '../../components/PromptCard.astro';
+import CategoryFilter from '../../components/CategoryFilter.astro';
+import promptsData from '../../data/prompts.json';
+
+const prompts = promptsData as any[];
+const seo_title = 'Free ChatGPT & AI Prompt Templates Library 2026 | AI Tool Guide';
+const seo_description = 'Browse 46 free, copy-paste AI prompt templates for ChatGPT, Claude, and Gemini. Organized by category: writing, coding, marketing, business, social media, and more.';
+
+const categoryCounts: Record<string, number> = {};
+for (const p of prompts) {
+  const slug = p.category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
+  categoryCounts[slug] = (categoryCounts[slug] || 0) + 1;
+}
+
+const categories = Object.entries(categoryCounts).map(([slug, count]) => ({
+  slug,
+  name: prompts.find((p: any) => p.category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and') === slug)?.category || slug,
+  count,
+}));
+---
+
+<Layout title="Free AI Prompt Templates" description={seo_description}>
+  <section class="relative overflow-hidden py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#eaddff] text-[#5a00c6] text-xs font-semibold mb-6">
+        46 Templates &middot; 8 Categories &middot; Updated June 2026
+      </span>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface mb-5 leading-tight">
+        Free AI Prompt Templates
+      </h1>
+      <p class="text-base md:text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed mb-4">
+        Copy-paste ready prompts for ChatGPT, Claude, and Gemini. Save hours of prompt engineering — browse by category, click to copy, and start getting better AI results immediately.
+      </p>
+    </div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 -z-10 w-full h-full opacity-20 pointer-events-none">
+      <div class="absolute top-[-10%] left-[-5%] w-[40%] h-[50%] bg-blue-600/30 rounded-full blur-[100px]"></div>
+      <div class="absolute bottom-[-10%] right-[-5%] w-[35%] h-[50%] bg-purple-600/30 rounded-full blur-[100px]"></div>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
+    <div class="mb-8">
+      <CategoryFilter categories={categories} />
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {prompts.map((prompt: any) => (
+        <PromptCard prompt={prompt} />
+      ))}
+    </div>
+  </section>
+</Layout>
