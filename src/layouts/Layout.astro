@@ -10,10 +10,12 @@ interface Props {
   ogImage?: string;
   type?: 'website' | 'article';
   publishedAt?: Date;
+  modifiedAt?: Date;
   tags?: string[];
+  robots?: string;
 }
 
-const { title, description, ogImage, type = 'website', publishedAt, tags = [] } = Astro.props;
+const { title, description, ogImage, type = 'website', publishedAt, modifiedAt, tags = [], robots } = Astro.props;
 const siteTitle = 'AI Tool Guide';
 const fullTitle = title === 'Home' ? siteTitle : `${title} - ${siteTitle}`;
 const siteURL = 'https://ai-tools-101.com';
@@ -23,19 +25,21 @@ const gaEnabled = !!GA4_MEASUREMENT_ID;
 ---
 
 <!doctype html>
-<html lang="en" translate="no" class="notranslate">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="google" content="notranslate" />
-
     <meta name="google-site-verification" content="vDxgsZBCiTtAQipL8HURwlMRw3ax1S1FiUcV8w-LHGg" />
 
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
+    {robots && <meta name="robots" content={robots} />}
 
     <meta property="og:type" content={type} />
     <meta property="og:url" content={canonicalURL} />
@@ -43,7 +47,7 @@ const gaEnabled = !!GA4_MEASUREMENT_ID;
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content={siteTitle} />
     {ogImage && <meta property="og:image" content={new URL(ogImage, siteURL).href} />}
-    {!ogImage && <meta property="og:image" content={`${siteURL}/og-default.svg`} />}
+    {!ogImage && <meta property="og:image" content={`${siteURL}/og-default.png`} />}
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
@@ -51,7 +55,7 @@ const gaEnabled = !!GA4_MEASUREMENT_ID;
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
     {ogImage && <meta name="twitter:image" content={new URL(ogImage, siteURL).href} />}
-    {!ogImage && <meta name="twitter:image" content={`${siteURL}/og-default.svg`} />}
+    {!ogImage && <meta name="twitter:image" content={`${siteURL}/og-default.png`} />}
 
     {
       type === 'article' ? (
@@ -62,6 +66,7 @@ const gaEnabled = !!GA4_MEASUREMENT_ID;
           description: description,
           ...(ogImage && { image: new URL(ogImage, siteURL).href }),
           ...(publishedAt && { datePublished: publishedAt.toISOString() }),
+          ...(modifiedAt && { dateModified: modifiedAt.toISOString() }),
           author: {
             '@type': 'Organization',
             name: siteTitle,
@@ -110,7 +115,7 @@ gtag('config', '${GA4_MEASUREMENT_ID}');`}>
       </>
     )}
   </head>
-  <body class="notranslate min-h-screen flex flex-col">
+  <body class="min-h-screen flex flex-col">
     <Header />
     <main class="flex-1">
       <slot />

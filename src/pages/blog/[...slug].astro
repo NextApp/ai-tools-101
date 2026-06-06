@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 }
 
 const { post, Content } = Astro.props as { post: CollectionEntry<'posts'>; Content: any };
-const { title, description, pubDate, tags, heroImage } = post.data;
+const { title, description, pubDate, updatedDate, tags, heroImage } = post.data;
 
 const relatedPosts = (await getCollection('posts', ({ data }) =>
   !data.draft && data.title !== title && data.tags.some((t: string) => tags.includes(t))
@@ -30,6 +30,7 @@ const relatedPosts = (await getCollection('posts', ({ data }) =>
   ogImage={heroImage}
   type="article"
   publishedAt={pubDate}
+  modifiedAt={updatedDate}
   tags={tags}
 >
   <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
