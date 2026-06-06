@@ -1,0 +1,229 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import toolsData from '../../data/tools.json';
+
+export function getStaticPaths() {
+  const tools = toolsData as any[];
+  const slugSet = new Set(tools.map((t: any) => t.slug));
+  const pairs = new Set<string>();
+
+  for (const t of tools) {
+    for (const ref of (t.compare_with || [])) {
+      if (!slugSet.has(ref)) continue;
+      const [a, b] = [t.slug, ref].sort();
+      pairs.add(`${a}-vs-${b}`);
+    }
+  }
+
+  return Array.from(pairs).map((pair) => ({ params: { slugs: pair } }));
+}
+
+const { slugs } = Astro.params;
+const [slugA, slugB] = (slugs || '').split('-vs-');
+
+const tools = toolsData as any[];
+const toolA = tools.find((t: any) => t.slug === slugA);
+const toolB = tools.find((t: any) => t.slug === slugB);
+
+if (!toolA || !toolB) {
+  return Astro.redirect('/404');
+}
+
+const name = (t: any) => t.name;
+const siteURL = 'https://ai-tools-101.com';
+const seoTitle = `${name(toolA)} vs ${name(toolB)}: Which is Better in 2026?`;
+const seoDesc = `${name(toolA)} vs ${name(toolB)} compared side-by-side: features, pricing, pros & cons, and honest review. Find which ${toolA.category} tool fits your needs in 2026.`;
+---
+
+<Layout title={seoTitle} description={seoDesc.slice(0, 160)} type="article">
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16">
+    <nav class="flex items-center gap-2 text-sm text-on-surface-variant mb-8">
+      <a href="/" class="hover:text-primary transition-colors">Home</a>
+      <span>/</span>
+      <a href="/tools" class="hover:text-primary transition-colors">Tools</a>
+      <span>/</span>
+      <span class="text-on-surface font-medium">Compare</span>
+    </nav>
+
+    <header class="text-center mb-12">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-on-surface mb-4">
+        {name(toolA)} vs {name(toolB)}
+      </h1>
+      <p class="text-lg text-on-surface-variant max-w-2xl mx-auto">
+        Side-by-side comparison of two {toolA.category} tools. Features, pricing, pros & cons, and recommendations to help you choose.
+      </p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      {
+        [toolA, toolB].map((tool: any) => {
+          const pricingLabel = tool.pricing === 'Freemium' ? 'Freemium' : tool.pricing === 'Free' ? 'Free' : tool.pricing === 'Free Trial' ? 'Free Trial' : 'Paid';
+          const pricingColor = tool.pricing === 'Free' || tool.pricing === 'Freemium'
+            ? 'bg-green-100 text-green-800'
+            : tool.pricing === 'Free Trial'
+              ? 'bg-blue-100 text-blue-800'
+              : 'bg-amber-100 text-amber-800';
+          const stars = Math.round(tool.rating);
+          return (
+            <div class="bg-surface border border-outline-variant/40 rounded-2xl p-8">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/15 to-primary/5 flex items-center justify-center text-primary font-bold text-xl shrink-0">
+                  {tool.name.charAt(0)}
+                </div>
+                <div>
+                  <h2 class="text-xl font-bold text-on-surface">{tool.name}</h2>
+                  <div class="flex items-center gap-2 mt-1">
+                    <span class={`inline-block px-2 py-0.5 rounded-full text-xs font-semibold ${pricingColor}`}>{pricingLabel}</span>
+                    <span class="text-xs text-on-surface-variant">{stars}/5 ({tool.rating})</span>
+                  </div>
+                </div>
+              </div>
+
+              <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">{tool.description_short}</p>
+
+              <div class="space-y-4">
+                <div>
+                  <h3 class="text-sm font-semibold text-on-surface mb-2 uppercase tracking-wide">Key Features</h3>
+                  <ul class="space-y-1.5">
+                    {(tool.features || []).map((f: string) => (
+                      <li class="flex items-start gap-2 text-sm text-on-surface-variant">
+                        <span class="text-primary mt-1 shrink-0">+</span>
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-sm font-semibold text-on-surface mb-2 uppercase tracking-wide">Pros</h3>
+                  <ul class="space-y-1">
+                    {(tool.pros || []).map((p: string) => (
+                      <li class="flex items-start gap-2 text-sm text-green-700">
+                        <span class="mt-1 shrink-0">+</span>
+                        <span>{p}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-sm font-semibold text-on-surface mb-2 uppercase tracking-wide">Cons</h3>
+                  <ul class="space-y-1">
+                    {(tool.cons || []).map((c: string) => (
+                      <li class="flex items-start gap-2 text-sm text-red-600">
+                        <span class="mt-1 shrink-0">-</span>
+                        <span>{c}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-sm font-semibold text-on-surface mb-2 uppercase tracking-wide">Best For</h3>
+                  <div class="flex flex-wrap gap-1.5">
+                    {(tool.best_for || []).map((bf: string) => (
+                      <span class="inline-block px-2 py-0.5 bg-primary/5 text-primary text-xs font-medium rounded-full">{bf}</span>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <h3 class="text-sm font-semibold text-on-surface mb-2 uppercase tracking-wide">Pricing</h3>
+                  <p class="text-sm text-on-surface-variant">{tool.pricing_detail}</p>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-outline-variant/20 flex gap-3">
+                <a href={`/tools/${tool.slug}`} class="flex-1 inline-flex items-center justify-center px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-hover transition-colors">
+                  View Details
+                </a>
+                {tool.website && (
+                  <a href={tool.website} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-2 bg-surface border border-outline-variant/40 text-on-surface text-sm font-medium rounded-lg hover:border-primary/30 transition-colors">
+                    Visit Site
+                  </a>
+                )}
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+
+    <div class="max-w-3xl mx-auto bg-surface border border-outline-variant/40 rounded-2xl p-8 mb-10">
+      <h2 class="text-xl font-bold text-on-surface mb-6">Quick Comparison</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-outline-variant/20">
+              <th class="text-left py-3 pr-4 font-semibold text-on-surface">Category</th>
+              <th class="text-left py-3 px-4 font-semibold text-on-surface">{name(toolA)}</th>
+              <th class="text-left py-3 pl-4 font-semibold text-on-surface">{name(toolB)}</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-outline-variant/10">
+            <tr>
+              <td class="py-3 pr-4 font-medium text-on-surface">Category</td>
+              <td class="py-3 px-4 text-on-surface-variant">{toolA.category}</td>
+              <td class="py-3 pl-4 text-on-surface-variant">{toolB.category}</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-medium text-on-surface">Pricing</td>
+              <td class="py-3 px-4 text-on-surface-variant">{toolA.pricing}</td>
+              <td class="py-3 pl-4 text-on-surface-variant">{toolB.pricing}</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-medium text-on-surface">Rating</td>
+              <td class="py-3 px-4 text-on-surface-variant">{toolA.rating}/5</td>
+              <td class="py-3 pl-4 text-on-surface-variant">{toolB.rating}/5</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-medium text-on-surface">Features</td>
+              <td class="py-3 px-4 text-on-surface-variant">{(toolA.features || []).length} listed</td>
+              <td class="py-3 pl-4 text-on-surface-variant">{(toolB.features || []).length} listed</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-medium text-on-surface">Best For</td>
+              <td class="py-3 px-4 text-on-surface-variant">{(toolA.best_for || []).join(', ')}</td>
+              <td class="py-3 pl-4 text-on-surface-variant">{(toolB.best_for || []).join(', ')}</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4 font-medium text-on-surface">Starting Price</td>
+              <td class="py-3 px-4 text-on-surface-variant">{toolA.pricing_detail}</td>
+              <td class="py-3 pl-4 text-on-surface-variant">{toolB.pricing_detail}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-sm text-on-surface-variant mb-8">
+        This comparison is based on publicly available data and our independent research.
+        Both tools offer free tiers or trials — we recommend testing them yourself before making a final decision.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        {toolA.website && (
+          <a href={toolA.website} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 bg-primary text-white font-semibold rounded-xl hover:bg-primary-hover transition-colors">
+            Try {name(toolA)} →
+          </a>
+        )}
+        {toolB.website && (
+          <a href={toolB.website} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 bg-surface border border-outline-variant/40 text-on-surface font-semibold rounded-xl hover:border-primary/30 transition-colors">
+            Try {name(toolB)} →
+          </a>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: seoTitle,
+    description: seoDesc.slice(0, 160),
+    author: { '@type': 'Organization', name: 'AI Tool Guide', url: siteURL },
+    publisher: { '@type': 'Organization', name: 'AI Tool Guide', url: siteURL },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${siteURL}/compare/${slugs}` },
+  })}>
+  </script>
+</Layout>
