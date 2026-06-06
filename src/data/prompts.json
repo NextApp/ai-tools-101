@@ -1,0 +1,699 @@
+[
+  {
+    "title": "Business Model Canvas",
+    "slug": "business-model-canvas",
+    "category": "Business & Strategy",
+    "subcategory": "Planning",
+    "description": "Fill out a complete Business Model Canvas for a startup idea with practical, grounded suggestions.",
+    "prompt": "Help me complete a Business Model Canvas for: [STARTUP_IDEA]. Fill each of the 9 blocks: 1) Customer Segments (who are they, what are their jobs-to-be-done), 2) Value Propositions (what problem do you solve, why you over alternatives), 3) Channels (how you reach customers), 4) Customer Relationships (how you retain them), 5) Revenue Streams, 6) Key Resources, 7) Key Activities, 8) Key Partners, 9) Cost Structure. Be honest — flag risky assumptions and suggest ways to test them cheaply.",
+    "use_case": "When ideating a new business and need a structured canvas to think through the model.",
+    "tags": [
+      "business model",
+      "startup",
+      "planning",
+      "strategy"
+    ]
+  },
+  {
+    "title": "Competitor Analysis Report",
+    "slug": "competitor-analysis",
+    "category": "Business & Strategy",
+    "subcategory": "Analysis",
+    "description": "Get a structured competitor analysis comparing features, pricing, positioning, strengths, and weaknesses.",
+    "prompt": "Analyze [COMPETITOR_NAME] as a competitor to my business: [MY_BUSINESS_DESCRIPTION]. Provide: 1) Company overview (founded, size, funding, target audience), 2) Product/service comparison (feature matrix), 3) Pricing comparison, 4) Positioning and messaging analysis, 5) Their strengths we should learn from, 6) Their weaknesses we can exploit, 7) Their likely next moves, 8) Our competitive advantage and how to communicate it.",
+    "use_case": "For competitive intelligence reports that inform product and marketing strategy.",
+    "tags": [
+      "competitor analysis",
+      "strategy",
+      "market research",
+      "business"
+    ]
+  },
+  {
+    "title": "Investor Pitch Deck Outline",
+    "slug": "pitch-deck-outline",
+    "category": "Business & Strategy",
+    "subcategory": "Fundraising",
+    "description": "Create a compelling investor pitch deck outline with slide-by-slide content suggestions.",
+    "prompt": "Create a pitch deck outline for: [STARTUP_NAME] raising a [SEED/SERIES_A/etc.] round. Slide-by-slide: 1) Title slide, 2) Problem (with data), 3) Solution (clear before/after), 4) Market size (TAM/SAM/SOM), 5) Product demo or screenshot description, 6) Traction (key metrics and growth), 7) Business model, 8) Competitive landscape (with differentiation), 9) Go-to-market strategy, 10) Team, 11) Financial projections (key numbers), 12) The Ask (amount, use of funds, milestones). For each slide: write the key message and suggested visuals.",
+    "use_case": "When preparing to raise funding and need a professional pitch deck structure.",
+    "tags": [
+      "pitch deck",
+      "fundraising",
+      "startup",
+      "investors"
+    ]
+  },
+  {
+    "title": "SWOT Analysis Generator",
+    "slug": "swot-analysis",
+    "category": "Business & Strategy",
+    "subcategory": "Analysis",
+    "description": "Generate a detailed SWOT analysis for any business, product, or idea with actionable insights.",
+    "prompt": "Perform a detailed SWOT analysis for: [COMPANY/PRODUCT/IDEA]. Industry context: [INDUSTRY]. For each quadrant provide 4-5 specific points: Strengths (internal advantages), Weaknesses (internal limitations), Opportunities (external factors to leverage), Threats (external risks). After the SWOT, provide: 1) Top 3 strategic recommendations based on the analysis, 2) The most urgent action to take this quarter.",
+    "use_case": "For strategic planning sessions, business proposals, or evaluating new market opportunities.",
+    "tags": [
+      "SWOT",
+      "strategy",
+      "business analysis",
+      "planning"
+    ]
+  },
+  {
+    "title": "API Endpoint Design",
+    "slug": "api-endpoint-design",
+    "category": "Coding & Development",
+    "subcategory": "Backend",
+    "description": "Design a RESTful API with proper endpoints, request/response formats, error handling, and authentication.",
+    "prompt": "Design a RESTful API for: [APPLICATION_DESCRIPTION]. Provide: 1) List of all endpoints with HTTP methods and paths, 2) Request body format for POST/PUT endpoints, 3) Response format for each endpoint with example JSON, 4) HTTP status codes and error response format, 5) Authentication approach (JWT, OAuth, API keys), 6) Rate limiting strategy, 7) Pagination format for list endpoints. Follow REST best practices.",
+    "use_case": "When starting a new backend project and need a complete API specification.",
+    "tags": [
+      "API",
+      "REST",
+      "backend",
+      "design",
+      "architecture"
+    ]
+  },
+  {
+    "title": "Debug Error Message",
+    "slug": "debug-error",
+    "category": "Coding & Development",
+    "subcategory": "Debugging",
+    "description": "Paste an error message and get a diagnosis, root cause analysis, and step-by-step fix.",
+    "prompt": "I'm getting the following error in my [LANGUAGE/FRAMEWORK] application. Please: 1) Explain what this error means in simple terms, 2) Identify the most likely root cause, 3) Provide a step-by-step fix, 4) Suggest how to prevent this error in the future, 5) Mention any related issues I should also check. Here's the error and relevant code:\n\nError:\n```\n[ERROR_MESSAGE]\n```\n\nRelevant code:\n```\n[CODE]\n```",
+    "use_case": "When stuck on an error message and need faster debugging help than Stack Overflow.",
+    "tags": [
+      "debugging",
+      "error",
+      "troubleshooting",
+      "fix"
+    ]
+  },
+  {
+    "title": "Explain Code Line by Line",
+    "slug": "explain-code",
+    "category": "Coding & Development",
+    "subcategory": "Learning",
+    "description": "Get a line-by-line explanation of any code snippet, perfect for learning and code reviews.",
+    "prompt": "Explain the following code line by line. For each line: state what it does, why it's written that way, and any potential issues or edge cases. At the end, give a high-level summary of what the entire code block accomplishes. Assume the reader knows basic programming but is unfamiliar with this specific code. Language: [LANGUAGE].\n\n```\n[CODE]\n```",
+    "use_case": "When learning a new codebase, preparing for code reviews, or teaching programming concepts.",
+    "tags": [
+      "coding",
+      "explanation",
+      "learning",
+      "code review"
+    ]
+  },
+  {
+    "title": "Generate Unit Tests",
+    "slug": "generate-unit-tests",
+    "category": "Coding & Development",
+    "subcategory": "Testing",
+    "description": "Generate comprehensive unit tests for any function, covering edge cases, happy paths, and error states.",
+    "prompt": "Write comprehensive unit tests for the following function. Cover: 1) Happy path (normal expected input), 2) Edge cases (empty input, very large input, boundary values), 3) Error states (invalid input, null, undefined), 4) Performance test cases if applicable. Use [TESTING_FRAMEWORK] and follow best practices. Include setup/teardown if needed. Here's the function:\n\n```[LANGUAGE]\n[FUNCTION_CODE]\n```",
+    "use_case": "For quickly generating test coverage for functions during development.",
+    "tags": [
+      "testing",
+      "unit tests",
+      "code quality",
+      "TDD"
+    ]
+  },
+  {
+    "title": "Refactor Code for Performance",
+    "slug": "refactor-performance",
+    "category": "Coding & Development",
+    "subcategory": "Optimization",
+    "description": "Get suggestions to refactor your code for better performance, with explanations of each improvement.",
+    "prompt": "Analyze the following code for performance bottlenecks and refactor it for optimal performance. For each improvement: 1) Identify the bottleneck, 2) Explain why it's slow, 3) Show the refactored version, 4) Estimate the performance gain (e.g., O(n^2) to O(n log n)). Prioritize changes with the biggest impact first. Keep the same functionality and avoid over-engineering.\n\n```[LANGUAGE]\n[CODE]\n```",
+    "use_case": "When your application is slow and you need targeted performance improvements.",
+    "tags": [
+      "performance",
+      "refactoring",
+      "optimization",
+      "code quality"
+    ]
+  },
+  {
+    "title": "SQL Query Optimization",
+    "slug": "sql-query-optimization",
+    "category": "Coding & Development",
+    "subcategory": "Database",
+    "description": "Optimize a slow SQL query with indexing suggestions, query restructuring, and EXPLAIN analysis.",
+    "prompt": "Optimize the following SQL query for better performance. Provide: 1) Analysis of why it might be slow (missing indexes, suboptimal joins, etc.), 2) Recommended indexes with CREATE INDEX statements, 3) The rewritten optimized query, 4) Explain what each optimization does, 5) Estimated performance improvement. Assume the database is [DATABASE_TYPE] with the following table schemas:\n\n[TABLE_SCHEMAS]\n\nQuery:\n```sql\n[QUERY]\n```",
+    "use_case": "When database queries are slow and need targeted optimization without full schema redesign.",
+    "tags": [
+      "SQL",
+      "database",
+      "optimization",
+      "performance",
+      "backend"
+    ]
+  },
+  {
+    "title": "Case Study Storytelling",
+    "slug": "case-study",
+    "category": "Content Writing",
+    "subcategory": "Business Writing",
+    "description": "Transform raw client results into a compelling case study with problem, solution, and results sections.",
+    "prompt": "Write a case study based on this information about [CLIENT_NAME] using [PRODUCT/SERVICE]. Use the Before-After-Bridge framework: 1) The Before: describe the client's situation, pain points, and what they tried before, 2) The Bridge: how they found our solution, implementation process, 3) The After: specific results with numbers (% improvements, time saved, revenue generated), 4) Client quote (placeholder), 5) Key takeaways. Make it a story, not a report. Focus on the transformation.",
+    "use_case": "For creating persuasive case studies that serve as social proof for sales and marketing.",
+    "tags": [
+      "case study",
+      "business writing",
+      "social proof",
+      "marketing"
+    ]
+  },
+  {
+    "title": "Comparison Article (X vs Y)",
+    "slug": "comparison-article",
+    "category": "Content Writing",
+    "subcategory": "Blogging",
+    "description": "Write a balanced comparison article between two products, tools, or approaches.",
+    "prompt": "Write a comprehensive comparison article: [PRODUCT_A] vs [PRODUCT_B]. Structure: 1) Intro (why compare these two, who this is for), 2) Quick overview table (features, pricing, best for), 3) Deep-dive comparison by features (at least 5 categories), 4) Pricing and value analysis, 5) Use case: when to choose A, 6) Use case: when to choose B, 7) Alternatives to consider, 8) Final verdict with clear recommendation. Be fair and balanced — both products should come off as good options for different people.",
+    "use_case": "For high-traffic comparison articles that rank well for 'X vs Y' search queries.",
+    "tags": [
+      "comparison",
+      "review",
+      "blogging",
+      "SEO"
+    ]
+  },
+  {
+    "title": "Email Newsletter Content",
+    "slug": "email-newsletter",
+    "category": "Content Writing",
+    "subcategory": "Email",
+    "description": "Draft an engaging email newsletter with a compelling subject line, body copy, and clear CTA.",
+    "prompt": "Write a newsletter email for: [AUDIENCE] about [TOPIC]. Include: 1) 3 subject line options (one curiosity-driven, one benefit-driven, one urgent), 2) A warm opening paragraph that connects with the reader, 3) 2-3 main content sections with subheadings, 4) 1 personal story or insight, 5) A clear, single CTA, 6) A P.S. line that reinforces the CTA. Keep it personal and avoid corporate tone.",
+    "use_case": "For building engaging email newsletters that drive opens and clicks.",
+    "tags": [
+      "email",
+      "newsletter",
+      "marketing",
+      "copywriting"
+    ]
+  },
+  {
+    "title": "FAQ Content Generator",
+    "slug": "faq-generator",
+    "category": "Content Writing",
+    "subcategory": "Website Content",
+    "description": "Generate a thorough FAQ section for any product, service, or topic with SEO-friendly Q&A pairs.",
+    "prompt": "Create an FAQ section for: [TOPIC/PRODUCT]. Generate 12-15 frequently asked questions with detailed, helpful answers. Requirements: 1) Questions should cover common objections, how-to queries, and comparison questions, 2) Answers should be 2-4 sentences each, honest and direct, 3) Include keywords naturally in both questions and answers, 4) Link to relevant resources where applicable, 5) End with 'Still have questions?' with contact info placeholder. Use real questions your audience actually asks.",
+    "use_case": "For building out FAQ pages that capture long-tail search traffic and reduce support inquiries.",
+    "tags": [
+      "FAQ",
+      "website content",
+      "SEO",
+      "customer support"
+    ]
+  },
+  {
+    "title": "How-To Guide with Step-by-Step Instructions",
+    "slug": "how-to-guide",
+    "category": "Content Writing",
+    "subcategory": "Tutorials",
+    "description": "Create a detailed step-by-step how-to guide that's easy for beginners to follow.",
+    "prompt": "Write a comprehensive step-by-step guide on how to: [TASK]. Format each step as: Step [N]: [Action Title] - followed by clear instructions any beginner can follow. Include: 1) What you'll need before starting, 2) Each step with screenshots placeholders marked as [SCREENSHOT: description], 3) Common mistakes to avoid in each step, 4) A troubleshooting section for common problems, 5) Final tips for best results.",
+    "use_case": "When creating tutorial content that needs to be accessible to readers of all skill levels.",
+    "tags": [
+      "tutorial",
+      "how-to",
+      "beginner",
+      "step-by-step"
+    ]
+  },
+  {
+    "title": "Listicle Article Generator",
+    "slug": "listicle-generator",
+    "category": "Content Writing",
+    "subcategory": "Blogging",
+    "description": "Create an engaging listicle article with numbered items, descriptions, and a compelling intro/outro.",
+    "prompt": "Write a listicle article: 'Top [NUMBER] [THING] for [AUDIENCE] in [YEAR]'. Structure: 1) Engaging intro (why this list matters, what criteria you used), 2) For each item: bold name, 2-3 sentence description, why it made the list, a pro tip. 3) Honorable mentions (2-3), 4) Conclusion with how to choose. Make each item entry scannable and distinct. Include relevant stats or data points where possible.",
+    "use_case": "For creating highly shareable list posts that perform well on social media and search.",
+    "tags": [
+      "listicle",
+      "blogging",
+      "content creation",
+      "SEO"
+    ]
+  },
+  {
+    "title": "Long-Form Article from Bullet Points",
+    "slug": "article-from-bullets",
+    "category": "Content Writing",
+    "subcategory": "Blogging",
+    "description": "Turn a set of bullet points into a flowing, well-structured long-form article with proper transitions.",
+    "prompt": "Expand the following bullet points into a cohesive, well-written long-form article. Use smooth transitions between sections, add context and examples where appropriate, and maintain an engaging but professional tone. Structure with clear introduction, body paragraphs, and conclusion. Target length: 1000-1500 words.\n\nBullet points:\n[BULLET_POINTS]",
+    "use_case": "When you've outlined your ideas in bullet form but need them turned into publishable prose.",
+    "tags": [
+      "blogging",
+      "content creation",
+      "writing",
+      "expansion"
+    ]
+  },
+  {
+    "title": "Persuasive Sales Page Copy",
+    "slug": "sales-page-copy",
+    "category": "Content Writing",
+    "subcategory": "Copywriting",
+    "description": "Write a full sales page using the AIDA framework (Attention, Interest, Desire, Action) that converts.",
+    "prompt": "Write a persuasive sales page for: [PRODUCT/SERVICE] targeting: [AUDIENCE] with the pain point: [PAIN_POINT]. Use the AIDA framework: 1) Attention: headline + subheadline that hooks, 2) Interest: agitate the problem + introduce solution, 3) Desire: benefits, social proof, risk reversal (guarantee), 4) Action: strong CTA with urgency/scarcity if applicable. Include: before/after scenario, 3-5 testimonials placeholders, FAQ section, bonus stack. Tone: conversational but authoritative.",
+    "use_case": "When launching a product and need high-converting long-form sales copy.",
+    "tags": [
+      "sales",
+      "copywriting",
+      "conversion",
+      "AIDA"
+    ]
+  },
+  {
+    "title": "Product Review Article",
+    "slug": "product-review-article",
+    "category": "Content Writing",
+    "subcategory": "Reviews",
+    "description": "Write a balanced, honest product review article with pros, cons, features breakdown, and a final verdict.",
+    "prompt": "Write a detailed product review for: [PRODUCT_NAME]. Structure it as follows: 1) Introduction (what it is, who it's for), 2) Key Features (list 4-5 with brief explanations), 3) Real-world performance (share specific examples and use cases), 4) Pros (3-4 bullet points), 5) Cons (2-3 honest limitations), 6) Pricing breakdown, 7) Comparison to 1-2 alternatives, 8) Final verdict (who should buy it, who should skip). Write in a trustworthy, reviewer's voice.",
+    "use_case": "For writing affiliate-friendly product reviews that build reader trust through balanced analysis.",
+    "tags": [
+      "reviews",
+      "affiliate",
+      "product review",
+      "comparison"
+    ]
+  },
+  {
+    "title": "Rewrite for Clarity & Conciseness",
+    "slug": "rewrite-for-clarity",
+    "category": "Content Writing",
+    "subcategory": "Editing",
+    "description": "Rewrite any text to be clearer, more concise, and easier to read while preserving the original meaning.",
+    "prompt": "Rewrite the following text to be clearer and more concise. Remove jargon, shorten sentences, and use active voice. Keep the original meaning and tone but make it flow better. Target a reading level of grade 8-10. Here is the text:\n\n[TEXT]",
+    "use_case": "Use when you have rough draft content that needs polishing before publishing.",
+    "tags": [
+      "editing",
+      "clarity",
+      "writing",
+      "revision"
+    ]
+  },
+  {
+    "title": "SEO Blog Post Outline",
+    "slug": "seo-blog-post-outline",
+    "category": "Content Writing",
+    "subcategory": "Blogging",
+    "description": "Generate a detailed, SEO-optimized blog post outline with H2/H3 headings, target keywords, and content suggestions.",
+    "prompt": "Create a detailed blog post outline for the topic: [TOPIC]. Include: 1) A compelling H1 title with primary keyword, 2) 5-7 H2 sections with supporting H3 sub-points, 3) Target secondary keywords for each section, 4) Suggested word count per section, 5) A meta description under 160 characters. Make it comprehensive enough for a 2000+ word article.",
+    "use_case": "When you need a structured outline before writing a long-form blog post that ranks well in search engines.",
+    "tags": [
+      "blogging",
+      "SEO",
+      "content outline",
+      "writing"
+    ]
+  },
+  {
+    "title": "Character Development Profile",
+    "slug": "character-profile",
+    "category": "Creative Writing",
+    "subcategory": "Fiction",
+    "description": "Build a deep, three-dimensional character profile with backstory, motivations, quirks, and voice.",
+    "prompt": "Create a detailed character profile for a [ROLE/PROTAGONIST_TYPE] in a [GENRE] story. Include: 1) Basic info (name, age, appearance), 2) Backstory (2-3 defining life events), 3) Core motivation (what they want and why), 4) Internal conflict (fear, flaw, or contradiction), 5) 3 unique quirks or habits, 6) How they speak (dialogue sample of 2-3 lines), 7) Their arc (how they change through the story), 8) A secret they're hiding. Make them feel real, not stereotypical.",
+    "use_case": "When developing characters for a novel, screenplay, or role-playing game.",
+    "tags": [
+      "fiction",
+      "character",
+      "creative writing",
+      "worldbuilding"
+    ]
+  },
+  {
+    "title": "Dialogue Scene Workshop",
+    "slug": "dialogue-scene",
+    "category": "Creative Writing",
+    "subcategory": "Fiction",
+    "description": "Write a tense, natural-sounding dialogue scene between two characters with conflicting goals.",
+    "prompt": "Write a dialogue-only scene (no narration) between two characters: [CHARACTER_A] (who wants [GOAL_A]) and [CHARACTER_B] (who wants [GOAL_B]). Their relationship: [RELATIONSHIP]. Setting: [SETTING]. Requirements: 1) Each character should have a distinct voice, 2) Show tension through what's left unsaid (subtext), 3) The power dynamic should shift at least once during the conversation, 4) End with a subtle but meaningful moment. Length: 300-500 words.",
+    "use_case": "For practicing dialogue writing and creating scenes that reveal character through conversation.",
+    "tags": [
+      "dialogue",
+      "fiction",
+      "scene",
+      "creative writing"
+    ]
+  },
+  {
+    "title": "Poetry Prompt Engine",
+    "slug": "poetry-prompt",
+    "category": "Creative Writing",
+    "subcategory": "Poetry",
+    "description": "Get a unique poetry prompt with form, theme, imagery constraints, and a first line starter.",
+    "prompt": "Generate a poetry prompt with these constraints: Form: [SONNET/FREE_VERSE/HAIKU/VILLANELLE/etc.], Theme: [THEME], Mood: [MOOD], Must include these words or images: [WORD_LIST]. Provide: 1) The prompt challenge, 2) A suggested first line as a starter, 3) 2-3 sensory details to inspire imagery, 4) A reference poem that exemplifies the form. Push for originality — no clichés.",
+    "use_case": "For poets seeking structured creative constraints to spark new work.",
+    "tags": [
+      "poetry",
+      "creative writing",
+      "prompt",
+      "inspiration"
+    ]
+  },
+  {
+    "title": "Story Idea Generator",
+    "slug": "story-idea-generator",
+    "category": "Creative Writing",
+    "subcategory": "Fiction",
+    "description": "Generate unique story ideas with character, conflict, setting, and plot twist elements.",
+    "prompt": "Generate 5 unique story ideas in the [GENRE] genre. For each idea provide: 1) A compelling one-line logline, 2) Main character description (name, age, defining trait, flaw), 3) Central conflict, 4) Unique setting, 5) A surprising plot twist, 6) Target audience and comparable works. Make them diverse and unexpected — avoid cliches of the genre.",
+    "use_case": "When you have writer's block and need fresh, structured story concepts to spark creativity.",
+    "tags": [
+      "fiction",
+      "creative writing",
+      "story",
+      "brainstorming"
+    ]
+  },
+  {
+    "title": "Explain Complex Topic Simply",
+    "slug": "explain-simply",
+    "category": "Education & Learning",
+    "subcategory": "Teaching",
+    "description": "Get any complex topic explained in simple terms using analogies, examples, and progressive disclosure.",
+    "prompt": "Explain [COMPLEX_TOPIC] as if I'm a complete beginner. Use the Feynman Technique: 1) Start with a simple analogy from everyday life, 2) Break it down into 3-5 core concepts explained in plain English, 3) Give one concrete example for each concept, 4) Explain what most people get wrong about this topic, 5) Summarize in 2 sentences a 10-year-old could understand. No jargon without explanation.",
+    "use_case": "When learning something new or preparing to teach a complex topic to others.",
+    "tags": [
+      "learning",
+      "teaching",
+      "explanation",
+      "Feynman technique",
+      "education"
+    ]
+  },
+  {
+    "title": "Flashcard Content Generator",
+    "slug": "flashcard-generator",
+    "category": "Education & Learning",
+    "subcategory": "Studying",
+    "description": "Generate a set of flashcards with questions on one side and detailed answers on the other.",
+    "prompt": "Create 20 flashcards for studying: [TOPIC]. Format each as: Front: [Question or prompt], Back: [Concise but complete answer with key details]. Mix question types: definitions, fill-in-the-blank, concept explanations, compare/contrast, and application questions. Order them from basic to advanced. Include 3 challenge cards at the end for deeper understanding.",
+    "use_case": "When you need spaced-repetition study materials for any subject.",
+    "tags": [
+      "flashcards",
+      "study",
+      "memorization",
+      "education"
+    ]
+  },
+  {
+    "title": "Lesson Plan Creator",
+    "slug": "lesson-plan",
+    "category": "Education & Learning",
+    "subcategory": "Teaching",
+    "description": "Design a complete lesson plan with learning objectives, activities, discussion questions, and assessment.",
+    "prompt": "Create a [DURATION]-minute lesson plan for teaching [TOPIC] to [GRADE_LEVEL/AGE_GROUP]. Include: 1) Learning objectives (3-4 measurable goals), 2) Required materials and preparation, 3) Hook/engagement activity (5 min), 4) Direct instruction outline (key points with examples), 5) Guided practice activity, 6) Independent practice or group work, 7) Discussion questions (5 thought-provoking), 8) Assessment method (formative or summative), 9) Differentiation strategies for different learner levels.",
+    "use_case": "For teachers and trainers who need ready-to-use lesson plans with pedagogical structure.",
+    "tags": [
+      "teaching",
+      "lesson plan",
+      "education",
+      "curriculum"
+    ]
+  },
+  {
+    "title": "Study Guide Generator",
+    "slug": "study-guide",
+    "category": "Education & Learning",
+    "subcategory": "Studying",
+    "description": "Turn any topic or lecture notes into a structured study guide with key concepts, questions, and summaries.",
+    "prompt": "Create a study guide for: [TOPIC/SUBJECT]. Include: 1) Key terms and definitions (5-10 terms), 2) Core concepts summary (3-5 concepts explained), 3) 10 review questions with answers, 4) Common mistakes or misconceptions to avoid, 5) A mnemonic or memory aid for the most important concept, 6) Suggested practice exercises. Target audience: [STUDENT_LEVEL].",
+    "use_case": "When preparing for exams or creating educational materials for students.",
+    "tags": [
+      "study",
+      "education",
+      "learning",
+      "exam prep"
+    ]
+  },
+  {
+    "title": "Cold Outreach Email Sequence",
+    "slug": "cold-outreach-email",
+    "category": "Marketing & SEO",
+    "subcategory": "Email",
+    "description": "Create a 3-email cold outreach sequence that's personalized, value-first, and gets replies.",
+    "prompt": "Write a 3-email cold outreach sequence for reaching out to: [TARGET_AUDIENCE] about: [OFFER/VALUE_PROP]. Email 1 (Day 1): Brief introduction, specific compliment about their work, clear value proposition in one sentence, soft CTA. Email 2 (Day 4): Share one piece of value (tip, insight, resource), reference email 1, no hard ask. Email 3 (Day 8): Polite follow-up, restate value briefly, clear and easy CTA. Keep each email under 150 words. Make them feel personal, not templated.",
+    "use_case": "For B2B outreach, partnership proposals, or link-building campaigns.",
+    "tags": [
+      "email",
+      "outreach",
+      "sales",
+      "B2B",
+      "cold email"
+    ]
+  },
+  {
+    "title": "Google Ads Headline Generator",
+    "slug": "google-ads-headlines",
+    "category": "Marketing & SEO",
+    "subcategory": "Advertising",
+    "description": "Generate 10 click-worthy Google Ads headlines with keywords, benefits, and CTAs for maximum CTR.",
+    "prompt": "Generate 10 Google Ads headlines for: [PRODUCT/SERVICE]. Each headline must be under 30 characters. Include a mix of: 1) Keyword-rich headlines, 2) Benefit-driven headlines, 3) Question headlines, 4) Urgency/CTA headlines. Also write 3 description lines (under 90 characters each) that complement the headlines. Target audience: [AUDIENCE].",
+    "use_case": "When building Google Search campaigns and need high-CTR ad copy variants for A/B testing.",
+    "tags": [
+      "advertising",
+      "Google Ads",
+      "PPC",
+      "copywriting"
+    ]
+  },
+  {
+    "title": "Keyword-Rich Product Description",
+    "slug": "keyword-product-description",
+    "category": "Marketing & SEO",
+    "subcategory": "E-commerce",
+    "description": "Write an SEO-friendly product description that naturally includes target keywords and converts browsers into buyers.",
+    "prompt": "Write a product description for: [PRODUCT_NAME]. Include: 1) A compelling opening sentence with the primary keyword, 2) 3-4 bullet points highlighting key features and benefits, 3) A paragraph on who this product is perfect for, 4) Technical specifications (as applicable), 5) A closing sentence that creates urgency or reinforces value. Naturally incorporate these keywords: [KEYWORDS]. Target word count: 150-250 words.",
+    "use_case": "For e-commerce product pages that need to rank well and convert visitors.",
+    "tags": [
+      "e-commerce",
+      "product description",
+      "SEO",
+      "copywriting"
+    ]
+  },
+  {
+    "title": "Landing Page Copy",
+    "slug": "landing-page-copy",
+    "category": "Marketing & SEO",
+    "subcategory": "Conversion",
+    "description": "Write persuasive landing page copy with hero section, features, social proof, pricing, and CTA.",
+    "prompt": "Write landing page copy for: [PRODUCT/SERVICE]. Sections: 1) Hero (headline + subheadline + CTA button text), 2) Problem statement (2-3 sentences describing the pain point), 3) Solution overview with 4-5 key benefits, 4) How it works (3 simple steps), 5) Social proof placeholder, 6) Pricing or value proposition, 7) FAQ section (5 common questions with answers), 8) Final CTA section. Target audience: [AUDIENCE]. Tone: [TONE].",
+    "use_case": "When launching a product or service page that needs to convert visitors into leads or customers.",
+    "tags": [
+      "landing page",
+      "conversion",
+      "copywriting",
+      "marketing"
+    ]
+  },
+  {
+    "title": "Meta Description Generator",
+    "slug": "meta-description-generator",
+    "category": "Marketing & SEO",
+    "subcategory": "SEO",
+    "description": "Create an SEO-optimized meta description that's under 160 characters and drives clicks from search results.",
+    "prompt": "Write 3 variations of a meta description for this page: [PAGE_TITLE]. The page is about: [CONTENT_SUMMARY]. Primary keyword: [KEYWORD]. Requirements: under 160 characters, include the primary keyword naturally, include a benefit or hook, end with a subtle CTA. Make each variation target a different search intent (informational, commercial, transactional).",
+    "use_case": "For quickly generating SEO meta descriptions that improve click-through rates from Google search results.",
+    "tags": [
+      "SEO",
+      "meta description",
+      "search engine",
+      "click-through rate"
+    ]
+  },
+  {
+    "title": "Social Media Ad Copy Pack",
+    "slug": "social-media-ad-copy",
+    "category": "Marketing & SEO",
+    "subcategory": "Advertising",
+    "description": "Generate a complete ad copy pack for Facebook, Instagram, LinkedIn, and X (Twitter) in one prompt.",
+    "prompt": "Create a social media ad copy pack for: [PRODUCT/SERVICE]. For each platform, provide: Facebook (primary text 125 chars + headline 40 chars + description 30 chars), Instagram (caption 125 chars + 5 hashtag suggestions), LinkedIn (professional intro 2-3 sentences + 3 key points + CTA), X/Twitter (2 tweet variations under 280 chars). All copy should be on-brand, action-oriented, and tailored to each platform's audience style.",
+    "use_case": "When running a multi-platform ad campaign and need platform-optimized copy in one shot.",
+    "tags": [
+      "social media",
+      "advertising",
+      "Facebook ads",
+      "Instagram",
+      "LinkedIn"
+    ]
+  },
+  {
+    "title": "Daily Standup Update",
+    "slug": "daily-standup-update",
+    "category": "Productivity & Work",
+    "subcategory": "Project Management",
+    "description": "Generate a clear, concise daily standup update from your scattered notes and task list.",
+    "prompt": "Write my daily standup update based on these notes. Format: Yesterday I [accomplished], Today I'm working on [tasks], Blockers: [any issues]. Keep each section to 2-3 bullet points max. Be specific about what was actually completed, not just what was worked on.\n\nMy notes and tasks:\n[NOTES]",
+    "use_case": "For quickly preparing daily standup updates when you have scattered thoughts about what you did.",
+    "tags": [
+      "standup",
+      "project management",
+      "agile",
+      "daily update"
+    ]
+  },
+  {
+    "title": "Meeting Notes to Action Items",
+    "slug": "meeting-notes-to-actions",
+    "category": "Productivity & Work",
+    "subcategory": "Meetings",
+    "description": "Transform raw meeting notes into a structured summary with action items, decisions, and follow-ups.",
+    "prompt": "Turn these raw meeting notes into a structured summary. Format: 1) Meeting purpose (1 sentence), 2) Key decisions made (numbered list), 3) Action items (table with: task, owner, deadline, priority), 4) Open questions that need follow-up, 5) Next meeting agenda suggestions. Be concise — no fluff.\n\nNotes:\n[RAW_NOTES]",
+    "use_case": "After any meeting to quickly produce a shareable summary instead of manually formatting notes.",
+    "tags": [
+      "meetings",
+      "productivity",
+      "notes",
+      "action items"
+    ]
+  },
+  {
+    "title": "Prioritize Your To-Do List",
+    "slug": "prioritize-todo-list",
+    "category": "Productivity & Work",
+    "subcategory": "Task Management",
+    "description": "Get your task list prioritized by urgency and importance with a clear action plan for the day.",
+    "prompt": "Help me prioritize this task list. Categorize each task into: 1) Do First (urgent + important), 2) Schedule (important, not urgent), 3) Delegate (urgent, not important), 4) Eliminate (neither urgent nor important). Then suggest the top 3 tasks I should complete today and in what order. Explain the reasoning for each placement.\n\nTasks:\n[TASK_LIST]",
+    "use_case": "When you're overwhelmed with tasks and need help focusing on what actually matters.",
+    "tags": [
+      "productivity",
+      "prioritization",
+      "task management",
+      "Eisenhower matrix"
+    ]
+  },
+  {
+    "title": "Project Proposal Outline",
+    "slug": "project-proposal",
+    "category": "Productivity & Work",
+    "subcategory": "Planning",
+    "description": "Create a professional project proposal outline with problem statement, solution, timeline, and budget.",
+    "prompt": "Create a project proposal outline for: [PROJECT_NAME]. Sections: 1) Executive Summary (3-4 sentences), 2) Problem Statement (what problem does this solve?), 3) Proposed Solution (high-level approach), 4) Scope & Deliverables (bullet list), 5) Timeline (phases with estimated dates), 6) Resource Requirements (team, tools, budget), 7) Risks & Mitigations, 8) Success Metrics (how will we measure success?). Target audience: [STAKEHOLDER_TYPE].",
+    "use_case": "When you need to pitch a project idea to stakeholders or clients with a professional framework.",
+    "tags": [
+      "project management",
+      "proposal",
+      "planning",
+      "business"
+    ]
+  },
+  {
+    "title": "Weekly Review & Planning",
+    "slug": "weekly-review-planning",
+    "category": "Productivity & Work",
+    "subcategory": "Planning",
+    "description": "Conduct a structured weekly review — reflect on wins, losses, and plan the upcoming week.",
+    "prompt": "Guide me through a weekly review. Ask me to reflect on: 1) Top 3 wins this week, 2) What didn't go as planned and why, 3) Key lessons learned, 4) What I'm avoiding or procrastinating on, 5) Top 3 priorities for next week. After I share, help me identify patterns and suggest one change to improve next week. Start by asking: 'What were your top 3 wins this week?'",
+    "use_case": "For a structured weekly reflection session that improves productivity over time.",
+    "tags": [
+      "weekly review",
+      "reflection",
+      "planning",
+      "productivity"
+    ]
+  },
+  {
+    "title": "Instagram Carousel Content",
+    "slug": "instagram-carousel",
+    "category": "Social Media",
+    "subcategory": "Instagram",
+    "description": "Plan a 10-slide Instagram carousel with hook, educational content, and strong CTA.",
+    "prompt": "Plan a 10-slide Instagram carousel about: [TOPIC]. For each slide: Slide 1: Hook (bold statement or question to stop the scroll), Slides 2-8: One key point per slide with a short explanatory caption, Slide 9: Summary or key takeaway, Slide 10: CTA and follow suggestion. For each slide write: the visual idea (what image/graphic), the on-slide text (keep short), and the caption text for the post. Educational, not salesy.",
+    "use_case": "For creating engaging educational carousel posts that drive saves and shares on Instagram.",
+    "tags": [
+      "Instagram",
+      "carousel",
+      "social media",
+      "content creation"
+    ]
+  },
+  {
+    "title": "LinkedIn Thought Leadership Post",
+    "slug": "linkedin-thought-leadership",
+    "category": "Social Media",
+    "subcategory": "LinkedIn",
+    "description": "Write a LinkedIn post that demonstrates expertise, tells a story, and sparks discussion.",
+    "prompt": "Write a LinkedIn post about: [TOPIC/EXPERIENCE]. Structure: 1) Hook (first line that makes people click 'see more'), 2) The story or insight (personal experience that teaches something), 3) The lesson or key takeaway (1-2 actionable points), 4) A discussion question to drive comments, 5) 3-5 relevant hashtags. Tone: authentic, not preachy. Length: 150-250 words. Format with line breaks for readability.",
+    "use_case": "For building personal brand and professional credibility on LinkedIn.",
+    "tags": [
+      "LinkedIn",
+      "thought leadership",
+      "personal brand",
+      "professional"
+    ]
+  },
+  {
+    "title": "Social Media Content Calendar",
+    "slug": "content-calendar",
+    "category": "Social Media",
+    "subcategory": "Strategy",
+    "description": "Generate a week's worth of social media post ideas across platforms with content pillars and timing.",
+    "prompt": "Create a 7-day social media content calendar for: [BRAND/TOPIC]. For each day provide: Day & best posting time, Platform (Instagram/LinkedIn/Twitter/etc.), Content pillar (educational/behind-the-scenes/promotional/engagement/user-generated), Post idea with a sample caption or first line, Suggested visual or media type. Mix content types: 40% educational, 30% engagement, 20% behind-the-scenes, 10% promotional.",
+    "use_case": "When planning a week of social media content and want varied, strategic post ideas.",
+    "tags": [
+      "social media",
+      "content calendar",
+      "strategy",
+      "planning"
+    ]
+  },
+  {
+    "title": "TikTok/Reels Script Outline",
+    "slug": "tiktok-script",
+    "category": "Social Media",
+    "subcategory": "Short Video",
+    "description": "Script a short-form video with hook, pattern-interrupt, value delivery, and CTA.",
+    "prompt": "Write a script outline for a [DURATION]-second TikTok/Reels video about: [TOPIC]. Structure: 0-3s: Visual hook + text overlay (what makes someone stop scrolling), 3-8s: Pattern interrupt or surprising fact, 8-25s: Core content (teach one specific thing), 25-30s: CTA (follow, comment, try this). Include: what's happening on screen at each timestamp, spoken audio script, and suggested on-screen text. Pace: fast, no dead air.\n\nTarget audience: [AUDIENCE].",
+    "use_case": "For planning short-form video content that hooks viewers in the first 3 seconds.",
+    "tags": [
+      "TikTok",
+      "Reels",
+      "short video",
+      "script",
+      "content creation"
+    ]
+  },
+  {
+    "title": "Twitter/X Thread Blueprint",
+    "slug": "twitter-thread",
+    "category": "Social Media",
+    "subcategory": "Twitter/X",
+    "description": "Craft an engaging Twitter/X thread that teaches something valuable in digestible tweets.",
+    "prompt": "Write a Twitter/X thread about: [TOPIC]. Structure: Tweet 1: Bold hook or controversial take (make it impossible to scroll past). Tweets 2-6: One insight per tweet, building on each other. Tweet 7: The counterintuitive part or 'what nobody tells you'. Tweet 8: Summary + CTA (follow for more, check link in bio, etc.). Requirements: Each tweet under 280 chars, use numbering (1/8), leave white space for readability, end with a strong conclusion.\n\nMake it actionable — readers should learn something concrete by the end.",
+    "use_case": "For building an audience on X/Twitter through educational thread content.",
+    "tags": [
+      "Twitter",
+      "thread",
+      "social media",
+      "content creation"
+    ]
+  },
+  {
+    "title": "YouTube Video Description",
+    "slug": "youtube-description",
+    "category": "Social Media",
+    "subcategory": "YouTube",
+    "description": "Write an SEO-optimized YouTube description with timestamps, links, and keyword-rich summary.",
+    "prompt": "Write a YouTube video description for a video about: [TOPIC]. Include: 1) First 2 lines (above the fold): keyword-rich summary with CTA (these show in search), 2) Timestamps/chapters for each section, 3) 3-5 bullet points of what viewers will learn, 4) Links section (related videos, resources, social media), 5) 10-15 relevant hashtags, 6) A question to drive comments. Total length: 200-300 words. Primary keyword: [KEYWORD].",
+    "use_case": "For optimizing YouTube video descriptions to improve search rankings and viewer engagement.",
+    "tags": [
+      "YouTube",
+      "video",
+      "SEO",
+      "description",
+      "content creation"
+    ]
+  }
+]

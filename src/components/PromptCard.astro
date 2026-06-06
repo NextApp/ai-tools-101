@@ -1,0 +1,56 @@
+---
+interface Prompt {
+  title: string;
+  slug: string;
+  category: string;
+  description: string;
+  prompt: string;
+  use_case?: string;
+  tags?: string[];
+}
+
+interface Props {
+  prompt: Prompt;
+}
+
+const { prompt } = Astro.props;
+const encodedPrompt = JSON.stringify(prompt.prompt);
+---
+
+<article class="group bg-surface border border-outline-variant/60 rounded-xl overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full">
+  <div class="p-6 flex flex-col h-full">
+    <div class="flex items-start justify-between mb-3">
+      <h3 class="text-base font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">
+        {prompt.title}
+      </h3>
+      <button
+        class="copy-btn shrink-0 ml-2 p-2 rounded-lg bg-surface-bg hover:bg-primary/10 text-on-surface-variant hover:text-primary transition-all relative"
+        onclick={`(function(){var t=${encodedPrompt};if(navigator.clipboard){navigator.clipboard.writeText(t);}else{var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');document.body.removeChild(a);}var b=this.querySelector('.copy-feedback');if(b){b.classList.add('opacity-100');setTimeout(function(){b.classList.remove('opacity-100');},1500);}})()`}
+        title="Copy prompt"
+        aria-label="Copy prompt to clipboard"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+        </svg>
+        <span class="copy-feedback absolute bottom-full left-1/2 -translate-x-1/2 mb-1 px-2 py-0.5 text-xs font-semibold text-green-600 bg-green-50 rounded whitespace-nowrap opacity-0 transition-opacity duration-200 pointer-events-none">Copied!</span>
+      </button>
+    </div>
+
+    <p class="text-sm text-on-surface-variant leading-relaxed mb-3 text-truncate-3">{prompt.description}</p>
+
+    <div class="bg-surface-bg rounded-lg p-3 mb-4 text-xs text-on-surface-variant leading-relaxed text-truncate-3 font-mono border border-outline-variant/20">
+      {prompt.prompt.split('\n')[0]}...
+    </div>
+
+    <div class="flex flex-wrap items-center justify-between mt-auto gap-2">
+      <span class="text-xs font-medium text-on-surface-variant bg-surface-bg px-2.5 py-1 rounded-full">
+        {prompt.category}
+      </span>
+      {prompt.tags && prompt.tags.length > 0 && (
+        <span class="text-xs text-on-surface-variant">
+          {prompt.tags.slice(0, 2).join(', ')}
+        </span>
+      )}
+    </div>
+  </div>
+</article>

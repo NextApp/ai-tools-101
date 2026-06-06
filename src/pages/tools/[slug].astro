@@ -1,0 +1,222 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ToolCard from '../../components/ToolCard.astro';
+import toolsData from '../../data/tools.json';
+import pageContent from '../../data/page-content.json';
+
+export function getStaticPaths() {
+  const tools = toolsData as any[];
+  return tools.map((tool: any) => ({ params: { slug: tool.slug } }));
+}
+
+const { slug } = Astro.params;
+
+const tools = toolsData as any[];
+const tool = tools.find((t: any) => t.slug === slug);
+
+if (!tool) {
+  return Astro.redirect('/404');
+}
+
+const pc = pageContent as any;
+
+const pricingLabel = tool.pricing === 'Freemium' ? 'Freemium' : tool.pricing === 'Free' ? 'Free' : tool.pricing === 'Free Trial' ? 'Free Trial' : 'Paid';
+const pricingColor = tool.pricing === 'Free' || tool.pricing === 'Freemium'
+  ? 'bg-green-100 text-green-800'
+  : tool.pricing === 'Free Trial'
+    ? 'bg-blue-100 text-blue-800'
+    : 'bg-amber-100 text-amber-800';
+
+const categorySlug = Object.keys(pageContent.categories).find((k: string) =>
+  pageContent.categories[k].name === tool.category
+) || tool.category.toLowerCase().replace(/\s+/g, '-');
+
+const relatedTools = tools
+  .filter((t: any) => t.category === tool.category && t.slug !== tool.slug)
+  .slice(0, 3);
+
+const stars = Math.round(tool.rating);
+---
+
+<Layout title={tool.seo_title} description={tool.seo_description} type="article">
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16">
+    <nav class="flex items-center gap-2 text-sm text-on-surface-variant mb-8">
+      <a href="/" class="hover:text-primary transition-colors">Home</a>
+      <span>/</span>
+      <a href="/tools" class="hover:text-primary transition-colors">Tools</a>
+      <span>/</span>
+      <a href={`/tools/${categorySlug}`} class="hover:text-primary transition-colors">{tool.category}</a>
+      <span>/</span>
+      <span class="text-on-surface font-medium">{tool.name}</span>
+    </nav>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/15 to-primary/5 flex items-center justify-center text-primary font-bold text-xl shrink-0">
+            {tool.name.charAt(0)}
+          </div>
+          <div>
+            <h1 class="text-3xl md:text-4xl font-extrabold text-on-surface">{tool.name}</h1>
+            <div class="flex items-center gap-2 mt-1">
+              <div class="flex items-center gap-0.5">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <svg class={`w-4 h-4 ${i < stars ? 'text-amber-400' : 'text-gray-200'}`} fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <span class="text-sm font-semibold text-on-surface">{tool.rating}/5</span>
+              <span class="text-on-surface-variant text-sm">&middot;</span>
+              <span class={`text-xs font-semibold px-2.5 py-0.5 rounded-full ${pricingColor}`}>{pricingLabel}</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-lg text-on-surface-variant leading-relaxed mb-8">{tool.description_long}</p>
+
+        <div class="mb-10">
+          <h2 class="text-xl font-bold text-on-surface mb-4">Key Features</h2>
+          <ul class="space-y-3">
+            {tool.features.map((f: string) => (
+              <li class="flex items-start gap-3 text-on-surface-variant">
+                <svg class="w-5 h-5 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>{f}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+          <div class="bg-green-50 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-green-900 mb-3 flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+              </svg>
+              Pros
+            </h3>
+            <ul class="space-y-2">
+              {tool.pros.map((p: string) => (
+                <li class="flex items-start gap-2 text-green-800 text-sm">
+                  <span class="text-green-500 font-bold shrink-0">+</span>
+                  <span>{p}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="bg-red-50 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-red-900 mb-3 flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.736 3h4.018a2 2 0 01.485.06l3.76.94m-7 10v5a2 2 0 002 2h.096c.5 0 .905-.405.905-.904 0-.715.211-1.413.608-2.008L17 13V4m-7 10h2m5-10h2a2 2 0 012 2v6a2 2 0 01-2 2h-2.5" />
+              </svg>
+              Cons
+            </h3>
+            <ul class="space-y-2">
+              {tool.cons.map((c: string) => (
+                <li class="flex items-start gap-2 text-red-800 text-sm">
+                  <span class="text-red-500 font-bold shrink-0">&minus;</span>
+                  <span>{c}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {tool.best_for && tool.best_for.length > 0 && (
+          <div class="mb-10">
+            <h2 class="text-xl font-bold text-on-surface mb-3">Best For</h2>
+            <div class="flex flex-wrap gap-2">
+              {tool.best_for.map((bf: string) => (
+                <span class="px-3 py-1.5 bg-surface border border-outline-variant/40 rounded-full text-sm text-on-surface-variant font-medium">
+                  {bf}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div class="flex flex-wrap gap-4 pt-6 border-t border-outline-variant/30">
+          <a
+            href={tool.website}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-xl hover:bg-primary-hover transition-colors shadow-sm"
+          >
+            Visit {tool.name}
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+          {tool.affiliate_link && (
+            <p class="text-xs text-on-surface-variant self-end opacity-60">
+              We may earn a commission if you sign up through our link, at no extra cost to you.
+            </p>
+          )}
+        </div>
+      </div>
+
+      <div class="lg:col-span-1">
+        <div class="bg-surface border border-outline-variant/40 rounded-xl p-6 sticky top-24">
+          <h3 class="font-bold text-on-surface mb-4">Quick Facts</h3>
+          <dl class="space-y-4">
+            <div>
+              <dt class="text-xs font-semibold text-on-surface-variant uppercase tracking-wide mb-1">Pricing</dt>
+              <dd class="text-sm text-on-surface">{pricingLabel}</dd>
+              {tool.pricing_detail && (
+                <dd class="text-xs text-on-surface-variant mt-0.5">{tool.pricing_detail}</dd>
+              )}
+            </div>
+            <div>
+              <dt class="text-xs font-semibold text-on-surface-variant uppercase tracking-wide mb-1">Category</dt>
+              <dd class="text-sm text-on-surface">{tool.category}</dd>
+            </div>
+            <div>
+              <dt class="text-xs font-semibold text-on-surface-variant uppercase tracking-wide mb-1">Rating</dt>
+              <dd class="text-sm text-on-surface font-semibold">{tool.rating} / 5</dd>
+            </div>
+            {tool.subcategory && (
+              <div>
+                <dt class="text-xs font-semibold text-on-surface-variant uppercase tracking-wide mb-1">Subcategory</dt>
+                <dd class="text-sm text-on-surface">{tool.subcategory}</dd>
+              </div>
+            )}
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    {relatedTools.length > 0 && (
+      <div class="mt-16 pt-10 border-t border-outline-variant/30">
+        <h2 class="text-xl font-bold text-on-surface mb-6">Related Tools in {tool.category}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {relatedTools.map((rt: any) => (
+            <ToolCard tool={rt} />
+          ))}
+        </div>
+      </div>
+    )}
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: tool.name,
+    description: tool.description_short,
+    applicationCategory: tool.category,
+    operatingSystem: 'Web',
+    offers: {
+      '@type': 'Offer',
+      price: tool.pricing === 'Free' ? '0' : undefined,
+      priceCurrency: 'USD',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: tool.rating,
+      bestRating: 5,
+      ratingCount: 1,
+    },
+  })} />
+</Layout>

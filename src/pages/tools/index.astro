@@ -1,0 +1,108 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ToolCard from '../../components/ToolCard.astro';
+import CategoryFilter from '../../components/CategoryFilter.astro';
+import toolsData from '../../data/tools.json';
+import pageContent from '../../data/page-content.json';
+
+const { tools: pc } = pageContent as any;
+
+const tools = toolsData as any[];
+
+const categoryCounts: Record<string, number> = {};
+const categoryNames: Record<string, string> = {};
+for (const t of tools) {
+  const catSlug = t.slug === 'perplexity-research' ? 'ai-research' : t.category.toLowerCase().replace(/\s+/g, '-').replace('ai-', 'ai-');
+  categoryCounts[catSlug] = (categoryCounts[catSlug] || 0) + 1;
+
+  const catKey = catSlug.startsWith('ai-') ? catSlug : `ai-${catSlug}`;
+}
+
+const catMeta: Record<string, { name: string; slug: string }> = {
+  'ai-writing': { name: 'AI Writing', slug: 'ai-writing' },
+  'ai-image': { name: 'AI Image', slug: 'ai-image' },
+  'ai-coding': { name: 'AI Coding', slug: 'ai-coding' },
+  'ai-video': { name: 'AI Video', slug: 'ai-video' },
+  'ai-productivity': { name: 'AI Productivity', slug: 'ai-productivity' },
+  'ai-chat': { name: 'AI Chat', slug: 'ai-chat' },
+  'ai-voice': { name: 'AI Voice', slug: 'ai-voice' },
+  'ai-research': { name: 'AI Research', slug: 'ai-research' },
+};
+
+for (const t of tools) {
+  const cat = t.category;
+  const slug = Object.keys(catMeta).find(k => catMeta[k].name === cat) || cat.toLowerCase().replace(/\s+/g, '-');
+  categoryNames[slug] = cat;
+}
+
+const actualCounts: Record<string, number> = {};
+for (const t of tools) {
+  const cat = Object.keys(catMeta).find(k => catMeta[k].name === t.category) || t.category.toLowerCase().replace(/\s+/g, '-');
+  actualCounts[cat] = (actualCounts[cat] || 0) + 1;
+}
+
+const categories = Object.entries(catMeta).map(([slug, { name }]) => ({
+  slug,
+  name,
+  count: actualCounts[slug] || 0,
+}));
+
+const sortedTools = [...tools].sort((a, b) => b.rating - a.rating);
+const featured = sortedTools.filter((t: any) => t.rating >= 4.5).slice(0, 6);
+---
+
+<Layout title={pc.seo_title.split(' — ')[0]} description={pc.seo_description}>
+  <section class="relative overflow-hidden py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#eaddff] text-[#5a00c6] text-xs font-semibold mb-6">
+        {pc.hero_badge}
+      </span>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface mb-5 leading-tight">
+        {pc.hero_title}
+      </h1>
+      <p class="text-base md:text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+        {pc.hero_subtitle}
+      </p>
+    </div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 -z-10 w-full h-full opacity-20 pointer-events-none">
+      <div class="absolute top-[-10%] left-[-5%] w-[40%] h-[50%] bg-blue-600/30 rounded-full blur-[100px]"></div>
+      <div class="absolute bottom-[-10%] right-[-5%] w-[35%] h-[50%] bg-purple-600/30 rounded-full blur-[100px]"></div>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
+    <div class="mb-8">
+      <CategoryFilter categories={categories} />
+    </div>
+  </section>
+
+  {featured.length > 0 && (
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+      <div class="mb-6">
+        <h2 class="text-xl md:text-2xl font-bold text-on-surface mb-1">{pc.section_featured_title}</h2>
+        <p class="text-sm text-on-surface-variant">{pc.section_featured_subtitle}</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {featured.map((tool: any) => (
+          <ToolCard tool={tool} />
+        ))}
+      </div>
+    </section>
+  )}
+
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24">
+    <div class="mb-6">
+      <h2 class="text-xl md:text-2xl font-bold text-on-surface mb-1">{pc.section_all_title}</h2>
+      <p class="text-sm text-on-surface-variant">{pc.section_all_subtitle}</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {sortedTools.map((tool: any) => (
+        <ToolCard tool={tool} />
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 text-center">
+    <p class="text-xs text-on-surface-variant opacity-60">{pc.affiliate_disclosure}</p>
+  </section>
+</Layout>

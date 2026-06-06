@@ -1,0 +1,74 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PromptCard from '../../components/PromptCard.astro';
+import CategoryFilter from '../../components/CategoryFilter.astro';
+import promptsData from '../../data/prompts.json';
+
+export function getStaticPaths() {
+  const prompts = promptsData as any[];
+  const catSet = new Set<string>();
+  for (const p of prompts) {
+    const slug = p.category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
+    catSet.add(slug);
+  }
+  return Array.from(catSet).map((slug) => ({ params: { category: slug } }));
+}
+
+const { category } = Astro.params;
+
+const prompts = promptsData as any[];
+const filtered = prompts.filter((p: any) => {
+  const slug = p.category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
+  return slug === category;
+});
+
+const catName = filtered.length > 0 ? filtered[0].category : category;
+
+const categoryCounts: Record<string, number> = {};
+for (const p of prompts) {
+  const slug = p.category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
+  categoryCounts[slug] = (categoryCounts[slug] || 0) + 1;
+}
+
+const categories = Object.entries(categoryCounts).map(([slug, count]) => ({
+  slug,
+  name: prompts.find((p: any) => p.category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and') === slug)?.category || slug,
+  count,
+}));
+---
+
+<Layout
+  title={`${catName} Prompt Templates — Free AI Prompts | AI Tool Guide`}
+  description={`Free copy-paste ${catName.toLowerCase()} prompt templates for ChatGPT, Claude, and Gemini. ${filtered.length} hand-crafted prompts to improve your AI results.`}
+>
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6">
+    <nav class="flex items-center gap-2 text-sm text-on-surface-variant mb-6">
+      <a href="/" class="hover:text-primary transition-colors">Home</a>
+      <span>/</span>
+      <a href="/prompts" class="hover:text-primary transition-colors">Prompts</a>
+      <span>/</span>
+      <span class="text-on-surface font-medium">{catName}</span>
+    </nav>
+
+    <h1 class="text-3xl md:text-4xl font-extrabold text-on-surface mb-4">{catName} Prompt Templates</h1>
+    <p class="text-base text-on-surface-variant max-w-3xl leading-relaxed mb-8">
+      {filtered.length} free, copy-paste prompt templates for {catName.toLowerCase()}. Each template is tested and optimized for ChatGPT, Claude, and Gemini.
+    </p>
+
+    <div class="mb-8">
+      <CategoryFilter categories={categories} currentCategory={category} />
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24">
+    {filtered.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filtered.map((prompt: any) => (
+          <PromptCard prompt={prompt} />
+        ))}
+      </div>
+    ) : (
+      <p class="text-center text-on-surface-variant py-16">No prompts found in this category.</p>
+    )}
+  </section>
+</Layout>
