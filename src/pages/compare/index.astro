@@ -1,0 +1,50 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import toolsData from '../../data/tools.json';
+
+const tools = toolsData as any[];
+const slugSet = new Set(tools.map((t: any) => t.slug));
+const pairs: { slug1: string; slug2: string; name1: string; name2: string; cat: string }[] = [];
+
+for (const t of tools) {
+  for (const ref of (t.compare_with || [])) {
+    if (!slugSet.has(ref)) continue;
+    const [a, b] = [t.slug, ref].sort();
+    const pairSlug = `${a}-vs-${b}`;
+    if (pairs.some((p) => `${p.slug1}-vs-${p.slug2}` === pairSlug)) continue;
+    const t2 = tools.find((x: any) => x.slug === ref);
+    pairs.push({ slug1: a, slug2: b, name1: t.name, name2: t2?.name || ref, cat: t.category });
+  }
+}
+
+const categories = [...new Set(pairs.map((p) => p.cat))].sort();
+---
+
+<Layout title="AI Tool Comparison — Compare Features Side-by-Side" description="Compare AI tools side-by-side. Browse {pairs.length} detailed comparisons across 8 categories. Features, pricing, pros & cons for each tool.">
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16">
+    <div class="text-center mb-12">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-on-surface mb-4">Compare AI Tools</h1>
+      <p class="text-lg text-on-surface-variant max-w-2xl mx-auto">
+        Browse {pairs.length} detailed side-by-side comparisons across 8 categories. Features, pricing, pros and cons — all in one view.
+      </p>
+    </div>
+
+    {categories.map((cat) => {
+      const catPairs = pairs.filter((p) => p.cat === cat);
+      return (
+        <div class="mb-10">
+          <h2 class="text-xl font-bold text-on-surface mb-4">{cat}</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {catPairs.map((p) => (
+              <a href={`/compare/${p.slug1}-vs-${p.slug2}`} class="flex items-center gap-3 p-4 bg-surface border border-outline-variant/40 rounded-xl hover:border-primary/30 hover:shadow-sm transition-all">
+                <span class="text-sm font-semibold text-on-surface">{p.name1}</span>
+                <span class="text-xs text-on-surface-variant">vs</span>
+                <span class="text-sm font-semibold text-on-surface">{p.name2}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      );
+    })}
+  </section>
+</Layout>
