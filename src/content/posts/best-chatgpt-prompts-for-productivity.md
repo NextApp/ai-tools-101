@@ -1,6 +1,6 @@
 ---
 title: "20 Best ChatGPT Prompts for Productivity That Actually Work"
-description: "20 tested ChatGPT prompts for work productivity: emails, reports, meeting summaries, and more. Copy-paste templates that save hours every week."
+description: "20 tested ChatGPT prompts for work productivity in 2026: emails, reports, meeting summaries, and more. Copy-paste templates that save hours every week."
 pubDate: 2026-04-30
 updatedDate: 2026-06-04
 tags: ['ChatGPT', 'Prompts', 'Productivity', 'Workflow', 'Templates']
