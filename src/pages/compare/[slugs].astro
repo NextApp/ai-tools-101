@@ -215,15 +215,4 @@ const seoDesc = `${name(toolA)} vs ${name(toolB)} compared side-by-side: feature
       </div>
     </div>
   </section>
-
-  <script type="application/ld+json" set:html={JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: seoTitle,
-    description: seoDesc.slice(0, 160),
-    author: { '@type': 'Organization', name: 'AI Tool Guide', url: siteURL },
-    publisher: { '@type': 'Organization', name: 'AI Tool Guide', url: siteURL },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `${siteURL}/compare/${slugs}` },
-  })}>
-  </script>
 </Layout>
