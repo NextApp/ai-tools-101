@@ -2,7 +2,7 @@
 title: "Claude vs ChatGPT for Creative Writing: Hands-On Comparison (2026)"
 pubDate: 2026-06-06
 tags: ["Claude", "ChatGPT", "Creative Writing", "AI Writing", "Comparison"]
-description: "Claude vs ChatGPT for creative writing: we tested both with identical prompts for fiction, poetry, and screenwriting. See real outputs, analyze style differences, and find the best AI writing assistant for your creative work."
+description: "Claude vs ChatGPT for creative writing: tested with identical prompts for fiction, poetry, and screenwriting. Real output comparison and style analysis."
 ---
 
 # Claude vs ChatGPT for Creative Writing: Hands-On Comparison (2026)
@@ -280,6 +280,8 @@ If you could only pick one AI for creative writing, here's the honest breakdown:
 ## Ethical Note on AI and Creative Writing
 
 AI is a writing tool, not an author. The most compelling creative work comes from the collaboration between human vision and AI capability—the writer provides the unique perspective, emotional truth, and lived experience; the AI provides fluency, variation, and the ability to rapidly iterate. As the Science Fiction Writers of America [noted in their 2025 AI guidelines](https://www.sfwa.org), AI output should be viewed as "raw material for human creative transformation," not finished work.
+
+The publishing industry is adapting rapidly to these tools. [A 2025 report from the Authors Guild](https://authorsguild.org/news/ai-survey-2025/) found that 31% of published authors now use AI as part of their writing process—primarily for brainstorming, research, and editing—but 94% believe that human authorship must remain the creative and legal standard. The consensus is clear: AI accelerates the craft, but the vision, voice, and final judgment must remain human.
 
 None of the creative passages in this article would pass as publishable fiction without significant human revision. Use AI to overcome blank-page paralysis, generate variations, or push through creative blocks—but the final vision should always be yours.
 

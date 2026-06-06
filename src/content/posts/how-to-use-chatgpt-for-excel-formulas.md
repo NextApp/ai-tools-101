@@ -2,7 +2,7 @@
 title: "How to Use ChatGPT for Excel Formulas: A Complete Tutorial (2026)"
 pubDate: 2026-06-06
 tags: ["ChatGPT", "Excel", "Productivity", "AI Tools", "Tutorial"]
-description: "Learn how to use ChatGPT for Excel formulas including VLOOKUP, IF statements, Pivot Tables, and complex nested functions. Step-by-step tutorial with real prompt examples and outputs."
+description: "Learn how to use ChatGPT for Excel formulas with step-by-step examples for VLOOKUP, IF, Pivot Tables, and nested functions. Real prompts and outputs included."
 ---
 
 # How to Use ChatGPT for Excel Formulas: A Complete Tutorial (2026)
