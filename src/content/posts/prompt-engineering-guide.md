@@ -1,7 +1,7 @@
 ---
 title: "How to Write Better AI Prompts: The Ultimate Prompt Engineering Guide"
 description: "Master prompt engineering with this step-by-step guide. Learn 6 elements of effective prompts, advanced techniques like chain-of-thought, and get 15 copy-paste templates for any task."
-pubDate: 2026-06-10
+pubDate: 2026-06-01
 tags: ['Prompt Engineering', 'Ai Prompts', 'ChatGPT', 'Claude', 'Prompt Templates']
 ---
 
