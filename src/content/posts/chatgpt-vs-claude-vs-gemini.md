@@ -1,7 +1,8 @@
 ---
 title: "ChatGPT vs Claude vs Gemini: Which AI Assistant Wins in 2026?"
 description: "ChatGPT vs Claude vs Gemini — we tested all three AI assistants on coding, writing, and reasoning tasks. See real test results and find which AI is best for your workflow in 2026."
-pubDate: 2026-05-30
+pubDate: 2026-04-01
+updatedDate: 2026-06-01
 tags: ['ChatGPT', 'Claude', 'Gemini', 'Ai Comparison', 'Productivity']
 ---
 

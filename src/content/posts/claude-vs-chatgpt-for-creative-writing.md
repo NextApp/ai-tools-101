@@ -1,6 +1,7 @@
 ---
 title: "Claude vs ChatGPT for Creative Writing: Hands-On Comparison (2026)"
-pubDate: 2026-06-06
+pubDate: 2026-05-28
+updatedDate: 2026-06-06
 tags: ["Claude", "ChatGPT", "Creative Writing", "AI Writing", "Comparison"]
 description: "Claude vs ChatGPT for creative writing: tested with identical prompts for fiction, poetry, and screenwriting. Real output comparison and style analysis."
 ---

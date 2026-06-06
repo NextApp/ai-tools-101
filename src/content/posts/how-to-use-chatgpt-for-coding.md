@@ -1,7 +1,8 @@
 ---
 title: "How to Use ChatGPT for Coding: A Beginner's Step-by-Step Guide"
 description: "Learn how to use ChatGPT for coding with this beginner-friendly step-by-step guide. Build real projects, debug code, and understand when to use AI vs. learning to code yourself."
-pubDate: 2026-06-03
+pubDate: 2026-05-20
+updatedDate: 2026-06-03
 tags: ['ChatGPT', 'Coding', 'Beginners', 'Python', 'JavaScript']
 ---
 

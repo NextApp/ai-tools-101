@@ -1,7 +1,8 @@
 ---
 title: "How to Build an AI Agent Without Coding (No-Code Guide 2026)"
 description: "Build your first AI agent without any coding experience. Step-by-step guide covering OpenAI Custom GPTs, Relevance AI, and Zapier AI Agents — choose the right platform and deploy in hours."
-pubDate: 2026-06-05
+pubDate: 2026-03-01
+updatedDate: 2026-05-28
 tags: ['Ai Agent', 'No-Code', 'Automation', 'Custom Gpt', 'Zapier']
 ---
 

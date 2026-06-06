@@ -1,6 +1,7 @@
 ---
 title: "Cursor AI vs GitHub Copilot for Python: Which AI Coding Tool Wins in 2026?"
-pubDate: 2026-06-06
+pubDate: 2026-06-05
+updatedDate: 2026-06-06
 tags: ["Cursor", "GitHub Copilot", "Python", "AI Coding", "Developer Tools"]
 description: "Cursor AI vs GitHub Copilot for Python: real-world comparison of code completion, debugging, and project context. Find the right AI coding tool in 2026."
 ---

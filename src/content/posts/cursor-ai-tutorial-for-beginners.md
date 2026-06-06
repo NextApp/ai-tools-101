@@ -1,7 +1,8 @@
 ---
 title: "Cursor AI Tutorial: Build Your First App Without Writing Code"
 description: "Learn Cursor AI from installation to your first app in this step-by-step tutorial. Build a personal blog without writing a single line of code — perfect for beginners in 2026."
-pubDate: 2026-06-02
+pubDate: 2026-04-15
+updatedDate: 2026-06-02
 tags: ['Cursor Ai', 'Ai Coding Assistant', 'Beginner Tutorial', 'No-Code', 'Vscode Alternative']
 ---
 

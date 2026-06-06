@@ -1,7 +1,8 @@
 ---
 title: "GitHub Copilot vs Cursor vs Windsurf: AI Coding Tools Compared (2026)"
 description: "GitHub Copilot vs Cursor vs Windsurf — we tested all three on speed, accuracy, and pricing. See our comparison table and find the best AI coding assistant for your needs in 2026."
-pubDate: 2026-06-03
+pubDate: 2026-05-10
+updatedDate: 2026-06-03
 tags: ['GitHub Copilot', 'Cursor Ai', 'Windsurf', 'Codeium', 'Ai Coding Assistant']
 ---
 

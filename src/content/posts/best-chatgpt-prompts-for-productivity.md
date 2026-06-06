@@ -1,7 +1,8 @@
 ---
 title: "20 Best ChatGPT Prompts for Productivity That Actually Work"
 description: "Discover 20 tested ChatGPT prompts that save hours every week. Copy-paste these templates for emails, task management, writing, and data analysis — no prompt engineering experience needed."
-pubDate: 2026-06-04
+pubDate: 2026-04-30
+updatedDate: 2026-06-04
 tags: ['ChatGPT', 'Prompts', 'Productivity', 'Workflow', 'Templates']
 ---
 
