@@ -121,40 +121,6 @@
     }
   },
 
-  "compare": {
-    "page": "/compare",
-    "seo_title": "AI Tool Comparison — Compare Features, Pricing & Reviews Side by Side | AI Tool Guide",
-    "seo_description": "Compare AI tools side by side. Pick any two tools to see features, pricing, pros and cons, and honest reviews. Make informed decisions about which AI tool fits your needs.",
-    "hero_title": "Compare AI Tools",
-    "hero_subtitle": "Pick any two tools and see how they stack up. Features, pricing, pros and cons — all side by side.",
-    "select_tool_placeholder": "Select a tool...",
-    "select_tool_1_label": "Tool 1",
-    "select_tool_2_label": "Tool 2",
-    "no_tools_selected_title": "Select two tools to compare",
-    "no_tools_selected_description": "Choose two AI tools from the dropdown menus above to see a detailed side-by-side comparison of their features, pricing, pros, cons, and more.",
-    "comparison_table_headers": {
-      "overview": "Overview",
-      "pricing": "Pricing",
-      "features": "Key Features",
-      "pros": "Pros",
-      "cons": "Cons",
-      "best_for": "Best For",
-      "rating": "Rating"
-    },
-    "cta_visit_website": "Visit Website",
-    "cta_view_details": "View Full Details",
-    "popular_comparisons_title": "Popular Comparisons",
-    "popular_comparisons_subtitle": "See how the most-compared tools measure up.",
-    "popular_comparisons": [
-      { "tool1": "chatgpt", "tool2": "claude" },
-      { "tool1": "cursor", "tool2": "github-copilot" },
-      { "tool1": "midjourney", "tool2": "dall-e" },
-      { "tool1": "gemini", "tool2": "chatgpt" },
-      { "tool1": "jasper", "tool2": "copy-ai" },
-      { "tool1": "elevenlabs", "tool2": "murf" }
-    ]
-  },
-
   "which-ai-tool": {
     "page": "/which-ai-tool",
     "seo_title": "Which AI Tool Should I Use? — Interactive AI Tool Recommendation Quiz | AI Tool Guide",
@@ -283,7 +249,6 @@
     "site_description": "Honest reviews and comparisons of the best AI tools. Find the right AI for writing, coding, design, video, research, and more.",
     "site_url": "https://ai-tools-101.com",
     "nav_tools": "Tools",
-    "nav_compare": "Compare",
     "nav_quiz": "Which AI Tool?",
     "breadcrumb_home": "Home",
     "breadcrumb_tools": "Tools",
