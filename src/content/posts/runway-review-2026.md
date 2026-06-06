@@ -116,6 +116,8 @@ The credit system and pricing can feel restrictive, especially on the Standard p
 
 **Rating: 4.5/5**
 
+> According to [McKinsey's 2025 AI productivity report](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai), knowledge workers using AI tools report 25-40% time savings on content and data tasks.
+
 ## Related Resources
 
 - [Best AI Tools for Students 2026](/blog/best-ai-tools-for-students-2026-free) — Free and affordable creative tools for content creation

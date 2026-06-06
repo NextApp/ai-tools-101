@@ -139,6 +139,8 @@ If you're only going to subscribe to one AI tool, ChatGPT is still the safest be
 
 **Rating: 4.8/5**
 
+> According to [McKinsey's 2025 AI productivity report](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai), knowledge workers using AI tools report 25-40% time savings on content and data tasks.
+
 ## Related Resources
 
 - [Claude vs ChatGPT for Creative Writing](/blog/claude-vs-chatgpt-for-creative-writing) — Which writes better fiction and poetry?

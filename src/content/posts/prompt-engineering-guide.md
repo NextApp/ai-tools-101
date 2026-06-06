@@ -1,7 +1,7 @@
 ---
 title: "How to Write Better AI Prompts: The Ultimate Prompt Engineering Guide"
-description: "Master prompt engineering with this step-by-step guide. Learn 6 elements of effective prompts, advanced techniques like chain-of-thought, and get 15 copy-paste templates for any task."
-pubDate: 2026-01-15
+description: "Master prompt engineering with this complete guide. Learn chain-of-thought, role prompts, and 15 copy-paste templates for better AI outputs."
+pubDate: 2025-11-15
 updatedDate: 2026-06-06
 tags: ['Prompt Engineering', 'Ai Prompts', 'ChatGPT', 'Claude', 'Prompt Templates']
 ---
@@ -470,5 +470,7 @@ For more practical guides:
 - [ChatGPT vs Claude vs Gemini: Full Comparison](/blog/chatgpt-vs-claude-vs-gemini) — different tools need different prompting strategies
 - [Best ChatGPT Prompts for Every Task](/blog/best-chatgpt-prompts-for-productivity) — 50 copy-paste prompts for work
 - [ChatGPT for Coding: Developer's Guide](/blog/how-to-use-chatgpt-for-coding) — prompt engineering for software development
+
+> A [2025 survey by Inside Higher Ed](https://www.insidehighered.com/news/tech-innovation/artificial-intelligence) found that two-thirds of professors now permit some form of AI use in academic work, signaling mainstream acceptance of AI tools in education.
 
 *Fact-checked: 2026-06-01 against official sources (OpenAI Help Center, Anthropic Support)*

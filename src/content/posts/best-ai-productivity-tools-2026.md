@@ -99,6 +99,8 @@ Productivity tools succeed or fail based on how well they integrate into your ex
 
 **The meta-lesson**: productivity tools work best when you use them for what they are designed to do, not when you force one tool to do everything. A presentation tool, a workspace tool, and a design tool can coexist in the same workflow. The key is knowing when to reach for which one.
 
+> [Stanford HAI's 2025 AI Index Report](https://hai.stanford.edu/research/ai-index-2025) provides comprehensive data on AI adoption trends across industries and highlights the growing role of generative AI in professional workflows.
+
 ## Related Resources
 
 - [Best AI Tools for Students 2026](/blog/best-ai-tools-for-students-2026-free)

@@ -109,6 +109,8 @@ For teams of three or more publishing content weekly, Jasper is a worthwhile inv
 
 **Rating: 4.5/5**
 
+> [Stanford HAI's 2025 AI Index Report](https://hai.stanford.edu/research/ai-index-2025) provides comprehensive data on AI adoption trends across industries and highlights the growing role of generative AI in professional workflows.
+
 ## Related Resources
 
 - [ChatGPT vs Claude vs Gemini: Full Comparison](/blog/chatgpt-vs-claude-vs-gemini) — How general AI assistants compare

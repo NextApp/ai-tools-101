@@ -116,6 +116,8 @@ The VS Code dependency is the main limitation, but for the majority of developer
 
 **Rating: 4.7/5**
 
+> A [2025 survey by Inside Higher Ed](https://www.insidehighered.com/news/tech-innovation/artificial-intelligence) found that two-thirds of professors now permit some form of AI use in academic work, signaling mainstream acceptance of AI tools in education.
+
 ## Related Resources
 
 - [Cursor AI vs GitHub Copilot for Python](/blog/cursor-ai-vs-github-copilot-for-python) — Python-specific comparison

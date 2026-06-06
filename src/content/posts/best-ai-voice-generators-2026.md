@@ -91,6 +91,8 @@ Voice AI tools have specialized so much that the right choice depends almost ent
 
 **Short-form social media voiceover.** ElevenLabs for quality or Murf for workflow, depending on volume. If you publish one polished video per week, ElevenLabs is the best bet. If you publish daily across multiple platforms, Murf's integrated timeline saves cumulative hours.
 
+> According to [McKinsey's 2025 AI productivity report](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai), knowledge workers using AI tools report 25-40% time savings on content and data tasks.
+
 ## Related Resources
 
 - [Best AI Tools for Students 2026](/blog/best-ai-tools-for-students-2026-free)

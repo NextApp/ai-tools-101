@@ -94,6 +94,8 @@ The best tool depends on where you are in the research process and what kind of 
 
 A combined workflow: Perplexity for broad exploration, then Elicit for systematic extraction, then Consensus for evidence verification. Each tool addresses a different stage of the research process, and using all three creates a more rigorous research practice than any single tool alone.
 
+> The [2025 Stack Overflow Developer Survey](https://survey.stackoverflow.co/2025) found that over 70% of developers are now using AI coding tools, with adoption continuing to accelerate.
+
 ## Related Resources
 
 - [Best AI Tools for Students 2026](/blog/best-ai-tools-for-students-2026-free)

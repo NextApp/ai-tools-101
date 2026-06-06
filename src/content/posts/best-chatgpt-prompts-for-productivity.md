@@ -1,6 +1,6 @@
 ---
 title: "20 Best ChatGPT Prompts for Productivity That Actually Work"
-description: "Discover 20 tested ChatGPT prompts that save hours every week. Copy-paste these templates for emails, task management, writing, and data analysis — no prompt engineering experience needed."
+description: "20 tested ChatGPT prompts for work: emails, reports, meeting summaries, and more. Boost your productivity with these copy-paste templates."
 pubDate: 2026-04-30
 updatedDate: 2026-06-04
 tags: ['ChatGPT', 'Prompts', 'Productivity', 'Workflow', 'Templates']
@@ -323,5 +323,7 @@ If 20 prompts feels overwhelming, start with three:
 These three alone save me 4-6 hours a week. The other 17 are for specific situations — use them when you need them.
 
 For more ways to integrate AI into your daily work, see our guide on [practical AI use cases at work](/blog/chatgpt-use-cases-for-work).
+
+> [Stanford HAI's 2025 AI Index Report](https://hai.stanford.edu/research/ai-index-2025) provides comprehensive data on AI adoption trends across industries and highlights the growing role of generative AI in professional workflows.
 
 *Fact-checked: 2026-06-01 against official sources (OpenAI Help Center)*

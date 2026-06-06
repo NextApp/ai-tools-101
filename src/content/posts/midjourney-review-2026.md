@@ -119,6 +119,8 @@ The main downsides—price, accessibility, and the Discord-centric workflow—ar
 
 **Rating: 4.7/5**
 
+> The [2025 Stack Overflow Developer Survey](https://survey.stackoverflow.co/2025) found that over 70% of developers are now using AI coding tools, with adoption continuing to accelerate.
+
 ## Related Resources
 
 - [Can ChatGPT Generate Images for Free?](/blog/can-chatgpt-generate-images-for-free) — Free alternatives for AI image generation
