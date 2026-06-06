@@ -2,25 +2,27 @@
 interface Props {
   categories: { slug: string; name: string; count: number }[];
   currentCategory?: string;
+  basePath?: string;
+  allLabel?: string;
 }
 
-const { categories, currentCategory } = Astro.props;
+const { categories, currentCategory, basePath = '/tools', allLabel = 'All Tools' } = Astro.props;
 ---
 
 <div class="flex flex-wrap gap-2">
   <a
-    href="/tools"
+    href={basePath}
     class={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
       !currentCategory
         ? 'bg-primary text-white shadow-sm'
         : 'bg-surface border border-outline-variant/50 text-on-surface-variant hover:text-primary hover:border-primary/30'
     }`}
   >
-    All Tools
+    {allLabel}
   </a>
   {categories.map((cat) => (
     <a
-      href={`/tools/${cat.slug}`}
+      href={`${basePath}/${cat.slug}`}
       class={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
         currentCategory === cat.slug
           ? 'bg-primary text-white shadow-sm'
