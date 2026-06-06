@@ -5,6 +5,7 @@ export const SOCIAL_LINKS = {
   x: 'https://x.com/AIToolGuide',
   pinterest: 'https://pinterest.com/AIToolGuide',
   github: 'https://github.com/NextApp/ai-tools-101',
+  youtube: 'https://youtube.com/@AIToolGuide',
 } as const;
 
 export const UTM_PARAMS = {
