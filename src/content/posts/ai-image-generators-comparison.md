@@ -1,6 +1,6 @@
 ---
 title: "AI Image Generators Compared: Midjourney vs DALL-E vs Stable Diffusion (2026)"
-description: "Midjourney vs DALL-E 3 vs Stable Diffusion: which AI image generator wins in 2026? Compare quality, pricing, ease of use, and best use cases."
+description: "Midjourney vs DALL-E 3 vs Stable Diffusion: which AI image generator wins in 2026? Compare quality, pricing, ease of use, and best use cases for artists and designers."
 pubDate: 2025-09-01
 updatedDate: 2026-06-01
 tags: ['Ai Image Generator', 'Midjourney', 'DALL-E', 'Stable Diffusion', 'Ai Art']

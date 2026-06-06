@@ -1,6 +1,6 @@
 ---
 title: "Best AI Chat Assistants 2026: ChatGPT vs Claude vs Gemini vs Perplexity"
-description: "Compare the best AI chat assistants of 2026: ChatGPT, Claude, Gemini, and Perplexity. Features, strengths, real-world tests, and which AI is right for your needs."
+description: "Compare the best AI chat assistants of 2026: ChatGPT, Claude, Gemini, and Perplexity. Features, strengths, real-world tests, and which AI is right for you."
 pubDate: 2026-06-01
 updatedDate: 2026-06-06
 tags: ["AI Chat", "ChatGPT", "Claude", "Gemini", "Perplexity"]

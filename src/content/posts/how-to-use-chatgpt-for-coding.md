@@ -1,6 +1,6 @@
 ---
 title: "How to Use ChatGPT for Coding: A Beginner's Step-by-Step Guide"
-description: "Learn how to use ChatGPT for coding: debugging, code generation, refactoring, and testing. Practical examples for Python, JavaScript, and more."
+description: "Learn how to use ChatGPT for coding: debugging, code generation, refactoring, and testing. Practical examples for Python, JavaScript, and more languages."
 pubDate: 2026-05-20
 updatedDate: 2026-06-03
 tags: ['ChatGPT', 'Coding', 'Beginners', 'Python', 'JavaScript']
