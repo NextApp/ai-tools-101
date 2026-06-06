@@ -3,20 +3,18 @@ import Layout from '../layouts/Layout.astro';
 import toolsData from '../data/tools.json';
 import pageContent from '../data/page-content.json';
 
-const { compare: pc, global: gc } = pageContent as any;
+const { compare: pc } = pageContent as any;
 const tools = toolsData as any[];
-
-const url = new URL(Astro.request.url);
-const tool1Param = url.searchParams.get('tool1');
-const tool2Param = url.searchParams.get('tool2');
-
-const tool1 = tool1Param ? tools.find((t: any) => t.slug === tool1Param) : null;
-const tool2 = tool2Param ? tools.find((t: any) => t.slug === tool2Param) : null;
 
 const popularComparisons = pc.popular_comparisons || [];
 ---
 
 <Layout title={pc.seo_title.split(' — ')[0]} description={pc.seo_description}>
+  <script is:inline>
+    window.__TOOLS_DATA__ = {JSON.stringify(tools)};
+    window.__PAGE_CONTENT__ = {JSON.stringify(pc)};
+  </script>
+
   <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16">
     <div class="text-center mb-10">
       <h1 class="text-3xl md:text-4xl font-extrabold text-on-surface mb-4">{pc.hero_title}</h1>
@@ -29,9 +27,7 @@ const popularComparisons = pc.popular_comparisons || [];
         <select id="tool1-select" class="w-full px-4 py-3 rounded-xl border border-outline-variant/60 bg-surface text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary/40 transition-all" onchange="updateComparison()">
           <option value="">{pc.select_tool_placeholder}</option>
           {tools.map((t: any) => (
-            <option value={t.slug} selected={tool1Param === t.slug}>
-              {t.name} ({t.category})
-            </option>
+            <option value={t.slug}>{t.name} ({t.category})</option>
           ))}
         </select>
       </div>
@@ -40,160 +36,13 @@ const popularComparisons = pc.popular_comparisons || [];
         <select id="tool2-select" class="w-full px-4 py-3 rounded-xl border border-outline-variant/60 bg-surface text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary/40 transition-all" onchange="updateComparison()">
           <option value="">{pc.select_tool_placeholder}</option>
           {tools.map((t: any) => (
-            <option value={t.slug} selected={tool2Param === t.slug}>
-              {t.name} ({t.category})
-            </option>
+            <option value={t.slug}>{t.name} ({t.category})</option>
           ))}
         </select>
       </div>
     </div>
 
-    {tool1 && tool2 ? (
-      <div class="bg-surface border border-outline-variant/40 rounded-xl overflow-hidden">
-        <div class="grid grid-cols-[120px_1fr_1fr] border-b border-outline-variant/30 bg-surface-bg">
-          <div class="p-4"></div>
-          <div class="p-4 text-center">
-            <a href={`/tools/${tool1.slug}`} class="text-lg font-bold text-on-surface hover:text-primary transition-colors">
-              {tool1.name}
-            </a>
-            <div class="flex items-center justify-center gap-2 mt-1">
-              <span class="text-xs text-on-surface-variant">{tool1.category}</span>
-              <span class={`text-xs font-semibold px-2 py-0.5 rounded-full ${
-                tool1.pricing === 'Free' || tool1.pricing === 'Freemium' ? 'bg-green-100 text-green-800' :
-                tool1.pricing === 'Free Trial' ? 'bg-blue-100 text-blue-800' :
-                'bg-amber-100 text-amber-800'
-              }`}>
-                {tool1.pricing === 'Freemium' ? 'Freemium' : tool1.pricing === 'Free' ? 'Free' : tool1.pricing === 'Free Trial' ? 'Free Trial' : 'Paid'}
-              </span>
-            </div>
-          </div>
-          <div class="p-4 text-center">
-            <a href={`/tools/${tool2.slug}`} class="text-lg font-bold text-on-surface hover:text-primary transition-colors">
-              {tool2.name}
-            </a>
-            <div class="flex items-center justify-center gap-2 mt-1">
-              <span class="text-xs text-on-surface-variant">{tool2.category}</span>
-              <span class={`text-xs font-semibold px-2 py-0.5 rounded-full ${
-                tool2.pricing === 'Free' || tool2.pricing === 'Freemium' ? 'bg-green-100 text-green-800' :
-                tool2.pricing === 'Free Trial' ? 'bg-blue-100 text-blue-800' :
-                'bg-amber-100 text-amber-800'
-              }`}>
-                {tool2.pricing === 'Freemium' ? 'Freemium' : tool2.pricing === 'Free' ? 'Free' : tool2.pricing === 'Free Trial' ? 'Free Trial' : 'Paid'}
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-[120px_1fr_1fr] border-b border-outline-variant/20">
-          <div class="p-4 text-xs font-semibold text-on-surface-variant uppercase tracking-wide bg-surface-bg/50">{pc.comparison_table_headers.overview}</div>
-          <div class="p-4 text-sm text-on-surface-variant leading-relaxed">{tool1.description_short}</div>
-          <div class="p-4 text-sm text-on-surface-variant leading-relaxed">{tool2.description_short}</div>
-        </div>
-
-        <div class="grid grid-cols-[120px_1fr_1fr] border-b border-outline-variant/20">
-          <div class="p-4 text-xs font-semibold text-on-surface-variant uppercase tracking-wide bg-surface-bg/50">{pc.comparison_table_headers.pricing}</div>
-          <div class="p-4 text-sm text-on-surface-variant">
-            <span class="font-semibold text-on-surface">{tool1.pricing === 'Freemium' ? 'Freemium' : tool1.pricing === 'Free' ? 'Free' : tool1.pricing === 'Free Trial' ? 'Free Trial' : 'Paid'}</span>
-            <br /><span class="text-xs">{tool1.pricing_detail}</span>
-          </div>
-          <div class="p-4 text-sm text-on-surface-variant">
-            <span class="font-semibold text-on-surface">{tool2.pricing === 'Freemium' ? 'Freemium' : tool2.pricing === 'Free' ? 'Free' : tool2.pricing === 'Free Trial' ? 'Free Trial' : 'Paid'}</span>
-            <br /><span class="text-xs">{tool2.pricing_detail}</span>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-[120px_1fr_1fr] border-b border-outline-variant/20">
-          <div class="p-4 text-xs font-semibold text-on-surface-variant uppercase tracking-wide bg-surface-bg/50">{pc.comparison_table_headers.rating}</div>
-          <div class="p-4">
-            <span class="text-sm font-semibold text-on-surface">{tool1.rating} / 5</span>
-          </div>
-          <div class="p-4">
-            <span class="text-sm font-semibold text-on-surface">{tool2.rating} / 5</span>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-[120px_1fr_1fr] border-b border-outline-variant/20">
-          <div class="p-4 text-xs font-semibold text-on-surface-variant uppercase tracking-wide bg-surface-bg/50">{pc.comparison_table_headers.features}</div>
-          <div class="p-4">
-            <ul class="space-y-1.5">
-              {tool1.features.map((f: string) => (
-                <li class="flex items-start gap-2 text-sm text-on-surface-variant">
-                  <svg class="w-4 h-4 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>{f}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div class="p-4">
-            <ul class="space-y-1.5">
-              {tool2.features.map((f: string) => (
-                <li class="flex items-start gap-2 text-sm text-on-surface-variant">
-                  <svg class="w-4 h-4 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>{f}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-[120px_1fr_1fr] border-b border-outline-variant/20">
-          <div class="p-4 text-xs font-semibold text-on-surface-variant uppercase tracking-wide bg-surface-bg/50">{pc.comparison_table_headers.pros}</div>
-          <div class="p-4">
-            <ul class="space-y-1.5">
-              {tool1.pros.map((p: string) => (
-                <li class="flex items-start gap-2 text-sm text-green-700">
-                  <span class="text-green-500 font-bold shrink-0">+</span>
-                  <span>{p}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div class="p-4">
-            <ul class="space-y-1.5">
-              {tool2.pros.map((p: string) => (
-                <li class="flex items-start gap-2 text-sm text-green-700">
-                  <span class="text-green-500 font-bold shrink-0">+</span>
-                  <span>{p}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-[120px_1fr_1fr]">
-          <div class="p-4 text-xs font-semibold text-on-surface-variant uppercase tracking-wide bg-surface-bg/50">{pc.comparison_table_headers.cons}</div>
-          <div class="p-4">
-            <ul class="space-y-1.5">
-              {tool1.cons.map((c: string) => (
-                <li class="flex items-start gap-2 text-sm text-red-700">
-                  <span class="text-red-500 font-bold shrink-0">&minus;</span>
-                  <span>{c}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div class="p-4">
-            <ul class="space-y-1.5">
-              {tool2.cons.map((c: string) => (
-                <li class="flex items-start gap-2 text-sm text-red-700">
-                  <span class="text-red-500 font-bold shrink-0">&minus;</span>
-                  <span>{c}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-    ) : (
-      <div class="text-center py-20">
-        <p class="text-on-surface-variant text-lg mb-2">{pc.no_tools_selected_title}</p>
-        <p class="text-on-surface-variant text-sm">{pc.no_tools_selected_description}</p>
-      </div>
-    )}
+    <div id="comparison-result"></div>
 
     {popularComparisons.length > 0 && (
       <div class="mt-16 pt-10 border-t border-outline-variant/30">
@@ -218,18 +67,150 @@ const popularComparisons = pc.popular_comparisons || [];
   </section>
 
   <script>
+    const tools = window.__TOOLS_DATA__;
+    const pc = window.__PAGE_CONTENT__;
+
+    function pricingBadgeClass(pricing: string) {
+      if (pricing === 'Free' || pricing === 'Freemium') return 'bg-green-100 text-green-800';
+      if (pricing === 'Free Trial') return 'bg-blue-100 text-blue-800';
+      return 'bg-amber-100 text-amber-800';
+    }
+
+    function pricingLabel(pricing: string) {
+      if (pricing === 'Freemium') return 'Freemium';
+      if (pricing === 'Free') return 'Free';
+      if (pricing === 'Free Trial') return 'Free Trial';
+      return 'Paid';
+    }
+
+    function getToolsFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      const slug1 = params.get('tool1');
+      const slug2 = params.get('tool2');
+      return {
+        tool1: slug1 ? tools.find((t: any) => t.slug === slug1) || null : null,
+        tool2: slug2 ? tools.find((t: any) => t.slug === slug2) || null : null,
+      };
+    }
+
+    function renderComparison() {
+      const { tool1, tool2 } = getToolsFromURL();
+      const sel1 = document.getElementById('tool1-select') as HTMLSelectElement;
+      const sel2 = document.getElementById('tool2-select') as HTMLSelectElement;
+      const container = document.getElementById('comparison-result')!;
+
+      if (tool1) sel1.value = tool1.slug;
+      if (tool2) sel2.value = tool2.slug;
+
+      if (!tool1 || !tool2) {
+        container.innerHTML = `
+          <div class="text-center py-20">
+            <p class="text-on-surface-variant text-lg mb-2">${pc.no_tools_selected_title}</p>
+            <p class="text-on-surface-variant text-sm">${pc.no_tools_selected_description}</p>
+          </div>
+        `;
+        return;
+      }
+
+      const h = pc.comparison_table_headers;
+
+      const toolHeader = (t: any) => `
+        <div class="p-4 text-center">
+          <a href="/tools/${t.slug}" class="text-lg font-bold text-on-surface hover:text-primary transition-colors">
+            ${t.name}
+          </a>
+          <div class="flex items-center justify-center gap-2 mt-1">
+            <span class="text-xs text-on-surface-variant">${t.category}</span>
+            <span class="text-xs font-semibold px-2 py-0.5 rounded-full ${pricingBadgeClass(t.pricing)}">
+              ${pricingLabel(t.pricing)}
+            </span>
+          </div>
+        </div>
+      `;
+
+      const featuresList = (items: string[]) => items.map(f => `
+        <li class="flex items-start gap-2 text-sm text-on-surface-variant">
+          <svg class="w-4 h-4 text-green-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span>${f}</span>
+        </li>
+      `).join('');
+
+      const prosList = (items: string[]) => items.map(p => `
+        <li class="flex items-start gap-2 text-sm text-green-700">
+          <span class="text-green-500 font-bold shrink-0">+</span>
+          <span>${p}</span>
+        </li>
+      `).join('');
+
+      const consList = (items: string[]) => items.map(c => `
+        <li class="flex items-start gap-2 text-sm text-red-700">
+          <span class="text-red-500 font-bold shrink-0">&minus;</span>
+          <span>${c}</span>
+        </li>
+      `).join('');
+
+      container.innerHTML = `
+        <div class="bg-surface border border-outline-variant/40 rounded-xl overflow-hidden">
+          <div class="grid grid-cols-[120px_1fr_1fr] border-b border-outline-variant/30 bg-surface-bg">
+            <div class="p-4"></div>
+            ${toolHeader(tool1)}
+            ${toolHeader(tool2)}
+          </div>
+          <div class="grid grid-cols-[120px_1fr_1fr] border-b border-outline-variant/20">
+            <div class="p-4 text-xs font-semibold text-on-surface-variant uppercase tracking-wide bg-surface-bg/50">${h.overview}</div>
+            <div class="p-4 text-sm text-on-surface-variant leading-relaxed">${tool1.description_short}</div>
+            <div class="p-4 text-sm text-on-surface-variant leading-relaxed">${tool2.description_short}</div>
+          </div>
+          <div class="grid grid-cols-[120px_1fr_1fr] border-b border-outline-variant/20">
+            <div class="p-4 text-xs font-semibold text-on-surface-variant uppercase tracking-wide bg-surface-bg/50">${h.pricing}</div>
+            <div class="p-4 text-sm text-on-surface-variant">
+              <span class="font-semibold text-on-surface">${pricingLabel(tool1.pricing)}</span>
+              <br /><span class="text-xs">${tool1.pricing_detail}</span>
+            </div>
+            <div class="p-4 text-sm text-on-surface-variant">
+              <span class="font-semibold text-on-surface">${pricingLabel(tool2.pricing)}</span>
+              <br /><span class="text-xs">${tool2.pricing_detail}</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-[120px_1fr_1fr] border-b border-outline-variant/20">
+            <div class="p-4 text-xs font-semibold text-on-surface-variant uppercase tracking-wide bg-surface-bg/50">${h.rating}</div>
+            <div class="p-4"><span class="text-sm font-semibold text-on-surface">${tool1.rating} / 5</span></div>
+            <div class="p-4"><span class="text-sm font-semibold text-on-surface">${tool2.rating} / 5</span></div>
+          </div>
+          <div class="grid grid-cols-[120px_1fr_1fr] border-b border-outline-variant/20">
+            <div class="p-4 text-xs font-semibold text-on-surface-variant uppercase tracking-wide bg-surface-bg/50">${h.features}</div>
+            <div class="p-4"><ul class="space-y-1.5">${featuresList(tool1.features || [])}</ul></div>
+            <div class="p-4"><ul class="space-y-1.5">${featuresList(tool2.features || [])}</ul></div>
+          </div>
+          <div class="grid grid-cols-[120px_1fr_1fr] border-b border-outline-variant/20">
+            <div class="p-4 text-xs font-semibold text-on-surface-variant uppercase tracking-wide bg-surface-bg/50">${h.pros}</div>
+            <div class="p-4"><ul class="space-y-1.5">${prosList(tool1.pros || [])}</ul></div>
+            <div class="p-4"><ul class="space-y-1.5">${prosList(tool2.pros || [])}</ul></div>
+          </div>
+          <div class="grid grid-cols-[120px_1fr_1fr]">
+            <div class="p-4 text-xs font-semibold text-on-surface-variant uppercase tracking-wide bg-surface-bg/50">${h.cons}</div>
+            <div class="p-4"><ul class="space-y-1.5">${consList(tool1.cons || [])}</ul></div>
+            <div class="p-4"><ul class="space-y-1.5">${consList(tool2.cons || [])}</ul></div>
+          </div>
+        </div>
+      `;
+    }
+
     function updateComparison() {
       const t1 = (document.getElementById('tool1-select') as HTMLSelectElement).value;
       const t2 = (document.getElementById('tool2-select') as HTMLSelectElement).value;
-      if (t1 && t2) {
-        window.location.href = `/compare?tool1=${t1}&tool2=${t2}`;
-      } else if (t1) {
-        window.location.href = `/compare?tool1=${t1}`;
-      } else if (t2) {
-        window.location.href = `/compare?tool2=${t2}`;
-      } else {
-        window.location.href = '/compare';
-      }
+      const params = new URLSearchParams();
+      if (t1) params.set('tool1', t1);
+      if (t2) params.set('tool2', t2);
+      const qs = params.toString();
+      const newUrl = qs ? `/compare?${qs}` : '/compare';
+      history.pushState(null, '', newUrl);
+      renderComparison();
     }
+
+    renderComparison();
+    window.addEventListener('popstate', renderComparison);
   </script>
 </Layout>
