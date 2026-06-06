@@ -2,6 +2,7 @@
 title: "10 Open-Source GitHub Projects That Can Replace Your Paid Software"
 description: "10 seriously capable open-source projects on GitHub — quant trading, AI video generation, voice cloning, OSINT analysis, API integration — each one a free alternative to the SaaS tools you're paying for every month."
 pubDate: 2026-06-07
+updatedDate: 2026-06-07
 tags: ['Open Source', 'GitHub', 'GitHub Projects', 'AI Tools', 'Free Tools', 'Alternatives', 'Finance', 'Video', 'Voice Cloning', 'API']
 ---
 
