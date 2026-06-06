@@ -42,7 +42,7 @@ const categories = Object.entries(categoryCounts).map(([slug, count]) => ({
 
   <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
     <div class="mb-8">
-      <CategoryFilter categories={categories} />
+      <CategoryFilter categories={categories} basePath="/prompts" allLabel="All Prompts" />
     </div>
   </section>
 
