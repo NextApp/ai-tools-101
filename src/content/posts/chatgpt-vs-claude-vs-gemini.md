@@ -8,7 +8,7 @@ tags: ['ChatGPT', 'Claude', 'Gemini', 'Ai Comparison', 'Productivity']
 
 I pay for all three — ChatGPT Plus, Claude Pro, and Gemini Advanced. Every month, I run them through the same real-world tasks: writing documentation, debugging code, analyzing data, drafting client proposals. The winner depends on what I'm doing that day.
 
-This comparison is based on actual usage, not marketing pages. I tested each model on identical tasks in May 2026, using the latest available versions: GPT-5.5 (ChatGPT), Claude's latest model (Anthropic), and Gemini 2.5 Pro (Google). Here's what I found.
+This comparison is based on actual usage, not marketing pages. I tested each model on identical tasks in May 2026, using the latest available versions: GPT-5.5 (ChatGPT), Claude's latest model (Anthropic), and Gemini 3.1 Pro (Google). Here's what I found.
 
 ## Quick Comparison Table
 
@@ -16,7 +16,7 @@ This comparison is based on actual usage, not marketing pages. I tested each mod
 |---|---|---|---|
 | **Monthly Price** | $20 (Plus) / $200 (Pro) | $20 (Pro) / Teams available | $20 (Advanced, included with Google One) |
 | **Context Window** | 128K tokens | 200K tokens | 1M tokens |
-| **Free Tier** | Yes (GPT-5.5, limited) | Yes (fast model, limited) | Yes (Gemini 2.0 Flash, generous limits) |
+| **Free Tier** | Yes (GPT-5.5, limited) | Yes (fast model, limited) | Yes (Gemini 3.0 Flash, generous limits) |
 | **Image Generation** | Built-in (DALL-E) | No native image gen | Built-in (Imagen) |
 | **Code Execution** | Yes (Code Interpreter) | Yes (Artifacts preview) | Yes (built-in Python) |
 | **Internet Access** | Yes (Browse with Bing) | No built-in browsing | Yes (Google Search integration) |
@@ -83,8 +83,8 @@ Gemini is the most interesting of the three because of Google's ecosystem integr
 
 Gemini's pricing trick: it comes bundled with Google One AI Premium:
 
-- **Free:** Gemini 2.0 Flash with generous limits. The strongest free tier of the three by a margin.
-- **Advanced ($20/mo, included in Google One AI Premium):** Gemini 2.5 Pro, 2TB Google Drive storage, Gemini in Gmail/Docs/Sheets/Meet. If you already use Google Workspace, this is essentially free — you were paying for the storage anyway.
+- **Free:** Gemini 3.0 Flash with generous limits. The strongest free tier of the three by a margin.
+- **Advanced ($20/mo, included in Google One AI Premium):** Gemini 3.1 Pro, 2TB Google Drive storage, Gemini in Gmail/Docs/Sheets/Meet. If you already use Google Workspace, this is essentially free — you were paying for the storage anyway.
 - **Enterprise:** Via Google Workspace business plans. Per-user pricing with admin controls.
 
 The bundle changes the value calculus. If you pay for Google Drive storage, Gemini Advanced costs you nothing extra. ChatGPT Plus and Claude Pro require a separate subscription on top of whatever productivity suite you already use.
@@ -185,7 +185,7 @@ If you can only pay for one and your work spans writing, coding, and general res
 
 If your work is primarily writing and analysis — reports, proposals, research synthesis, legal/policy review — Claude Pro is the better choice. The writing quality difference becomes more significant the longer the output. For a 200-word email, ChatGPT and Claude are interchangeable. For a 5,000-word report, Claude's advantage compounds.
 
-**What about free tiers?** The free landscape in 2026 is genuinely good. Gemini's free tier (Gemini 2.0 Flash) is powerful enough for most casual use. Claude's free fast model punches above its weight for writing tasks. ChatGPT's free tier (GPT-5.5) handles coding and general questions competently. If you're not using AI for professional work, you can get by without paying for any of them.
+**What about free tiers?** The free landscape in 2026 is genuinely good. Gemini's free tier (Gemini 3.0 Flash) is powerful enough for most casual use. Claude's free fast model punches above its weight for writing tasks. ChatGPT's free tier (GPT-5.5) handles coding and general questions competently. If you're not using AI for professional work, you can get by without paying for any of them.
 
 For an overview of other free AI tools worth checking out, see our [roundup of the best free AI tools in 2026](/blog/best-free-ai-tools-2026).
 

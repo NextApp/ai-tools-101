@@ -53,10 +53,10 @@ Claude tends to produce more natural prose than ChatGPT and hallucinates less on
 
 #### Gemini
 
-Google's Gemini 2.0 Flash is available completely free at gemini.google.com — no message caps, no throttling to a weaker model. It's easily the most generous free tier in 2026.
+Google's Gemini 3.0 Flash is available completely free at gemini.google.com — no message caps, no throttling to a weaker model. It's easily the most generous free tier in 2026.
 
-- **Free tier**: Unlimited Gemini 2.0 Flash messages. File uploads up to 100MB. Google Drive integration.
-- **What you don't get**: Gemini 2.0 Pro, 2M token context window (Flash caps at 1M tokens), NotebookLM Plus.
+- **Free tier**: Unlimited Gemini 3.0 Flash messages. File uploads up to 100MB. Google Drive integration.
+- **What you don't get**: Gemini 3.0 Pro, 2M token context window (Flash caps at 1M tokens), NotebookLM Plus.
 - **Best for**: Research requiring web-connected answers, analyzing Google Docs/Sheets, and summarizing YouTube videos.
 
 Gemini's web integration with Google Search makes it better than ChatGPT Free for real-time factual questions. It also handles multimodal inputs (image + text) seamlessly.

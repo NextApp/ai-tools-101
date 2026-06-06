@@ -168,7 +168,7 @@ When using any AI image generator, keep these principles in mind:
 
 ## The Future of Free AI Image Generation
 
-The trajectory is clear: free AI image generation will continue to improve. Just as ChatGPT's free text model is now GPT-4o level (which would have been unthinkable two years ago), free image models will close the quality gap with paid versions. Microsoft's decision to offer DALL-E 3 for free through Designer signals where the industry is heading—AI companies are competing on ecosystem lock-in, not per-generation fees.
+The trajectory is clear: free AI image generation will continue to improve. Just as ChatGPT's free text model is now GPT-5.5 level (which would have been unthinkable two years ago), free image models will close the quality gap with paid versions. Microsoft's decision to offer DALL-E 3 for free through Designer signals where the industry is heading—AI companies are competing on ecosystem lock-in, not per-generation fees.
 
 For now, the answer to "can chatgpt generate images for free" is a qualified yes. You can, and the results are surprisingly good—but if image generation is central to your workflow, the $20/month for Plus (or free Microsoft Designer) will give you a significantly better experience.
 

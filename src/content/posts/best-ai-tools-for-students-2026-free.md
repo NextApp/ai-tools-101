@@ -16,7 +16,7 @@ Writing papers is the most time-consuming part of college. These AI writing tool
 
 ### ChatGPT (Free)
 
-[ChatGPT](https://chat.openai.com) remains the most versatile free AI tool for students in 2026. The free tier now runs on GPT-4o, which is powerful enough for most academic writing tasks.
+[ChatGPT](https://chat.openai.com) remains the most versatile free AI tool for students in 2026. The free tier now runs on GPT-5.5, which is powerful enough for most academic writing tasks.
 
 **Best for:**
 - Brainstorming essay outlines and thesis statements

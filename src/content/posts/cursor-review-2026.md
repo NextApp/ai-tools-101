@@ -12,7 +12,7 @@ Cursor has gone from an interesting experiment to arguably the most important de
 
 ## What Is Cursor?
 
-Cursor is a code editor built on top of VS Code's open-source foundation, but with AI capabilities woven into every aspect of the experience. It supports multiple AI models (GPT-4o, Claude 3.5, and custom models), indexes your entire codebase for context, and provides AI assistance that goes far beyond inline code completion.
+Cursor is a code editor built on top of VS Code's open-source foundation, but with AI capabilities woven into every aspect of the experience. It supports multiple AI models (GPT-5.5, Claude 4, and custom models), indexes your entire codebase for context, and provides AI assistance that goes far beyond inline code completion.
 
 The key insight behind Cursor is that AI isn't an add-on feature—it's the operating system of the editor. Every interaction, from writing code to debugging to refactoring, is designed with AI augmentation as the default, not the exception.
 
@@ -85,7 +85,7 @@ The tradeoff is clear: Cursor is more powerful but requires switching editors. C
 - **Codebase-wide context** transforms AI from a helpful autocomplete to a legitimate development partner
 - **Composer** alone is worth the $20/month for any developer who does regular refactoring
 - **Inline debugging** eliminates the context-switching cost of debugging
-- **Multi-model support** lets you use the best model for each task (Claude for complex reasoning, GPT-4o for fast completions)
+- **Multi-model support** lets you use the best model for each task (Claude for complex reasoning, GPT-5.5 for fast completions)
 - **Growing extension ecosystem**—most VS Code extensions work, and Cursor-specific extensions are emerging
 
 ### What Could Be Better

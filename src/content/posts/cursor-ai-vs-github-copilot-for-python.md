@@ -14,7 +14,7 @@ The AI coding assistant market has consolidated around two dominant players: Git
 
 | Category | GitHub Copilot | Cursor AI |
 |----------|---------------|-----------|
-| Core Model | GPT-4o / Claude 3.5 | GPT-4o / Claude 3.5 / custom |
+| Core Model | GPT-5.5 / Claude 4 | GPT-5.5 / Claude 4 / custom |
 | Python Completion | Fast, inline | Fast, with multi-line edits |
 | Debugging | Chat-based assistance | Inline error explanation + fix |
 | Virtual Environment | Manual activation needed | Auto-detection + activation |

@@ -12,7 +12,7 @@ Writers have been debating the merits of Claude vs ChatGPT for creative writing 
 
 ## The Test Setup
 
-To make this comparison fair and reproducible, I designed four creative writing challenges and fed identical prompts to both Claude (3.5 Sonnet, the current free-tier model) and ChatGPT (GPT-4o, the current free-tier model). Both received the same instructions with no additional coaching.
+To make this comparison fair and reproducible, I designed four creative writing challenges and fed identical prompts to both Claude (3.5 Sonnet, the current free-tier model) and ChatGPT (GPT-5.5, the current free-tier model). Both received the same instructions with no additional coaching.
 
 **The four tests:**
 
