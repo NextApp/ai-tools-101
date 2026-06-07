@@ -1,8 +1,8 @@
 ---
 title: "AI Image Generators Compared: Midjourney vs DALL-E vs Stable Diffusion (2026)"
-description: "Midjourney vs DALL-E 3 vs Stable Diffusion: which AI image generator wins in 2026? Compare quality, pricing, ease of use, and best use cases for artists."
+description: "Midjourney vs DALL-E 4 vs Stable Diffusion: which AI image generator wins in 2026? Compare quality, pricing, ease of use, and best use cases for artists."
 pubDate: 2025-09-01
-updatedDate: 2026-06-01
+updatedDate: 2026-06-07
 tags: ['Ai Image Generator', 'Midjourney', 'DALL-E', 'Stable Diffusion', 'Ai Art']
 ---
 
@@ -53,7 +53,7 @@ Midjourney's result: Rich, cinematic, magazine-quality. The steam catches the ne
 
 Midjourney's result: Beautifully composed. The lighting tells a story. But the code on screen is nonsense characters, and the keyboard layout is physically impossible. Beautiful, but don't look too closely at the details.
 
-## DALL-E 3/4 (Best for Prompt Understanding)
+## DALL-E 4 (Best for Prompt Understanding)
 
 DALL-E 4, accessed through ChatGPT Plus/Pro ($20/mo), understands exactly what you ask for — and usually delivers it. If you write "a red cube sitting on a blue table next to a green lamp," you'll get exactly that composition.
 
