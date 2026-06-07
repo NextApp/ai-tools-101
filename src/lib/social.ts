@@ -1,8 +1,8 @@
 export const GA4_MEASUREMENT_ID = 'G-4DXBJ5C3K5';
 
 export const SOCIAL_LINKS = {
-  twitter: 'https://twitter.com/AIToolGuide',
-  x: 'https://x.com/AIToolGuide',
+  twitter: 'https://twitter.com/AI_Tools_101',
+  x: 'https://x.com/AI_Tools_101',
   pinterest: 'https://pinterest.com/AIToolGuide',
   github: 'https://github.com/NextApp/ai-tools-101',
   youtube: 'https://youtube.com/@AIToolGuide',
