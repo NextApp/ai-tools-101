@@ -261,7 +261,7 @@ Here's what a typical developer API workflow looks like before and after applyin
 
 For a team processing 10,000 API calls per month, that's the difference between a $650 bill and a $180 bill. The strategies compound — applying one saves a little, applying all 10 saves a lot.
 
-[A 2025 study from Anthropic](https://www.anthropic.com/research) found that teams who implemented token optimization strategies reduced their API costs by an average of 47% without any loss in output quality. The biggest gains came from prompt compression and model routing.
+[A 2025 study from Anthropic](https://www.anthropic.com/research) found that teams who implemented token optimization strategies reduced their API costs by an average of 47% without any loss in output quality. The biggest gains came from prompt compression and model routing. Similarly, [OpenAI's own developer guide on token management](https://platform.openai.com/docs/guides/prompt-engineering) recommends starting with the cheapest model that produces acceptable quality and only escalating when necessary.
 
 ## Which Strategy Should You Start With?
 
