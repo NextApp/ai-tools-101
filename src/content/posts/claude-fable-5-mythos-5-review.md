@@ -1,6 +1,6 @@
 ---
 title: "Claude Fable 5 Review: Anthropic's Best Model Yet — Can It Beat GPT-5.5?"
-description: "Anthropic just launched Claude Fable 5 and Mythos 5 — two Mythos-tier flagship models. I spent 12 hours putting Fable 5 through real tasks: full-stack coding, contract review, and creative work. Here's the hands-on verdict, complete with Opus 4.8 comparison and upgrade advice."
+description: "Claude Fable 5 hands-on review: 12 hours of real tasks — React app, 40-page contract, creative work. Mythos-tier benchmark scores, Opus 4.8 comparison, and upgrade advice."
 pubDate: 2026-06-10
 updatedDate: 2026-06-10
 tags: ["Claude", "Fable 5", "Mythos 5", "Anthropic", "AI Model", "Review", "AI Coding"]
