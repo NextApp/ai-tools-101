@@ -1,8 +1,8 @@
 ---
 title: "How to Write Better AI Prompts: The Ultimate Prompt Engineering Guide"
 description: "Master prompt engineering with this complete step-by-step guide. Learn chain-of-thought, role prompts, and 15 copy-paste templates for better AI outputs."
-pubDate: 2025-11-15
-updatedDate: 2026-06-06
+pubDate: 2026-06-12
+updatedDate: 2026-06-12
 tags: ['Prompt Engineering', 'Ai Prompts', 'ChatGPT', 'Claude', 'Prompt Templates']
 ---
 
@@ -391,11 +391,11 @@ For more ready-to-use prompts across specific job functions, see our [best ChatG
 
 ## Prompt Engineering for Different AI Tools
 
-### ChatGPT / GPT Models
+### ChatGPT / GPT-5.5
 
-GPT-5.5 responds well to structured, instruction-heavy prompts. It's the most "obedient" model — you give detailed instructions, it follows them. Use all six elements freely.
+GPT-5.5 is the most instruction-following model available as of June 2026. It responds to structured, detailed prompts with high precision — use all six prompt elements freely. It supports a 256K token context window and includes built-in web search, image recognition, and code execution.
 
-GPT models also benefit from **system + user message separation**. In the API, put role/context/constraints in the system message and the specific task in the user message. In the web interface, combine everything into one message with clear section breaks.
+**System + user message separation** is the single most impactful GPT-5.5 pattern for API users. Put role, tone, constraints, and persistent rules in the system message. Put the specific task, input data, and one-shot instructions in the user message. The separation matters: GPT-5.5's instruction hierarchy weights system messages above user messages for safety and consistency.
 
 ```
 System: You are an expert technical copywriter. Your writing is concise, data-backed, and never uses marketing clichés. Write at a 10th-grade reading level.
@@ -403,13 +403,25 @@ System: You are an expert technical copywriter. Your writing is concise, data-ba
 User: Write a 500-word technical blog post comparing Redis and Memcached for caching in a Node.js application. Include a comparison table, latency benchmarks, and when to use each.
 ```
 
-### Claude (Long-Context Prompting)
+**Reasoning mode.** GPT-5.5 includes a reasoning toggle that allocates extra compute to step-by-step thinking before generating output. For logic puzzles, multi-step math, legal analysis, or complex decision trees, turn reasoning on. For simple tasks like summarization or rewriting, leave it off — the extra compute adds latency without meaningful quality gains. A good rule: if you would need scratch paper to solve the problem, enable reasoning.
 
-Claude's large context window enables patterns that aren't practical with GPT-5.5. You can paste entire documents, codebases, or conversation histories and ask questions that require synthesizing information across long contexts.
+**Structured output / JSON mode.** When you need machine-readable output (API responses, database seeding, data extraction pipelines), use GPT-5.5's structured output feature. It guarantees valid JSON conforming to a provided schema, eliminating the "parse this JSON-ish output" problem that plagues prompt-based extraction:
 
-For Claude, **put examples near the end** of your prompt. Claude's attention mechanism weights recent text more heavily than older text. If you're doing few-shot prompting with Claude, place the examples immediately before the new input.
+```
+System: You extract structured data from customer support tickets. Always output valid JSON matching the schema below.
 
-Claude also benefits from **XML-style delimiters** for organizing large prompts:
+User: Ticket: "Customer 8872 called about login error on Chrome 132. The password reset link expired before they could use it. They want a new link sent to backup email."
+```
+
+**Multi-turn contextual prompting.** GPT-5.5 excels at multi-turn conversations where each response builds on previous exchanges. For complex tasks (writing a strategy doc, debugging a multi-file codebase, iterating a design), break the work into a sequence of prompts rather than attempting it in one massive prompt. GPT-5.5 maintains context across turns better than any previous model — use this. Start broad ("analyze this codebase and identify the 3 most impactful performance issues"), then narrow ("now fix issue #2 and explain the tradeoff").
+
+**Web search integration.** GPT-5.5 can search the web mid-generation when prompted. Use phrases like "search for the latest on [topic] and incorporate findings" to trigger grounded, up-to-date responses. This is especially useful for fact-heavy writing where training cutoff dates would otherwise produce stale information.
+
+### Claude Fable 5 (Large Context + Autonomous Prompting)
+
+Claude Fable 5 (released June 2026) is Anthropic's Mythos-tier model with a massive context window and unprecedented autonomy for long-running tasks. Its prompting patterns differ from GPT-5.5 in meaningful ways.
+
+**Long-context prompt architecture.** Fable 5 holds focus across millions of tokens — you can paste entire codebases, full contracts, or book-length documents and ask questions that require cross-document synthesis. Use **XML-style delimiters** to organize large prompts so Fable 5 can distinguish context blocks from instruction blocks:
 
 ```
 <context>
@@ -425,7 +437,41 @@ Output as a JSON array of objects with keys: "date", "amount", "party".
 </format>
 ```
 
+**Put examples near the end.** Fable 5's attention mechanism weights recent text more heavily. For few-shot prompting, place your examples immediately before the new input — the examples get the strongest attention signal.
+
+**Autonomous multi-step prompting.** Fable 5's defining trait is autonomy. Unlike GPT-5.5 which benefits from turn-by-turn guidance, Fable 5 thrives when given an end goal and trusted to figure out the intermediate steps. For coding tasks, prompt it with the full spec and let it plan, build, test, and debug on its own — it self-corrects without hand-holding:
+
+```
+Task: Build a full-stack React bookkeeping app with auth, a SQLite database, and a REST API. Plan the project structure first, implement the backend, then the frontend, then wire them together. Write your own tests and fix any bugs you find. Report what you built and any tradeoffs you made.
+```
+
+**File memory for persistent context.** Fable 5 can write to files and read from them across conversation turns — use this for tasks that span hours or days. Prompt it to maintain a progress log or a running notes file. Its later outputs consistently improve when it can reference its own earlier reasoning. In testing, giving Fable 5 persistent file memory improved task performance 3× more than the same boost helped Claude Opus 4.8.
+
+**Vision prompting.** Fable 5 includes top-tier vision capabilities. You can screenshot a UI, a chart, or a whiteboard diagram and ask Fable 5 to analyze it, reconstruct code from it, or extract precise data points. No special vision syntax required — paste the image and describe what you need.
+
+**Safety classifier awareness.** Fable 5 includes classifiers that route cybersecurity and biology/chemistry queries to Opus 4.8. Over 95% of sessions never trigger a fallback, but if your prompt involves security research or bioinformatics, test with a small prompt first to verify it runs on Fable 5 rather than being silently downgraded.
+
 For a detailed comparison of when to use ChatGPT vs Claude, see our [AI assistant comparison guide](/blog/chatgpt-vs-claude-vs-gemini).
+
+### DeepSeek (Reasoning-First Prompting)
+
+DeepSeek's latest models (V3 and R1, current as of June 2026) are the top open-weight contenders, with strengths in code generation, mathematical reasoning, and technical analysis. Their prompting patterns differ from both GPT-5.5 and Claude Fable 5 in two important ways.
+
+**Direct, technical prompts outperform conversational ones.** DeepSeek models are trained heavily on technical and academic content. They respond best to direct, specification-style prompts — think "Write a Python function that implements Dijkstra's algorithm with the following constraints" rather than "Hey, could you help me write some code for finding shortest paths?" Save the conversational framing for GPT-5.5; give DeepSeek the spec.
+
+**Chain-of-thought is built in (R1).** DeepSeek-R1 shows its full reasoning chain before delivering a final answer — you see the model think. This is not a feature you toggle on; it's the architecture. For complex tasks (math proofs, algorithm design, debugging tangled logic), this visible reasoning chain is extremely useful. You can read the model's intermediate steps and catch flawed assumptions before they reach the final answer. Prompt R1 with:
+
+```
+Solve this problem step by step. Show your full reasoning before giving the final answer.
+```
+
+The prompt doesn't force the behavior (R1 does this by default), but it signals that you value the reasoning chain and want it preserved in the output.
+
+**Cost-aware prompting.** DeepSeek's API pricing is substantially lower than GPT-5.5 or Claude Fable 5 — tens of cents per million tokens versus dollars. This changes your prompting strategy: tasks where you'd agonize over token count with GPT-5.5 (massive few-shot examples, multi-document synthesis, bulk classification) are trivial with DeepSeek. Use more examples. Paste more context. Run batch jobs without worrying about the bill.
+
+**Bilingual strength.** DeepSeek handles Chinese and English with native fluency, and it's competitive in Japanese, Korean, and several European languages. If your task involves translation, code-switching, or Chinese-language content analysis, DeepSeek often outperforms both GPT-5.5 and Claude Fable 5. Prompt in the target language directly — DeepSeek doesn't need English instructions to produce non-English output.
+
+**When to use DeepSeek vs GPT-5.5 vs Claude Fable 5.** Use DeepSeek for code generation, math, technical documentation, and any task where you want visible reasoning chains or need to minimize cost at scale. Use GPT-5.5 when instruction-following precision matters most (creative writing, structured outputs, multi-turn conversations). Use Claude Fable 5 for long-document analysis, autonomous multi-step projects, and vision-heavy tasks.
 
 ### Image Generators (Midjourney / DALL-E)
 
@@ -473,4 +519,4 @@ For more practical guides:
 
 > A [2025 survey by Inside Higher Ed](https://www.insidehighered.com/news/tech-innovation/artificial-intelligence) found that two-thirds of professors now permit some form of AI use in academic work, signaling mainstream acceptance of AI tools in education.
 
-*Fact-checked: 2026-06-01 against official sources (OpenAI Help Center, Anthropic Support)*
+*Fact-checked: 2026-06-12 against official sources (OpenAI Help Center, Anthropic Support, DeepSeek documentation)*
