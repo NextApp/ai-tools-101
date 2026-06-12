@@ -103,10 +103,10 @@ A combined workflow: Perplexity for broad exploration, then Elicit for systemati
 
 ## Implementation Advice and Workflow Integration
 
-Each of these tools represents a different philosophy about AI-assisted work. Gamma optimizes for speed—the fastest path from blank page to presented deck. Notion AI optimizes for depth—building an intelligent knowledge system that compounds over time. Beautiful.ai optimizes for polish—ensuring every output meets professional design standards.
+Each of these tools represents a different philosophy about AI-assisted research. Perplexity optimizes for breadth and speed—giving you real-time, sourced answers from across the web with follow-up conversation capability. Elicit optimizes for academic rigor—systematically extracting data from papers and automating the literature review process. Consensus optimizes for evidence synthesis—aggregating findings across studies to answer questions with scientific consensus rather than a single source.
 
-The most effective approach is often hybrid: use Notion AI as your daily workspace for writing, planning, and knowledge management; use Gamma when you need to rapidly produce presentation-ready output from Notion content; use Beautiful.ai when design quality is the primary differentiator for client-facing or investor-facing presentations.
+The most effective approach is often hybrid: use Perplexity for initial exploration, topic scoping, and quick fact-checking when you need up-to-date web information; use Elicit when you are ready to go deep—extracting methodologies, sample sizes, and effect sizes from dozens of papers in a structured format; use Consensus when the question is empirical and the answer depends on what the body of evidence says, not what one study found.
 
-A practical weekly workflow: Monday planning in Notion AI → Wednesday content creation → Friday presentation prep in Gamma or Beautiful.ai depending on audience. This rhythm leverages each tool's strength at the right stage of the production process.
+A practical research workflow: start broad in Perplexity to map the landscape and identify key questions → move to Elicit to systematically review the academic literature and build a structured evidence table → validate your conclusions in Consensus to confirm that the weight of evidence supports your interpretation → return to Perplexity for the final check on recent developments not yet indexed in academic databases. Think of Perplexity as your research scout, Elicit as your systematic reviewer, and Consensus as your evidence auditor.
 
 *Affiliate disclosure: We may earn a commission if you subscribe to Perplexity Pro or other tools mentioned through our affiliate links, at no additional cost to you.*

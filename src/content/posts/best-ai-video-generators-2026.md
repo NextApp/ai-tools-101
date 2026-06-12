@@ -111,10 +111,10 @@ AI video generation rewards specific prompting techniques. After generating hund
 
 ## Implementation Advice and Workflow Integration
 
-Each of these tools represents a different philosophy about AI-assisted work. Gamma optimizes for speed—the fastest path from blank page to presented deck. Notion AI optimizes for depth—building an intelligent knowledge system that compounds over time. Beautiful.ai optimizes for polish—ensuring every output meets professional design standards.
+Each of these tools represents a different philosophy about AI video generation. Runway optimizes for creative control—it's a professional toolset for filmmakers and designers who want frame-level precision. Pika optimizes for speed and accessibility—turning a text prompt or image into video in seconds with minimal friction. Synthesia optimizes for presenter-led content—replacing the camera crew with an AI avatar that speaks your script in over 140 languages.
 
-The most effective approach is often hybrid: use Notion AI as your daily workspace for writing, planning, and knowledge management; use Gamma when you need to rapidly produce presentation-ready output from Notion content; use Beautiful.ai when design quality is the primary differentiator for client-facing or investor-facing presentations.
+The most effective approach is often hybrid: use Runway for creative storytelling, brand films, and any project where visual quality and artistic direction are the primary differentiators; use Pika for social media content, rapid concept visualization, and iterations where speed trumps polish; use Synthesia for training videos, product walkthroughs, and internal communications where a human presenter is expected but filming is impractical.
 
-A practical weekly workflow: Monday planning in Notion AI → Wednesday content creation → Friday presentation prep in Gamma or Beautiful.ai depending on audience. This rhythm leverages each tool's strength at the right stage of the production process.
+A practical production pipeline: brainstorm and script in your team's planning tool → generate quick concept clips in Pika to test visual directions → move the approved creative into Runway for final production with full editing and compositing → if the project also needs presenter-led segments (intros, explanations, calls to action), create those in Synthesia and integrate them into the Runway timeline. Think of Pika as your rapid sketchpad, Runway as your editing suite, and Synthesia as your virtual presenter.
 
 *Affiliate disclosure: We may earn a commission if you subscribe to Runway, Synthesia, or other tools mentioned through our affiliate links, at no additional cost to you.*
