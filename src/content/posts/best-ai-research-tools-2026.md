@@ -103,10 +103,10 @@ A combined workflow: Perplexity for broad exploration, then Elicit for systemati
 
 ## Implementation Advice and Workflow Integration
 
-Each of these tools represents a different philosophy about AI-assisted work. Gamma optimizes for speed—the fastest path from blank page to presented deck. Notion AI optimizes for depth—building an intelligent knowledge system that compounds over time. Beautiful.ai optimizes for polish—ensuring every output meets professional design standards.
+Each of these tools represents a different philosophy about AI-assisted research. Perplexity optimizes for breadth and recency—casting the widest net across web sources, academic papers, and news in real time. Elicit optimizes for depth and structure—systematically extracting methodology, findings, and effect sizes from academic literature. Consensus optimizes for evidence quality—quantifying the state of scientific agreement and surfacing the most-cited seed papers.
 
-The most effective approach is often hybrid: use Notion AI as your daily workspace for writing, planning, and knowledge management; use Gamma when you need to rapidly produce presentation-ready output from Notion content; use Beautiful.ai when design quality is the primary differentiator for client-facing or investor-facing presentations.
+The most effective approach is often hybrid: use Perplexity Pro Search for initial exploration and orienting yourself in a new topic area; use Elicit for conducting systematic literature reviews and extracting structured data from papers; use Consensus for validating specific claims and understanding where the scientific consensus actually stands. No single tool covers the full research lifecycle.
 
-A practical weekly workflow: Monday planning in Notion AI → Wednesday content creation → Friday presentation prep in Gamma or Beautiful.ai depending on audience. This rhythm leverages each tool's strength at the right stage of the production process.
+A practical research workflow: formulate the research question → Perplexity for broad context and recent developments → Elicit for systematic paper extraction and structured comparison → Consensus for evidence verification and consensus quantification. This pipeline transforms research from a linear search process into a layered, verifiable practice.
 
 *Affiliate disclosure: We may earn a commission if you subscribe to Perplexity Pro or other tools mentioned through our affiliate links, at no additional cost to you.*
