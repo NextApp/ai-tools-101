@@ -1,0 +1,17 @@
+{
+  "redirects": [
+    {
+      "source": "https://www.ai-tools-101.com/(.*)",
+      "destination": "https://ai-tools-101.com/$1",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/_astro/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ]
+}
