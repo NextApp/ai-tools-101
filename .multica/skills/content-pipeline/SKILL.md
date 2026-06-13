@@ -97,6 +97,23 @@ git push origin main
 
 ---
 
+## 异常回流链路
+
+### 选题审核驳回（Stage 1）
+- ✅ 通过 → 进入 Stage 2
+- ⚠️ 待定 / P2 / P3 → 进入选题池，下周自动重提。连续 3 次待定 → 标记"需人工决策"
+- ❌ 不通过 → 归档，不重提
+
+### 任一 Stage 驳回
+- 返回上一个 Agent 重制。最多回流 2 次。
+- 第 3 次仍未通过 → 标记"需人工介入"，暂停流水线，通知用户。
+
+### 7 天复盘触发的 fix issue
+- 自动走"修改已有文章"场景，从 Stage 3 开始，到 Stage 8 结束。
+- 不重新分发（不改内容的情况下不重复推 X/Pin）。
+
+---
+
 ## 硬约束清单（违反直接 reject，共 10 条）
 
 | # | 规则 | 检查方式 |
@@ -160,10 +177,19 @@ print(f"H5 description: {dl} chars {'✅' if ok else '⚠️ MUST BE 150-160'}")
 wc = len(body.split()); ok = wc >= 1500; all_ok &= ok
 print(f"H6 word count: {wc} {'✅' if ok else '⚠️ MUST BE >= 1500'}")
 
+# H6 strict: strip code blocks, URLs, markdown syntax before counting
+clean = re.sub(r'```.*?```', '', body, flags=re.S)
+clean = re.sub(r'https?://\S+', '', clean)
+clean = re.sub(r'[#*>\-|`\[\]()]', ' ', clean)
+clean = re.sub(r'\s+', ' ', clean).strip()
+wc_strict = len(clean.split()); ok = wc_strict >= 1500; all_ok &= ok
+print(f"H6 word count (strict): {wc_strict} {'✅' if ok else '⚠️ MUST BE >= 1500'}")
+
+# H7-H8: link checks with broader patterns
 ext = len(re.findall(r'\[([^\]]+)\]\((https?://[^)]+)\)', body)); ok = ext >= 2; all_ok &= ok
 print(f"H7 external links: {ext} {'✅' if ok else '⚠️ NEED >= 2'}")
 
-intern = len(re.findall(r'\[([^\]]+)\]\((/blog/[^)]+)\)', body)); ok = intern >= 2; all_ok &= ok
+intern = len(re.findall(r'\[([^\]]+)\]\((/[^)]+)\)', body)); ok = intern >= 2; all_ok &= ok
 print(f"H8 internal links: {intern} {'✅' if ok else '⚠️ NEED >= 2'}")
 
 pub = re.search(r'pubDate:\s*(.+)', front)
@@ -175,15 +201,16 @@ print(f"H10 updatedDate: {upd.group(1).strip() if upd else 'MISSING ⚠️'}")
 tags = re.search(r'tags:\s*\[.*?\]', front)
 print(f"H10 tags: {'✅' if tags else 'MISSING ⚠️'}")
 
-# H1: English check
-cn_chars = len(re.findall(r'[\u4e00-\u9fff]', body))
-print(f"H1 Chinese chars: {cn_chars} {'⚠️ MUST BE ENGLISH' if cn_chars > 0 else '✅'}")
+# H1: English check (frontmatter + body + Chinese punctuation/wide chars)
+cn_body = len(re.findall(r'[\u4e00-\u9fff\u3000-\u303f\uff00-\uffef]', front + body))
+print(f"H1 Chinese chars: {cn_body} {'⚠️ MUST BE ENGLISH' if cn_body > 0 else '✅'}")
 
-# S8: avg sentence length
-sents = re.split(r'[.!?]+', body)
-sents = [s.strip() for s in sents if len(s.strip()) > 20]
+# S8: avg sentence length (exclude code blocks, discard fragments < 5 words)
+sents_body = re.sub(r'```.*?```', '', body, flags=re.S)
+sents = re.split(r'[.!?]+', sents_body)
+sents = [s.strip() for s in sents if len(s.strip().split()) >= 5]
 avg = sum(len(s.split()) for s in sents) / len(sents) if sents else 0
-print(f"S8 avg sentence: {avg:.0f} words {'✅' if avg <= 20 else '⚠️'}")
+print(f"S8 avg sentence: {avg:.0f} words {'✅' if avg <= 20 else '⚠️ SHORTEN'}")
 
 # S9: H2 count
 h2s = len(re.findall(r'^## ', body, re.M))
