@@ -1,12 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "has": [{ "type": "host", "value": "www.ai-tools-101.com" }],
-      "destination": "https://ai-tools-101.com/$1",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/_astro/(.*)",
