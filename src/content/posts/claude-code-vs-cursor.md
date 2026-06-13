@@ -17,8 +17,8 @@ Before we get into opinions, here's the ground truth.
 **Environment:**
 - MacBook Pro M3 Max, 36GB RAM, macOS 15
 - Node.js 22, pnpm 9
-- Claude Code: v1.0.270 with **Claude Opus 4.8** (terminal agent mode)
-- Cursor: v0.46.11 with **Claude 3.5 Sonnet** (Composer agent mode) and GPT-4o (tab completion)
+- Claude Code with **Claude Opus 4.8** (terminal agent mode)
+- Cursor with **Opus 4.8** (Composer agent mode) and **GPT-5.5** (tab completion)
 
 **The task:** Build a REST API scaffold for a task-management app. Requirements:
 - Express + TypeScript
@@ -429,4 +429,4 @@ This means the tool you choose today isn't the tool you'll be using in December.
 
 *Claude Code is available at [claude.ai/code](https://claude.ai/code). Cursor is available at [cursor.com](https://cursor.com). Both offer free tiers for evaluation.*
 
-*For more on AI coding workflows, read our [guide to effective prompting for AI code generation](/blog/ai-prompting-guide) and our [comparison of terminal-based vs IDE-based development environments](/blog/terminal-vs-ide-environments).*
+*For more on AI coding workflows, read our [prompt engineering guide](/blog/prompt-engineering-guide) and [GitHub Copilot vs Cursor vs Windsurf comparison](/blog/github-copilot-vs-cursor-vs-windsurf).*
