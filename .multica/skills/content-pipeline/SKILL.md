@@ -35,9 +35,18 @@ allowed-tools: Bash(git *), Bash(npm *), Bash(python3 *)
 3. **竞品雷达**：扫 Zapier AI 板块、Every.to、Reddit r/aiTools 的热门话题
 
 **输出**：5-10 个候选选题，按优先级排序：
+
 ```
-优先级 = (有affiliate × 10) + (搜索量预估 × 5) + (竞争度低 × 3) - (已有覆盖 × 20)
+score = affiliate_bonus(0 or 1) × 10                   # 变现有无
+      + norm_search_volume(search_vol, 50, 5000) × 5     # 搜索量归一化到0~1
+      + norm_competition(rival_da_scores) × 3             # 竞争度归一化
+      - duplicate_penalty(coverage_pct) × 20              # 已覆盖扣分
 ```
+其中 `norm_search_volume(v, min, max)` 将原始值映射到 0~1：
+- v < 50 → 0（太低，不优先）
+- v > 5000 → 1（高价值）
+- 中间线性映射
+
 取前 3 个进入阶段 1。
 
 ### 阶段 1：选题审核（→ 选题审核员）
@@ -45,7 +54,7 @@ allowed-tools: Bash(git *), Bash(npm *), Bash(python3 *)
 
 | 维度 | 检查 |
 |------|------|
-| 品类匹配 | 是否属于8大品类之一？不匹配 → ❌ 直接reject |
+| 品类匹配 | 是否属于8大品类之一？不匹配 → ❌ 直接reject。品类判定规则：关键词含"chat/assistant/LLM"→AI Chat；含"write/content/copy"→AI Writing；含"image/art/design"→AI Image；含"code/dev/program"→AI Coding；含"video/clip/animation"→AI Video；含"voice/speech/audio"→AI Voice；含"research/paper/academic"→AI Research；含"productivity/workflow/note"→AI Productivity。规则无法判定时，退回人工确认。 |
 | 竞争度 | SERP前5是谁？DA 80+霸占 → 标记"高风险" |
 | 已有覆盖 | 是否已有80%+重合的文章？→ ❌ 同类相食，reject |
 | 搜索需求 | 预估月搜索量？<50 → 低优先级 |
@@ -84,9 +93,19 @@ git push origin main
 ```
 
 ### 阶段 9：自动分发（→ 全栈开发）
-- 生成 X/Twitter thread（英文，每条 < 280 字符，钩子+要点+链接）
-- 生成 Pinterest Pin（HTML模板截图 → PNG）
-- 生成 Pin 描述（标题 + 描述 + 链接 + 2-3个hashtag）
+
+**X/Twitter Thread 规范：**
+- 总条数：5-8 条（含首尾），单条 < 280 字符
+- 首条：数字钩子（如"3 things I learned testing X for 12 hours"）
+- 中间：每条一个独立要点 + 具体数字或结论
+- 尾条：行动号召 + 文章链接
+- 格式：英文，无 hashtag（首条可放 1 个），不用"🧵"emoji（降低机器人感）
+
+**Pinterest Pin 规范：**
+- 图片：1000×1500px PNG，由 `scripts/gen-pins.py` + `screenshot-pins.cjs` 自动生成
+- 标题：≤ 100 字符，含工具名 + 核心结论
+- 描述：≤ 500 字符，前 50 字符必须包含关键信息（Pinterest 折叠线），2-3 个 hashtag
+- 目标链接：`https://ai-tools-101.com/blog/[slug]`
 
 ### 阶段 10：7天效果复盘（→ 全栈开发，每周日自动触发）
 检查发布 ≥7 天的文章表现：
@@ -216,6 +235,17 @@ print(f"S8 avg sentence: {avg:.0f} words {'✅' if avg <= 20 else '⚠️ SHORTE
 h2s = len(re.findall(r'^## ', body, re.M))
 print(f"S9 H2 count: {h2s} {'✅' if h2s >= 6 else '⚠️'}")
 
+# Frontmatter format validation
+pub = re.search(r'pubDate:\s*(\d{4}-\d{2}-\d{2})', front)
+print(f"FT1 pubDate format: {'✅ YYYY-MM-DD' if pub else '⚠️ INVALID FORMAT'}")
+upd = re.search(r'updatedDate:\s*(\d{4}-\d{2}-\d{2})', front)
+print(f"FT2 updatedDate format: {'✅ YYYY-MM-DD' if upd else '⚠️ INVALID FORMAT'}")
+tags_fm = re.search(r'tags:\s*\[.*?\]', front)
+print(f"FT3 tags format: {'✅' if tags_fm else '⚠️ MISSING OR INVALID'}")
+title_fm = re.search(r'title:\s*"?(.{1,200})"?\s*\n', front)
+tl = len(title_fm.group(1)) if title_fm else 0
+print(f"FT4 title length: {tl} chars {'✅' if 10 <= tl <= 200 else '⚠️'}")
+
 print(f"\n{'ALL CHECKS PASSED ✅' if all_ok else 'SOME CHECKS FAILED ⚠️ — fix before publish'}")
 ```
 
@@ -230,3 +260,16 @@ print(f"\n{'ALL CHECKS PASSED ✅' if all_ok else 'SOME CHECKS FAILED ⚠️ —
 - **语言规则**：全站英文，发现中文直接 reject
 - **类型规则**：不是对比就不是教程，就不写
 - **数据驱动**：选题优先看 GSC 数据，不是看感觉
+- **构建警告**：`npm run build` 必须 zero errors + zero warnings。warning 会被捕获，有 warning 也需修复
+- **Frontmatter 格式**：pubDate/updatedDate 必须是 `YYYY-MM-DD`，tags 必须是 YAML 数组格式 `["tag1", "tag2"]`，title 10-200 字符
+- **Git 安全**：push 前检查 `git status` 确认在 main 分支，禁止 `git push -f`
+
+## v3 迭代清单（待基建就绪后实施）
+
+| # | 项目 | 阻塞原因 |
+|---|------|---------|
+| 1 | 软约束 S1-S4 脚本化自动检测 | 需 NLP 模型训练 AI 套话检测器 |
+| 2 | 竞品雷达动态扩展数据源 | 需建成数据管道 |
+| 3 | 复盘阈值动态调整（按站点阶段） | 需站点过 Sandbox 后有稳定流量基线 |
+| 4 | 社交分发独立 Agent | 需 GSC + Pinterest API 接入能力 |
+| 5 | 全栈开发负载拆分（发布/分发/复盘） | 需 2 个新 Agent 分担 |
