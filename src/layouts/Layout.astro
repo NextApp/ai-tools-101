@@ -18,7 +18,7 @@ interface Props {
 const { title, description, ogImage, type = 'website', publishedAt, modifiedAt, tags = [], robots } = Astro.props;
 const siteTitle = 'AI Tool Guide';
 const fullTitle = title === 'Home' ? siteTitle : `${title} - ${siteTitle}`;
-const siteURL = 'https://ai-tools-101.com';
+const siteURL = 'https://www.ai-tools-101.com';
 const canonicalURL = Astro.url ? new URL(Astro.url.pathname, siteURL).href : siteURL;
 
 const gaEnabled = !!GA4_MEASUREMENT_ID;
