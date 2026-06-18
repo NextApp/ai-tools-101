@@ -3,7 +3,7 @@ title: "GLM-5.2 vs Claude Opus 4.8: Open-Source New King vs Closed-Source Benchm
 pubDate: 2026-06-18
 updatedDate: 2026-06-18
 tags: ["GLM-5.2", "Claude Opus 4.8", "Comparison", "AI Coding", "Open Source", "Zhipu AI", "Anthropic"]
-description: "GLM-5.2 vs Claude Opus 4.8: FrontierSWE 47.33% vs 48.15%. Beyond the 0.82% gap — 1M open-source context vs 200K closed-source code taste. Which matters more for your daily workflow?"
+description: "GLM-5.2 vs Claude Opus 4.8: FrontierSWE 47.33% vs 48.15%. Beyond the 0.82% gap — open-source 1M context vs closed-source code aesthetics. Which matters more for daily coding?"
 ---
 
 When two models are separated by 0.82% on the hardest software engineering benchmark in existence — FrontierSWE 47.33% (GLM-5.2) vs 48.15% (Claude Opus 4.8) — the benchmark stops being the decision-maker. You're left with a question that no leaderboard answers: what actually changes in your daily development experience when you pick one over the other?
