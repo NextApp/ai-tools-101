@@ -6,7 +6,7 @@ tags: ["AI Coding", "GLM-5.2", "DeepSeek", "Comparison", "Open Source", "Zhipu A
 description: "Two Chinese MoE models, opposite paths: GLM-5.2 is open-weight and self-hostable, DeepSeek V4 is cheap but API-only. The real call is price vs sovereignty."
 ---
 
-Here's the awkward truth about comparing GLM-5.2 and DeepSeek V4: there is no clean head-to-head benchmark to settle it. GLM-5.2 sits at Code Arena #1 and scored 47.33% on FrontierSWE. DeepSeek V4 has never published a Code Arena ranking. You can line up GLM's numbers against GPT-5.5 or Claude all day, but the one comparison you actually want — these two Chinese models, side by side, on the same coding leaderboard — doesn't exist.
+Here's the awkward truth about comparing GLM-5.2 and DeepSeek V4: there is no clean head-to-head benchmark to settle it. GLM-5.2 sits at Code Arena #1 and ranks #3 on [FrontierSWE](https://frontierswe.com/) (AVG RANK 4.32, 74% dominance). DeepSeek V4 has never published a Code Arena ranking. You can line up GLM's numbers against GPT-5.5 or Claude all day, but the one comparison you actually want — these two Chinese models, side by side, on the same coding leaderboard — doesn't exist.
 
 So if you're a developer or tech lead trying to pick one for your team, the leaderboard is a dead end. You can't sort these two by score. What you *can* sort them by is how they reach you: GLM-5.2 hands you the weights, DeepSeek V4 hands you an API endpoint at a price so low it barely registers on the invoice.
 
@@ -22,7 +22,7 @@ The structural difference that matters isn't *inside* the model. It's the distri
 |-----------|---------|-----------------|
 | Architecture | MoE | MoE, 1.6T total / 49B active |
 | Context window | 1M tokens | 1M tokens |
-| Coding signal | Code Arena #1, FrontierSWE 47.33% | No public Code Arena ranking |
+| Coding signal | Code Arena #1, FrontierSWE #3 (AVG RANK 4.32) | No public Code Arena ranking |
 | How you get it | Download the weights, self-host | API endpoint |
 | Headline price | Coding Plan from $18/month | $0.44 / 1M input, $0.87 / 1M output |
 | Ecosystem | Claude Code / OpenClaw integration | OpenAI / Anthropic API-compatible |

@@ -8,13 +8,13 @@ description: "GLM-5.2 tops Code Arena and beats GPT-5.5 on FrontierSWE. Five rea
 
 Another model claiming to beat GPT? After the hype cycles of the past two years, developer fatigue is real. So when GLM-5.2 hit the leaderboards with "Code Arena #1 globally" and "FrontierSWE surpasses GPT-5.5," the reaction wasn't excitement — it was skepticism.
 
-But this time the numbers are harder to dismiss. On FrontierSWE, GLM-5.2 scored 47.33%. GPT-5.5 scored 46.12%. Claude Opus 4.8 scored 48.15%. The gap is under one percentage point. What makes it significant isn't the margin — it's the direction. A Chinese open-source model just pulled ahead of GPT-5.5 on one of the hardest software engineering benchmarks in existence.
+But this time the numbers are harder to dismiss. On [FrontierSWE](https://frontierswe.com/), GLM-5.2 ranks at #3 with an average rank of 4.32 and a 74% dominance rate. Claude Opus 4.8 sits at #2 (AVG RANK 4.24, 75%). GPT-5.5 is at #4 (AVG RANK 4.56, 73%). The gaps are narrow — GLM-5.2 and Claude Opus 4.8 are separated by just 0.08 in average rank — but the direction is significant. A Chinese open-source model just pulled ahead of GPT-5.5 on one of the hardest software engineering benchmarks in existence.
 
 This isn't a benchmark summary. I took a real NestJS + React project and put both models through five real-world scenarios. Here's what the code looked like, where each one stumbled, and where one genuinely surprised me.
 
 ## Benchmarks First — But They Only Tell Half the Story
 
-GLM-5.2 leads Code Arena with a 1,356 Elo rating, ahead of GPT-5.5 (1,338) and Claude Opus 4.8 (1,351). It beats GPT-5.5 on FrontierSWE by roughly 1% and scores 92.3% on AIME 2025 math reasoning.
+GLM-5.2 leads Code Arena with a 1,356 Elo rating, ahead of GPT-5.5 (1,338) and Claude Opus 4.8 (1,351). On FrontierSWE it ranks ahead of GPT-5.5 (AVG RANK 4.32 vs 4.56, Dominance 74% vs 73%) and scores 92.3% on AIME 2025 math reasoning.
 
 What do these numbers actually mean? They mean GLM-5.2 can go toe-to-toe with the world's best models on tasks with clear instructions and verifiable answers. But your daily work isn't multiple-choice — it's changing requirements, reading legacy code, and fixing CI pipelines that broke for reasons nobody understands.
 
@@ -114,8 +114,10 @@ The cost breakdown:
 |--------|-------------|---------|
 | GLM-5.2 API (Coding Plan) | From $18/month | Individual developers, ~20-30K tokens/day |
 | GLM-5.2 self-hosted (4×A100) | $3,000+/month | Teams, 5M+ tokens/month |
-| GPT-5.5 API | $20/month (Plus) or per-token | Individual devs needing multimodal |
-| Claude Opus 4.8 API | $20/month (Pro) or per-token | Frontend/design-focused work |
+| GPT-5.5 (ChatGPT Plus) | $20/month | Individual devs needing multimodal, limited API access |
+| GPT-5.5 API | $5/1M input, $30/1M output | Production workloads, per-token billing |
+| Claude Opus 4.8 (Pro) | $20/month | Individual devs, writing and coding |
+| Claude Opus 4.8 API | $15/1M input, $75/1M output | Production workloads, per-token billing |
 
 Tool selection isn't a benchmark competition — it's a total cost of ownership calculation. Open-source models shift your cost from "per API call" to "one-time deployment and maintenance." If your volume is high enough, that shift is margin. If your volume is low, API pricing will always win.
 
