@@ -429,4 +429,6 @@ This means the tool you choose today isn't the tool you'll be using in December.
 
 *Claude Code is available at [claude.ai/code](https://claude.ai/code). Cursor is available at [cursor.com](https://cursor.com). Both offer free tiers for evaluation.*
 
+*Compare code tools: [Claude Code vs Cursor](/compare/claude-code-vs-cursor) · [Cursor vs GitHub Copilot](/compare/cursor-vs-github-copilot) · [All AI Coding tools](/tools/ai-coding)*
+
 *For more on AI coding workflows, read our [prompt engineering guide](/blog/prompt-engineering-guide) and [GitHub Copilot vs Cursor vs Windsurf comparison](/blog/github-copilot-vs-cursor-vs-windsurf).*
