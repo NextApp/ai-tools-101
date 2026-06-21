@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
-const siteURL = 'https://www.ai-tools-101.com';
+const siteURL = 'https://ai-tools-101.com';
 
 // https://astro.build/config
 export default defineConfig({
