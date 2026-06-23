@@ -133,4 +133,6 @@ The technology here is moving fast. [Midjourney V7's character consistency](http
 
 *Related reads: [AI Image Generators Compared: Midjourney vs DALL-E vs Stable Diffusion](/blog/ai-image-generators-comparison) · [Midjourney Review 2026](/blog/midjourney-review-2026)*
 
+*See how Midjourney stacks up: [Midjourney vs DALL-E](/compare/dall-e-vs-midjourney) · [Midjourney vs Stable Diffusion](/compare/midjourney-vs-stable-diffusion) · [Browse all AI Image tools](/tools/ai-image)*
+
 *Affiliate disclosure: We may earn a commission if you subscribe to Midjourney through our affiliate link, at no additional cost to you.*
