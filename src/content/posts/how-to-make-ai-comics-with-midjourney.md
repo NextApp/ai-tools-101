@@ -1,6 +1,6 @@
 ---
 title: "How to Make AI Comics with Midjourney: Character Design to Full Pages (2026)"
-description: "Create AI comics from scratch with Midjourney: character design, consistent art style, panel layouts, and full-page generation. Step-by-step tutorial with real prompts."
+description: "Create AI comics from scratch with Midjourney: lock character designs, build a style bible, generate panels, and assemble full pages. Real prompts and workflow included."
 pubDate: 2026-06-21
 updatedDate: 2026-06-21
 tags: ["Midjourney", "AI Image", "AI Art", "Tutorial", "Comics", "Character Design"]
@@ -128,6 +128,8 @@ After finishing my first 8-page comic, here's what I'd change:
 | Estimated time (third comic) | ~4 hours |
 
 The learning curve is steep — my third comic took half the time of my first. Once you've locked in your characters, style bible, and storyboard template, the panel generation becomes mechanical. The creative energy shifts from "how do I prompt this?" to "what's the best composition for this story beat?"
+
+The technology here is moving fast. [Midjourney V7's character consistency](https://docs.midjourney.com/docs/character-consistency) improved dramatically with the `--cref` flag introduced earlier this year, and the [recent style reference feature](https://docs.midjourney.com/docs/style-reference) means you can now lock an entire visual aesthetic across an unlimited number of generations. If you tried AI comics six months ago and gave up because characters kept morphing, the tools have genuinely caught up. It's not perfect — you'll still get the occasional hand with six fingers — but it's crossed the threshold from "frustrating experiment" to "repeatable workflow."
 
 *Related reads: [AI Image Generators Compared: Midjourney vs DALL-E vs Stable Diffusion](/blog/ai-image-generators-comparison) · [Midjourney Review 2026](/blog/midjourney-review-2026)*
 
