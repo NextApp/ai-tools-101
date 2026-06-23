@@ -1,8 +1,8 @@
 ---
 title: "How to Make AI Comics with Midjourney: Character Design to Full Pages (2026)"
 description: "Create AI comics with Midjourney: lock character designs, build a style bible, generate consistent panels, and assemble full pages. Real prompts and workflow."
-pubDate: 2026-06-21
-updatedDate: 2026-06-21
+pubDate: 2026-06-23
+updatedDate: 2026-06-23
 tags: ["Midjourney", "AI Image", "AI Art", "Tutorial", "Comics", "Character Design"]
 ---
 
