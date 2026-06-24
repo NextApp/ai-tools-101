@@ -466,3 +466,5 @@ ChatGPT works best when you treat it as a pair programmer who's fast but occasio
 If you want structured prompts that make ChatGPT more effective for your day-to-day work, grab the [20 best ChatGPT prompts for productivity](/blog/best-chatgpt-prompts-for-productivity) next.
 
 *Fact-checked: 2026-06-01 against official sources (OpenAI Help Center)*
+
+*More AI tutorials: [AI Short Films with Runway](/blog/how-to-make-ai-short-films-with-runway-2026) · [AI Comics with Midjourney](/blog/how-to-make-ai-comics-with-midjourney)*

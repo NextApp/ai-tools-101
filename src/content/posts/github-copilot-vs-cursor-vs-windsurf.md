@@ -310,3 +310,5 @@ All three tools share a trajectory: from autocomplete to pair programmer to auto
 > According to [McKinsey's 2025 AI productivity report](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai), knowledge workers using AI tools report 25-40% time savings on content and data tasks.
 
 *Fact-checked: 2026-06-01 against official sources (GitHub Copilot, Cursor, Windsurf, Amazon Q documentation)*
+
+*More AI tutorials: [Make AI Short Films with Runway](/blog/how-to-make-ai-short-films-with-runway-2026) · [Create AI Comics with Midjourney](/blog/how-to-make-ai-comics-with-midjourney)*

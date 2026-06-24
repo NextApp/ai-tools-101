@@ -198,3 +198,5 @@ If you're switching between these tools, invest 15 minutes in learning to write 
 > The [2025 Stack Overflow Developer Survey](https://survey.stackoverflow.co/2025) found that over 70% of developers are now using AI coding tools, with adoption continuing to accelerate.
 
 *Fact-checked: 2026-06-01 against official sources (OpenAI Help Center, Anthropic Support, Google AI)*
+
+*New tutorials: [Make AI Short Films with Runway](/blog/how-to-make-ai-short-films-with-runway-2026) · [Create AI Comics with Midjourney](/blog/how-to-make-ai-comics-with-midjourney)*

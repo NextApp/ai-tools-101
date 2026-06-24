@@ -520,3 +520,5 @@ For more practical guides:
 > A [2025 survey by Inside Higher Ed](https://www.insidehighered.com/news/tech-innovation/artificial-intelligence) found that two-thirds of professors now permit some form of AI use in academic work, signaling mainstream acceptance of AI tools in education.
 
 *Fact-checked: 2026-06-12 against official sources (OpenAI Help Center, Anthropic Support, DeepSeek documentation)*
+
+*More AI tutorials: [AI Short Films with Runway](/blog/how-to-make-ai-short-films-with-runway-2026) · [AI Comics with Midjourney](/blog/how-to-make-ai-comics-with-midjourney)*
