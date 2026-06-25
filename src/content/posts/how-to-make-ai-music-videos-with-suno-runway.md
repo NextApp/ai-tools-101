@@ -2,7 +2,7 @@
 title: "How to Make AI Music Videos with Suno + Runway: A Step-by-Step Guide (2026)"
 description: "Create AI music videos from scratch: generate original songs with Suno, visualize with Runway, and sync everything. Full workflow with real prompts and costs."
 pubDate: 2026-06-24
-updatedDate: 2026-06-24
+updatedDate: 2026-06-25
 tags: ["Suno", "Runway", "AI Video", "AI Music", "Tutorial", "Music Video"]
 ---
 
@@ -10,7 +10,7 @@ I wanted to make a music video for a song that didn't exist yet. Six hours and $
 
 ## Why Suno + Runway Is the Right Combo
 
-Suno generates music from text prompts. Runway generates video from text and images. Together, they replace what used to require a band, a recording studio, a film crew, and a video editor. For $30/month total (Suno Pro $10 + Runway $15), you get unlimited music generations and enough video credits for 2-3 full music videos per month.
+Suno generates music from text prompts. Runway generates video from text and images. Together, they replace what used to require a band, a recording studio, a film crew, and a video editor. For $25/month total (Suno Pro $10 + Runway Standard $15), you get 2,500 Suno credits and 625 Runway credits — enough for 2-3 full music videos per month. Suno also offers annual billing at $8/month and a Premier plan at $30/month with 10,000 credits.
 
 The workflow is linear: generate the song → extract the vibe → generate matching visuals → sync in an editor. No step takes more than 30 minutes once you know the flow.
 
@@ -27,7 +27,7 @@ buildup, cinematic tension and release
 
 Suno generates two variations per prompt. Pick the one with the cleanest production — some generations will have muddy mixing or weird artifacts. Listen on headphones, not laptop speakers. A mix that sounds fine on MacBook speakers can be a disaster on AirPods.
 
-**Pro tip:** If the song cuts off at 2 minutes, use the "Extend" button in Suno. Add `[Continue]` to the end of your prompt and it continues from where it left off. I needed two extensions to hit 3:15 — exactly the length I wanted.
+**Pro tip:** Suno Pro generates up to 4 minutes per track natively (2 minutes on the free plan). If you need longer, use the "Extend" feature (three-dot menu on any track → Remix/Edit → Extend) to continue from any timestamp. Pro users can extend tracks up to 8 minutes total; Premier users can go beyond 12 minutes. You can set a custom start point, add new lyrics, and when done, use "Get Whole Song" to merge all segments into one seamless file. I needed two extensions to hit 3:15 — exactly the length I wanted.
 
 ## Step 2: Map the Song Structure
 
@@ -43,7 +43,7 @@ This structure determines how many video clips you need and what kind. For my 3:
 
 ## Step 3: Generate Videos to Match Each Section
 
-Runway's Gen-3 Alpha lets you generate from text or images. For music videos, text-to-video with strong style direction works best.
+Runway's Gen-4.5 (the latest model as of mid-2026) lets you generate from text or images. For music videos, text-to-video with strong style direction works best. Gen-3 Alpha and Gen-4 are also available if you prefer their look.
 
 **Intro clips (atmospheric, slow):**
 ```
@@ -59,9 +59,9 @@ through industrial corridor, flickering fluorescent lights, motion
 blur, high contrast, intense, 10 seconds --ar 16:9
 ```
 
-Generate 2-3 variations per clip concept. Runway charges per second of output, so each generation costs roughly $0.05-0.10. At 18 clips × 3 variations each = 54 generations, your total Runway cost is around $3-5 for a full music video. That's cheaper than one stock footage clip.
+Generate 2-3 variations per clip concept. Runway uses a credits system (Standard plan: 625 credits/month), with each generation costing credits based on resolution and duration. At 18 clips × 3 variations each = 54 generations, your total Runway credit spend is roughly 150-200 credits for a full music video — well within the monthly allowance. That's cheaper than one stock footage clip.
 
-**Style consistency tip:** Paste `--style-reference` with a screenshot URL from your first successful generation. This keeps the color palette and lighting consistent across all clips. Without it, your cyberpunk video might suddenly turn into a sunny beach at clip 14 (happened to me, hilarious but unusable).
+**Style consistency tip:** Use Runway's Style Reference feature in the web UI — upload a screenshot from your first successful generation as a reference frame. This keeps the color palette and lighting consistent across all clips. Without it, your cyberpunk video might suddenly turn into a sunny beach at clip 14 (happened to me, hilarious but unusable).
 
 ## Step 4: Sync in CapCut (Free)
 
@@ -88,15 +88,15 @@ Export at 1080p, 30fps. Suno exports at 320kbps MP3 which is fine for YouTube an
 
 ## What Breaks and How to Fix It
 
-**Problem: Suno generations sound muffled.** Suno's default mix boosts bass and compresses dynamics. Fix: run the audio through a free mastering tool like BandLab's online Mastering service (free, web-based). It takes 30 seconds and adds clarity that Suno's raw output lacks.
+**Problem: Suno generations sound muffled.** Suno's default mix boosts bass and compresses dynamics. Fix: run the audio through BandLab's online Mastering service, which is permanently free with no usage limits. It offers 4 built-in presets — Universal, Fire, Clarity, and Tape — and requires only a free BandLab account (no credit card). Exports are watermark-free and valid for both personal and commercial use. BandLab Membership ($14.95/month) adds extra presets and fine-tuning controls, but the free tier is all you need for basic cleanup. It takes 30 seconds and adds clarity that Suno's raw output lacks.
 
 **Problem: Runway clips have morphing artifacts.** Hands, faces, and text will warp in some generations. Generate 3-4 variations per clip and pick the cleanest one. If a clip has minor artifacts, use it for a short duration (3-5 seconds) where the viewer won't notice. If it's major (face melting), discard and regenerate.
 
 **Problem: Sync feels off even with beat markers.** CapCut's beat detection is good but not perfect. For critical moments — the exact frame where the bass drops — do a manual cut. Zoom into the audio waveform, find the transient spike, and snap your cut to that exact frame.
 
-**Problem: Colors don't match across clips.** [Runway's style consistency feature](https://help.runwayml.com/en/articles/8683921-style-reference) saves hours — upload a reference frame from your first clip and apply it to all subsequent generations. Without it, each generation picks its own color temperature and the final video looks like 18 different movies stitched together. With it, the palette stays locked.
+**Problem: Colors don't match across clips.** Runway's Style Reference feature saves hours — upload a reference frame from your first clip in the web UI and apply it to all subsequent generations. Without it, each generation picks its own color temperature and the final video looks like 18 different movies stitched together. With it, the palette stays locked.
 
-**Problem: The song ends too early or too late for your clips.** [Suno's Extend feature](https://suno.com/docs) lets you continue a generation from any point. If your video runs longer than expected, extend the song. If it's too long, use CapCut's trim tool to fade out at the right timestamp. Always mix the audio AFTER placing all video clips — not before.
+**Problem: The song ends too early or too late for your clips.** Suno's Extend feature (three-dot menu → Remix/Edit → Extend) lets you continue a generation from any timestamp. Pro users can extend tracks up to 8 minutes total, enough for most music videos. If your video runs longer than expected, extend the song. If it's too long, use CapCut's trim tool to fade out at the right timestamp. Always mix the audio AFTER placing all video clips — not before.
 
 ## Real Numbers from Three Music Videos
 
