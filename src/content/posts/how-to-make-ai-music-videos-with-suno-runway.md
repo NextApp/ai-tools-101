@@ -94,6 +94,10 @@ Export at 1080p, 30fps. Suno exports at 320kbps MP3 which is fine for YouTube an
 
 **Problem: Sync feels off even with beat markers.** CapCut's beat detection is good but not perfect. For critical moments — the exact frame where the bass drops — do a manual cut. Zoom into the audio waveform, find the transient spike, and snap your cut to that exact frame.
 
+**Problem: Colors don't match across clips.** [Runway's style consistency feature](https://help.runwayml.com/en/articles/8683921-style-reference) saves hours — upload a reference frame from your first clip and apply it to all subsequent generations. Without it, each generation picks its own color temperature and the final video looks like 18 different movies stitched together. With it, the palette stays locked.
+
+**Problem: The song ends too early or too late for your clips.** [Suno's Extend feature](https://suno.com/docs) lets you continue a generation from any point. If your video runs longer than expected, extend the song. If it's too long, use CapCut's trim tool to fade out at the right timestamp. Always mix the audio AFTER placing all video clips — not before.
+
 ## Real Numbers from Three Music Videos
 
 | Video | Length | Clips | Suno Cost | Runway Cost | Total |
