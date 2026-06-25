@@ -107,7 +107,9 @@ Export at 1080p, 30fps. Suno exports at 320kbps MP3 which is fine for YouTube an
 | Orchestral epic | 4:00 | 24 | $4 | $8 | $12 |
 | **Average** | **3:15** | **18** | **$2.70** | **$5.30** | **$8** |
 
-The learning curve is real but short. My first video took 6 hours, my third took 2.5 hours. The time savings come from knowing exactly how many clips you need before generating, and from building a library of reusable style references.
+The learning curve is real but short. My first video took 6 hours, my third took 2.5 hours. The time savings come from knowing exactly how many clips you need before generating, and from building a library of reusable style references. After three videos, you'll have a style reference library of 6-8 "looks" that you can apply instantly to new projects — your cyberpunk preset, your nature documentary preset, your abstract art preset. Each new video becomes progressively faster because you're no longer discovering the workflow, just executing it.
+
+If you're coming from traditional video production, the shift that takes the longest to internalize is this: you're now curating rather than creating. Your job isn't to make each frame perfect — it's to generate 50 candidates and pick the 18 that work best together. The machine does the heavy lifting. You do the taste.
 
 *Compare AI video tools: [Runway vs Pika](/compare/pika-vs-runway) · [HeyGen vs Synthesia](/compare/hey-gen-vs-synthesia) · [All AI Video tools](/tools/ai-video)*
 
