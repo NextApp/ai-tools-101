@@ -91,14 +91,6 @@ const gaEnabled = !!GA4_MEASUREMENT_ID;
           name: siteTitle,
           url: siteURL,
           description: 'Step-by-step tutorials and guides for the best AI tools. Learn ChatGPT, Midjourney, Copilot, and more.',
-          potentialAction: {
-            '@type': 'SearchAction',
-            target: {
-              '@type': 'EntryPoint',
-              urlTemplate: `${siteURL}/tags/{search_term_string}`,
-            },
-            'query-input': 'required name=search_term_string',
-          },
         })}>
         </script>
       )
