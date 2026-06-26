@@ -1,6 +1,6 @@
 ---
 title: "US Government Blocks GPT-5.6 Full Release: What It Means for AI Developers"
-description: "GPT-5.6 is finished but US gov now approves access per customer. What this means for developers and why open-weight models just got more valuable."
+description: "GPT-5.6 is finished but the US government now approves access per customer. What this shift means for developers and why open-weight models just got more valuable."
 pubDate: 2026-06-26
 updatedDate: 2026-06-26
 tags: ["GPT-5.6", "OpenAI", "AI Regulation", "AI Policy", "Industry Analysis"]
