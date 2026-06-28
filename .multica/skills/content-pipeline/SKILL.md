@@ -1,22 +1,39 @@
 ---
 name: content-pipeline
-description: 内容文章全生命周期管理 v2——数据驱动选题、类型约束、11步协同流水线、26条质量约束、自动分发与效果复盘。所有Agent协作规范。
+description: 内容文章全生命周期管理 v3 — 简化流程：选题审核 → 全栈开发写作+自查 → FactChecker事实核查 → 发布。26条质量约束。
 user-invocable: true
 allowed-tools: Bash(git *), Bash(npm *), Bash(python3 *)
 ---
 
-# 内容文章全生命周期流水线 v2
+# 内容文章全生命周期流水线 v3（简化版）
 
-## Agent 清单
+v3 重大变更：Prompt优化师、内容创作、内容主编三个 agent 因频繁 fail 已被合并到全栈开发直接处理。只保留选题审核员（可选）和 FactChecker（必选）。
+
+## 当前流程（3 步）
+
+```
+选题 → 全栈开发（调研+写+自查+发布）→ FactChecker（事后事实核查）
+```
+
+1. **用户给选题** → 全栈开发调研数据 + 直接写文章 + 跑格式校验 + 推送
+2. **FactChecker 事后审查** → 创建 issue 分配给 FactChecker 做第二轮事实核查
+3. **发现错误立即修复** → 更新文章 + updatedDate
+
+## 已退役 Agent（不可用，勿尝试分配）
+
+| Agent | 状态 | 原因 |
+|-------|------|------|
+| Prompt优化师 (55f668b8) | 退役 | 频繁 fail，功能已合并到全栈开发 |
+| 内容创作 (24f88291) | 退役 | SSH push 超时，文件无法提交 |
+| 内容主编 (0f823a5b) | 退役 | 从未响应过 issue 分配 |
+
+## 活跃 Agent
 
 | 顺序 | Agent | 职责 |
 |------|-------|------|
-| 0 | [@选题审核员](mention://agent/88ef61ae-088c-48f7-ad48-ec02a00c31dd) | 数据驱动选题+审核：GSC数据/工具库存/竞品雷达 |
-| 1 | [@Prompt优化师](mention://agent/55f668b8-a6d3-471a-b339-a4751c68c72f) | 把选题变成强化版写作指令 |
-| 2 | [@内容创作](mention://agent/24f88291-928b-47e2-b5cc-ac71241b0eea) | 按Prompt生成文章初稿 |
-| 3 | [@事实核查员](mention://agent/44db8f15-4678-4719-8181-fdf437e25f19) | 验证版本号/价格/功能/引用准确性 |
-| 4 | [@内容主编](mention://agent/a530a75a-e520-439a-908a-3b88a02f9ef2) | 去AI味/吸引力/人性化/信息密度 |
-| 5 | [@全栈开发](mention://agent/d5da950d-d09a-4339-a250-0fda55877354) | 格式校验+发布+分发+复盘 |
+| 0 | [@选题审核员](mention://agent/88ef61ae-088c-48f7-ad48-ec02a00c31dd) | （可选）数据驱动选题|
+| 1 | [@全栈开发](mention://agent/d5da950d-d09a-4339-a250-0fda55877354) | 调研+写作+自查+格式校验+发布+分发 |
+| 2 | [@FactChecker](mention://agent/e3a6eafc-8d9b-40a8-9df9-eb1ea25c8955) | 事后事实核查：版本号/定价/功能/引用 |
 
 ---
 
