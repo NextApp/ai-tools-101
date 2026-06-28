@@ -1,7 +1,7 @@
 ---
 title: "How to Make AI Video Avatars Without a Camera: HeyGen + Synthesia Guide (2026)"
 description: "Create AI video avatars without filming yourself. Compare HeyGen vs Synthesia and make your first avatar video in under 30 minutes."
-pubDate: 2026-06-27
+description: "Create AI video avatars without a camera: compare HeyGen vs Synthesia, pick your tool, and make your first avatar video in under 30 minutes."
 updatedDate: 2026-06-27
 tags: ["HeyGen", "Synthesia", "AI Video", "AI Avatars", "Tutorial", "Content Creation"]
 ---
