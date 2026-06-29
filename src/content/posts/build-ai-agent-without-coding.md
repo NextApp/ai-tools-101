@@ -1,8 +1,8 @@
 ---
-title: "How to Build an AI Agent Without Coding (No-Code Guide 2026)"
-description: "Build your first AI agent without writing code. Step-by-step guide using no-code platforms with real automation examples for beginners and non-developers."
+title: "How I Built an AI Agent in 2 Hours Without Writing Code (2026)"
+description: "Build a working AI agent in 2 hours with zero coding. Real automation examples using OpenAI Custom GPTs, Relevance AI, and Zapier. Step-by-step from setup to deployment."
 pubDate: 2025-08-15
-updatedDate: 2026-05-28
+updatedDate: 2026-06-28
 tags: ['Ai Agent', 'No-Code', 'Automation', 'Custom Gpt', 'Zapier']
 ---
 
