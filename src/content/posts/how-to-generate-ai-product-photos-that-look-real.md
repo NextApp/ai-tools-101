@@ -8,7 +8,7 @@ tags: ["Midjourney", "Leonardo AI", "AI Image", "Product Photography", "Tutorial
 
 I spent $200 on product photos for my side project last year. Two months ago, I generated the same shots with AI for $4. The images weren't just "good enough" — my conversion rate on the product page went up 4%. Here's exactly how.
 
-The trick isn't using one tool. It's knowing which tool to use for which shot. Midjourney for creative hero images. Leonardo AI for clean e-commerce product shots. Together, they replace a $500-2000 product photoshoot with a $10 AI session.
+The trick isn't using one tool. It's knowing which tool to use for which shot. Midjourney for creative hero images. Leonardo AI for clean e-commerce product shots. Together, they replace a $500-2000 product photoshoot for under a dollar in AI generation costs. Even with heavy iteration, you won't spend more than $10.
 
 ## Which Tool for Which Shot
 
@@ -46,11 +46,13 @@ The difference: the first prompt describes the product. The second describes the
 
 Leonardo AI does one thing better than anyone else: clean, consistent product shots with transparent backgrounds. For an Amazon listing or Shopify product page, this is what you need.
 
-**Leonardo settings for product photography:**
+**Leonardo settings for product photography (requires paid plan, ~$12/month):**
 1. Select **Leonardo Diffusion XL** model
 2. Enable **Alchemy** for enhanced detail
 3. Set **Contrast** to Medium, **Prompt Magic** to 0.5
 4. Use **Preset: Photography**
+
+**Free tier alternative:** Use Lightning XL or Phoenix model, skip Alchemy. Quality drops slightly but still usable for prototypes.
 
 **Prompt template:**
 ```
@@ -96,7 +98,7 @@ After 10 product launches using AI photos, here's the workflow that stuck:
 
 The real unlock isn't the cost savings — it's the speed. You can iterate through 10 creative directions in an afternoon. With a photographer, each direction means a reshoot. The ability to test multiple visual styles before committing to one is worth more than the $2,000 you'll save.
 
-The tools are ready. [Midjourney's latest photorealism update](https://docs.midjourney.com/docs/photorealism) in V7 handles lighting and depth of field better than most entry-level DSLR shots. [Leonardo AI's batch tools](https://leonardo.ai/features/) let you generate 50+ product variations in under 10 minutes — a task that would take a photographer a full day of shooting and post-processing. If you're launching a physical product in the next six months, the question isn't whether to use AI product photos. It's whether your competitors already are.
+The tools are ready. Midjourney's V7 handles lighting and depth of field better than most entry-level DSLR shots. Leonardo AI's batch tools let you generate 50+ product variations in under 10 minutes — a task that would take a photographer a full day of shooting and post-processing. If you're launching a physical product in the next six months, the question isn't whether to use AI product photos. It's whether your competitors already are.
 
 One last piece of advice from someone who learned it the hard way: always generate a few "bad" variations intentionally — slightly off lighting, awkward angles, minor artifacts. Keep them in a separate folder. When your team or client inevitably asks "but does AI really look as good as real photography?", you pull up the duds first, then show them the winners. The contrast sells the quality far better than any spec sheet.
 
