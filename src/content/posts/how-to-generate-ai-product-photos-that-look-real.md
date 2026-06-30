@@ -1,6 +1,6 @@
 ---
 title: "How to Generate AI Product Photos That Look Real: Midjourney + Leonardo AI Guide (2026)"
-description: "Generate realistic AI product photos without a studio: Midjourney for creative shots, Leonardo AI for e-commerce. Real prompts, costs, and when each tool works best."
+description: "Generate realistic AI product photos without a studio: Midjourney for creative shots, Leonardo AI for e-commerce. Real prompts, costs, and when to use each."
 pubDate: 2026-06-28
 updatedDate: 2026-06-28
 tags: ["Midjourney", "Leonardo AI", "AI Image", "Product Photography", "Tutorial", "E-commerce"]
