@@ -1,6 +1,6 @@
 ---
 title: "Claude Fable 5 Returns With a Catch: 50% Quota, 7 Days, Then You Pay"
-description: "Claude Fable 5 returns after 19-day ban: half subscription quota, mandatory paid credits after 7 days, and aggressive safety filters that block normal work requests."
+description: "Claude Fable 5 returns after 19-day ban: half quota, mandatory paid credits after 7 days, and safety filters that block normal work requests."
 pubDate: 2026-07-02
 updatedDate: 2026-07-02
 tags: ["Claude", "Fable 5", "Anthropic", "AI Regulation", "AI Pricing"]
