@@ -1,5 +1,5 @@
 ---
-title: "Claude Fable 5 vs Claude Opus 4.8: Is Mythos-Tier Worth Twice the Tokens?"
+title: "Claude Fable 5 vs Claude Opus 4.8: Is Mythos-Tier Worth 2x?"
 description: "Claude Fable 5 vs Opus 4.8 compared: benchmark differences, token costs, safety filter impact, and real user experiences. Should you upgrade or wait for the classifiers to stabilize?"
 pubDate: 2026-07-02
 updatedDate: 2026-07-02
@@ -89,5 +89,7 @@ For developers whose work falls outside the filter's scope — frontend developm
 **The upgrade math:** If you're on the $200/month Max plan and Fable 5 is limited to 50% of your weekly quota, you're getting roughly $100/month worth of Fable 5 access. After July 7, buying equivalent usage credits would cost $200-400/month depending on your volume. If you think Fable 5 makes you 20% more productive, the upgrade pays for itself. If you think it makes you 5% more productive, it doesn't.
 
 For most individual developers, the pragmatic answer is: **use Fable 5 heavily this week while it's still partially included in your subscription. After July 7, use Opus 4.8 for daily work and pay for Fable 5 only on the tasks where you genuinely need Mythos-tier reasoning.**
+
+One more thing worth noting: the [FrontierSWE leaderboard](https://frontierswe.com/) shows that Fable 5's dominance score (90%) nearly doubles Claude 3.5 Sonnet's previous score. That gap — from "capable" to "nearly autonomous" — is what you're paying for with the 2x token premium. The question isn't whether Fable 5 is better. It's whether your workflow actually needs that level of autonomy, or whether Opus 4.8's "reliable and predictable" is already enough for what you build.
 
 *Related: [Claude Fable 5 Returns With Restrictions](/blog/claude-fable-5-returns-restrictions) · [Claude Fable 5 Original Review](/blog/claude-fable-5-mythos-5-review) · [Claude Code vs Cursor](/blog/claude-code-vs-cursor)*
