@@ -100,6 +100,8 @@ The practical difference: with Opus 4.8, I use it all day and rarely think about
 
 For most individual developers, the pragmatic answer is: **use Fable 5 heavily this week while it's still partially included in your subscription. After July 7, use Opus 4.8 for daily work and pay for Fable 5 only on the tasks where you genuinely need Mythos-tier reasoning.**
 
+This split — Fable 5 for architecture and hard bugs, Opus 4.8 for daily coding — is what the most productive Fable 5 users are already doing. The token economics naturally push you toward it: Fable 5 costs 2x per response and the safety classifier risk makes it unsuitable for quick, iterative work. Save it for the moments where you actually need the extra 1.89 FrontierSWE positions of capability, and let Opus handle everything else. The subscription math works out to roughly $250-350/month for this hybrid approach, which is more than the old $200/month all-inclusive plan but less than going full Fable 5 on usage credits.
+
 One more thing worth noting: the [FrontierSWE leaderboard](https://frontierswe.com/) shows that Fable 5's dominance score (90%) nearly doubles Claude 3.5 Sonnet's previous score. That gap — from "capable" to "nearly autonomous" — is what you're paying for with the 2x token premium. The question isn't whether Fable 5 is better. It's whether your workflow actually needs that level of autonomy, or whether Opus 4.8's "reliable and predictable" is already enough for what you build.
 
 *Related: [Claude Fable 5 Returns With Restrictions](/blog/claude-fable-5-returns-restrictions) · [Claude Fable 5 Original Review](/blog/claude-fable-5-mythos-5-review) · [Claude Code vs Cursor](/blog/claude-code-vs-cursor)*
