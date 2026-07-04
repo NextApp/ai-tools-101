@@ -1,6 +1,6 @@
 ---
 title: "Claude Fable 5 vs Claude Opus 4.8: Is Mythos-Tier Worth 2x?"
-description: "Claude Fable 5 vs Opus 4.8 compared: benchmark differences, token costs, safety filter impact, and real user experiences. Should you upgrade or wait for the classifiers to stabilize?"
+description: "Claude Fable 5 vs Opus 4.8 compared: benchmarks, token costs, safety filter impact, and real user experiences. Upgrade or wait for the classifiers to stabilize?"
 pubDate: 2026-07-02
 updatedDate: 2026-07-02
 tags: ["Claude", "Fable 5", "Opus 4.8", "Anthropic", "AI Comparison"]
