@@ -73,6 +73,10 @@ Export at 1080p, 30fps. Watch the video twice: once with sound, once without. Th
 
 ## Real Numbers
 
+After making 15+ explainer videos, three mistakes cost the most time and credits: not trimming the script before generating (150 words/minute is the sweet spot), using the wrong avatar for the audience (friendly avatars convert better for B2C, corporate for B2B), and over-animating in CapCut (one animation per 15 seconds is plenty — more than that competes with the message).
+
+Here's what it costs:
+
 | Item | Cost | Time |
 |------|------|------|
 | Synthesia (1 avatar, 2 min) | $29/mo subscription | 10 min |
