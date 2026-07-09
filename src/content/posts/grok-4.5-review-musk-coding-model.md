@@ -1,6 +1,6 @@
 ---
 title: "Grok 4.5 Review: Musk's AI Coding Model Is 15x Cheaper Than GPT-5.5 and Now Default on Cursor"
-description: "SpaceXAI launched Grok 4.5 — a coding model that beats GPT-5.5 on marathon tasks, costs $6/1M output vs GPT-5.5's $30, and is now the default AI in Cursor. Full review with benchmarks."
+description: "SpaceXAI launched Grok 4.5 — a coding model beating GPT-5.5 on marathon tasks, costing $6/1M output, now the default AI in Cursor. Full review with benchmarks."
 pubDate: 2026-07-09
 updatedDate: 2026-07-09
 tags: ["Grok", "SpaceXAI", "AI Coding", "Cursor", "Elon Musk", "AI Model", "Review"]
