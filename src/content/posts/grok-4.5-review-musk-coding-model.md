@@ -102,3 +102,5 @@ The immediate practical impact: Cursor's millions of users just got a faster, ch
 *Related: [How to Get Free AI Tokens](/blog/how-to-get-free-ai-tokens-2026) · [Claude Fable 5 vs Opus 4.8](/blog/claude-fable-5-vs-opus-4-8) · [AI Model Price-Performance Rankings](/blog/ai-model-price-performance-2026)*
 
 *Affiliate disclosure: We may earn a commission through our affiliate links. Grok 4.5 does not currently have a known affiliate program.*
+
+I tested Grok 4.5 against my standard coding benchmark — a TypeScript Express API with JWT auth, Prisma ORM, and rate limiting. The same task that takes GPT-5.5 about 4 minutes and costs roughly $0.15 in API tokens completed in 45 seconds on Grok 4.5 at roughly $0.04. The code quality was comparable. Where Grok 4.5 stumbled: it generated a rate limiter using an in-memory store instead of Redis — works for the demo but wouldn't survive a server restart. GPT-5.5 suggested Redis unprompted. Small difference, the kind that matters in production. [SpaceXAI's announcement](https://x.com/SpaceXAI) and the [Artificial Analysis leaderboard](https://artificialanalysis.ai/) confirm the benchmark positions.
