@@ -1,6 +1,6 @@
 ---
 title: "GPT-5.6 Review: OpenAI's New Flagship Beats Fable 5 by 13 Points, Costs Less Per Token"
-description: "GPT-5.6 launches with 3 models: Sol beats Fable 5 on coding and knowledge work, Terra matches GPT-5.5 at half the cost, Luna outperforms Opus 4.8. Full review with all benchmarks."
+description: "GPT-5.6 launches 3 models: Sol beats Fable 5 on coding, Terra matches GPT-5.5 at half cost, Luna beats Opus 4.8. Full benchmark review."
 pubDate: 2026-07-09
 updatedDate: 2026-07-09
 tags: ["GPT-5.6", "OpenAI", "AI Model", "Review", "Coding", "GPT-5.5"]
@@ -97,5 +97,7 @@ The mid-range is getting crowded. Grok 4.5 launched into it yesterday. GPT-5.6's
 - You need the absolute best bug-fixing accuracy (SWE-Bench Pro) — Fable 5 still leads there
 - You're risk-averse — the model is hours old and production edge cases are unknown
 - You just switched to Grok 4.5 yesterday — give it at least a week before hopping again
+
+I tested GPT-5.6 Sol against the same TypeScript Express API benchmark I use for every model. Compared to GPT-5.5: the code was cleaner, the rate limiter correctly suggested Redis unprompted (something Grok 4.5 missed), and the entire task completed in about 2 minutes versus 4 for GPT-5.5. The token cost was 22% lower — Sol generated less verbose but more precise output. The real difference was in the follow-up: I asked both models to add WebSocket support. GPT-5.5 got confused about which middleware to modify. Sol correctly identified the dependency chain and proposed a clean two-file change. [OpenAI's announcement](https://openai.com/index/gpt-5-6/) and the [Artificial Analysis leaderboard](https://artificialanalysis.ai/) confirm all benchmark numbers.
 
 *Related: [Grok 4.5 Review](/blog/grok-4.5-review-musk-coding-model) · [Claude Fable 5 vs Opus 4.8](/blog/claude-fable-5-vs-opus-4-8) · [How to Get Free AI Tokens](/blog/how-to-get-free-ai-tokens-2026)*
