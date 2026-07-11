@@ -1,6 +1,6 @@
 ---
 title: "GPT-5.6 Review: OpenAI's New Flagship Beats Fable 5 by 13 Points, Costs Less Per Token"
-description: "GPT-5.6 launches 3 models: Sol beats Fable 5 by 13 points, Terra matches GPT-5.5 at half cost, Luna beats Opus 4.8. Full benchmark review and early test results."
+description: "GPT-5.6 launches 3 models: Sol beats Fable 5 by 13 pts, Terra matches GPT-5.5 at half cost, Luna outperforms Opus 4.8. Full benchmark review."
 pubDate: 2026-07-09
 updatedDate: 2026-07-09
 tags: ["GPT-5.6", "OpenAI", "AI Model", "Review", "Coding", "GPT-5.5"]
