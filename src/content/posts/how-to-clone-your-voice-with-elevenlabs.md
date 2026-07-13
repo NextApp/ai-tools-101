@@ -93,6 +93,8 @@ After generating roughly 40 hours of AI-narrated audio with my clone, here's wha
 
 I've spent roughly $94 on ElevenLabs over three months. The same 40 hours of professional narration would cost $8,000-20,000. For podcast intros, video voiceovers, and personal projects, the quality is good enough that listeners don't notice. For commercial audiobooks being sold on Audible, I'd still hire a human — the emotional range gap is real and readers can tell.
 
+[ElevenLabs' voice cloning documentation](https://elevenlabs.io/docs/product/voices/voice-cloning) walks through the technical requirements in detail. The [Creator plan pricing](https://elevenlabs.io/pricing) confirms $22/month with 100,000 characters of generation — enough for roughly 2 hours of narrated audio per month. If you're producing content weekly, that's more than enough. If you're doing daily long-form, you'll want the Pro plan at $99/month.
+
 *Compare voice tools: [ElevenLabs vs Murf](/compare/elevenlabs-vs-murf) · [ElevenLabs vs PlayHT](/compare/elevenlabs-vs-play-ht) · [All AI Voice tools](/tools/ai-voice)*
 
 *Related: [Best AI Voice Generators 2026](/blog/best-ai-voice-generators-2026) · [AI Music Videos with Suno + Runway](/blog/how-to-make-ai-music-videos-with-suno-runway)*
