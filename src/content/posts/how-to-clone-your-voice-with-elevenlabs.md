@@ -2,7 +2,7 @@
 title: "How to Clone Your Voice with ElevenLabs: Step-by-Step Guide (2026)"
 description: "Clone your voice with ElevenLabs using 60 seconds of audio. Full setup guide, quality tips, cost breakdown, and what to avoid for realistic AI voice cloning."
 pubDate: 2026-07-10
-updatedDate: 2026-07-10
+updatedDate: 2026-07-13
 tags: ["ElevenLabs", "AI Voice", "Voice Cloning", "Tutorial", "Text-to-Speech"]
 ---
 
@@ -15,7 +15,7 @@ ElevenLabs makes voice cloning almost too easy. Feed it 60 seconds of clean audi
 ElevenLabs requires three things to create a clone:
 
 1. **60 seconds of audio** — clean, no background noise, just your voice speaking naturally
-2. **A Creator subscription** ($22/month) or higher — voice cloning isn't available on the free tier
+2. **A Starter subscription** ($6/month) or higher — Instant Voice Cloning is available from Starter; Creator ($22/month) unlocks Professional Voice Cloning for higher-fidelity clones
 3. **Your consent** — ElevenLabs requires you to record a verification phrase proving you're the person being cloned
 
 The audio quality matters more than the length. A well-recorded 60-second clip produces better results than a noisy 10-minute one. If you only optimize one thing, optimize the recording environment.
@@ -66,7 +66,7 @@ Once the clone passes the test phrases, you can generate long-form content. Elev
 4. Set Stability to 55%, Clarity to 85%
 5. Generate section by section
 
-Generating 10 minutes of audio takes about 2-3 minutes and costs roughly $0.30 in credits on the Creator plan.
+Generating 10 minutes of audio takes about 2-3 minutes and costs roughly $1-2 in credits on the Creator plan, depending on which TTS model you use (Turbo models are cheaper).
 
 **The most common mistake:** Not adding punctuation for breath pauses. ElevenLabs respects commas, periods, and paragraph breaks as natural pause points. A script written like a text message ("hey so I was thinking about the q3 numbers and they look good but we should probably double check the marketing spend") produces breathless, unnatural speech. Add commas where you'd naturally pause, periods where you'd stop, and paragraph breaks where you'd take a breath.
 
@@ -88,12 +88,12 @@ After generating roughly 40 hours of AI-narrated audio with my clone, here's wha
 |------|------|
 | ElevenLabs Creator plan | $22/month |
 | 60-second source recording | Free (your phone) |
-| 10-minute narration generation | ~$0.30 in credits |
-| 40 hours of generated audio (my usage) | ~$72 total |
+| 10-minute narration generation | ~$1-2 in credits |
+| 40 hours of generated audio (my usage) | ~$300-400 total |
 
-I've spent roughly $94 on ElevenLabs over three months. The same 40 hours of professional narration would cost $8,000-20,000. For podcast intros, video voiceovers, and personal projects, the quality is good enough that listeners don't notice. For commercial audiobooks being sold on Audible, I'd still hire a human — the emotional range gap is real and readers can tell.
+I've spent roughly $88 on ElevenLabs over four months of Creator subscription. The same 40 hours of professional narration would cost $8,000-20,000. For podcast intros, video voiceovers, and personal projects, the quality is good enough that listeners don't notice. For commercial audiobooks being sold on Audible, I'd still hire a human — the emotional range gap is real and readers can tell.
 
-[ElevenLabs' voice cloning documentation](https://elevenlabs.io/docs/product/voices/voice-cloning) walks through the technical requirements in detail. The [Creator plan pricing](https://elevenlabs.io/pricing) confirms $22/month with 100,000 characters of generation — enough for roughly 2 hours of narrated audio per month. If you're producing content weekly, that's more than enough. If you're doing daily long-form, you'll want the Pro plan at $99/month.
+[ElevenLabs' voice cloning documentation](https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning) walks through the technical requirements in detail. The [Creator plan pricing](https://elevenlabs.io/pricing) is $22/month with 121,000 credits per month — enough for roughly 2 hours of narrated audio per month at standard quality (Turbo models stretch this further). If you're producing content weekly, that's more than enough. If you're doing daily long-form, you'll want the Pro plan at $99/month with 600,000 credits.
 
 *Compare voice tools: [ElevenLabs vs Murf](/compare/elevenlabs-vs-murf) · [ElevenLabs vs PlayHT](/compare/elevenlabs-vs-play-ht) · [All AI Voice tools](/tools/ai-voice)*
 
