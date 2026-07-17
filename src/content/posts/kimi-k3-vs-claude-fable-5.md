@@ -19,7 +19,7 @@ The short answer: not quite. But it's closer than any model from any country has
 | Reasoning | Top tier | Competitive | Fable 5 |
 | Multimodal | ✅ | ✅ | Tie |
 | Context window | 200K | 1M | K3 |
-| Parameters | Unknown | 2.5T MoE | K3 (on paper) |
+| Parameters | Unknown | 2.8T MoE | K3 (on paper) |
 | API pricing | $10/$50 per 1M | ¥199/mo (~$28) | K3 |
 | Availability | Global (with restrictions) | China-first | Depends on location |
 

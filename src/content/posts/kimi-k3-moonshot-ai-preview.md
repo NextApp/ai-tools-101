@@ -1,6 +1,6 @@
 ---
 title: "Kimi K3 Preview: China's Largest AI Model Beats GPT-5.6 Terra, Trails Only Sol and Fable 5"
-description: "Kimi K3 launches this week: 2.5T parameters, 1M context, multimodal. Benchmarks beat Opus 4.7 and GPT-5.6 Terra, trailing only Sol and Fable 5. Full preview."
+description: "Kimi K3 launches this week: 2.8T parameters, 1M context, multimodal. Benchmarks beat Opus 4.7 and GPT-5.6 Terra, trailing only Sol and Fable 5. Full preview."
 pubDate: 2026-07-15
 updatedDate: 2026-07-15
 tags: ["Kimi", "Kimi K3", "Moonshot AI", "AI Model", "China AI"]
@@ -8,14 +8,14 @@ tags: ["Kimi", "Kimi K3", "Moonshot AI", "AI Model", "China AI"]
 
 Kimi K3 is about to drop. And for the first time, a Chinese AI model lands in the tier just below the absolute frontier — beating GPT-5.6 Terra, surpassing Claude Opus 4.7, and trailing only the flagship Sol and Fable 5.
 
-At 2.5 trillion parameters, it's the largest Chinese model ever built. It has a 1M context window, multimodal support, and benchmarks that put it firmly in the conversation with the best American models. If the leaked numbers hold, K3 represents the most significant Chinese AI launch since DeepSeek V4.
+At 2.8 trillion parameters, it's the largest Chinese model ever built. It has a 1M context window, multimodal support, and benchmarks that put it firmly in the conversation with the best American models. If the leaked numbers hold, K3 represents the most significant Chinese AI launch since DeepSeek V4.
 
 ## What We Know So Far
 
 Moonshot AI (月之暗面) has been teasing K3's launch for weeks. The company briefly posted a recharge promotion page on July 14 — a clear signal that the launch is imminent — then quickly took it down. The full release is expected within 48 hours.
 
 **Confirmed specs from early testers:**
-- 2.5 trillion parameters (MoE architecture assumed, given the parameter count)
+- 2.8 trillion parameters (MoE architecture assumed, given the parameter count)
 - 1M context window
 - Multimodal input support
 - Benchmarks that surpass Opus 4.7, GPT-5.5, and GPT-5.6 Terra
@@ -28,7 +28,7 @@ Based on the leaked benchmarks, here's roughly where K3 slots in:
 | Tier | Models | Position |
 |------|--------|----------|
 | Absolute frontier | GPT-5.6 Sol, Claude Fable 5 | Above K3 |
-| **Kimi K3** | **2.5T MoE, beats Opus 4.7/GPT-5.5** | **New entry** |
+| **Kimi K3** | **2.8T MoE, beats Opus 4.7/GPT-5.5** | **New entry** |
 | Upper mid-range | GPT-5.6 Terra, Claude Opus 4.8, Grok 4.5 | Below K3 |
 | Budget frontier | DeepSeek V4-Pro, GPT-5.6 Luna, GLM-5.2 | Budget tier |
 
@@ -36,9 +36,9 @@ This is new territory. Previously, Chinese models topped out at the "upper mid-r
 
 ## Why 2.5 Trillion Parameters Matters
 
-The parameter count tells a story about ambition. DeepSeek V4-Pro runs at 1.6T total (49B active). Baidu's WenXin 5.0 sits at 2.4T. Kimi K3 at 2.5T is the largest Chinese model by a small but meaningful margin — and quadruple the active parameters of most competitors.
+The parameter count tells a story about ambition. DeepSeek V4-Pro runs at 1.6T total (49B active). Baidu's WenXin 5.0 sits at 2.4T. Kimi K3 at 2.8T is the largest Chinese model by a small but meaningful margin — and quadruple the active parameters of most competitors.
 
-But raw parameter count matters less in the MoE era than it used to. What's more significant is the combination: 2.5T parameters + 1M context + multimodal in a single model. Chinese labs have historically had to choose two of those three. GLM-5.2 has 1M context and open weights but no multimodal. DeepSeek V4 has MoE efficiency and pricing but weights aren't public. K3 appears to be going for all three: scale, long context, and multimodal — with the parameter budget to make it work.
+But raw parameter count matters less in the MoE era than it used to. What's more significant is the combination: 2.8T parameters + 1M context + multimodal in a single model. Chinese labs have historically had to choose two of those three. GLM-5.2 has 1M context and open weights but no multimodal. DeepSeek V4 has MoE efficiency and pricing but weights aren't public. K3 appears to be going for all three: scale, long context, and multimodal — with the parameter budget to make it work.
 
 ## Two Unanswered Questions
 

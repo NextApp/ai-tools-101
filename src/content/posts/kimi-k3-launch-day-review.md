@@ -1,6 +1,6 @@
 ---
-title: "Kimi K3 Launch Day: China's Best AI Model Lands Between Sol and Fable 5"
-description: "Kimi K3 launches: benchmarks second only to Fable 5, ahead of GPT-5.6 Sol. The first Chinese model in the absolute frontier tier. Full launch day analysis."
+title: "Kimi K3 Launch Day: China's Best AI Model Lands Just Behind Sol and Fable 5"
+description: "Kimi K3 launches: benchmarks third behind Sol and Fable 5, ahead of GPT-5.5, trails Sol and Fable 5. The first Chinese model in the absolute frontier tier. Full launch day analysis."
 pubDate: 2026-07-16
 updatedDate: 2026-07-16
 tags: ["Kimi", "Kimi K3", "Moonshot AI", "AI Model", "China AI", "Launch"]
@@ -8,17 +8,17 @@ tags: ["Kimi", "Kimi K3", "Moonshot AI", "AI Model", "China AI", "Launch"]
 
 Kimi K3 launched today. And the early benchmarks confirm what yesterday's leaks suggested: this is the first Chinese AI model to reach the absolute frontier tier.
 
-According to multiple early testers who got access in the hours after launch, K3 benchmarks place it second only to Claude Fable 5 — ahead of GPT-5.6 Sol on key coding and reasoning tasks. If the numbers hold under broader testing, this marks the moment Chinese AI labs caught up to Anthropic's best.
+According to multiple early testers who got access in the hours after launch, K3 benchmarks place it second only to Claude Fable 5 — ahead of GPT-5.5, trails Sol and Fable 5 on key coding and reasoning tasks. If the numbers hold under broader testing, this marks the moment Chinese AI labs caught up to Anthropic's best.
 
 ## What Changed Since Yesterday's Preview
 
 The big update: pricing is now confirmed. K3 launches with a free tier and a Pro tier at ¥199/month (roughly $28). For developers, the API pricing is expected to follow within days. The recharge promotion that leaked on July 14 turned out to be real — K3 is launching with a 30-day discount window.
 
 **Confirmed specs:**
-- 2.5 trillion parameters (MoE)
+- 2.8 trillion parameters (MoE)
 - 1M context window
 - Multimodal support (text + image + code)
-- Benchmarks: second only to Fable 5, ahead of GPT-5.6 Sol
+- Benchmarks: third behind Sol and Fable 5, ahead of GPT-5.5, trails Sol and Fable 5
 
 The pricing structure suggests Moonshot is going for the same playbook as DeepSeek and GLM-5.2: aggressive pricing, developer-first distribution, and a strong domestic base before pushing internationally. At ¥199/month for a model that competes with Fable 5 ($20/month Claude Pro), the value proposition is compelling for Chinese developers who've been paying for Western API access.
 
@@ -35,7 +35,7 @@ July 2026 is ending as the most transformative month in AI model history. Here's
 | Rank | Model | Launch Date | Key Strength |
 |------|-------|-------------|--------------|
 | 1 | Claude Fable 5 | June 9 | Overall capability leader |
-| 2 | **Kimi K3** | **July 16** | **First Chinese frontier model** |
+| 3 | **Kimi K3** | **July 16** | **First Chinese frontier model** |
 | 3 | GPT-5.6 Sol | July 9 | Coding + ecosystem |
 | 4 | Grok 4.5 | July 8 | Speed + Cursor integration |
 | 5 | DeepSeek V4 | TBD | Ultra-low pricing |
