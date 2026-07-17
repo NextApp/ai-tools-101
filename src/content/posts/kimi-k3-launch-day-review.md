@@ -1,6 +1,6 @@
 ---
 title: "Kimi K3 Launch Day: China's Best AI Model Lands Between Sol and Fable 5"
-description: "Kimi K3 officially launches: benchmarks second only to Fable 5, ahead of GPT-5.6 Sol. The first Chinese model to reach the absolute frontier tier. Full launch analysis."
+description: "Kimi K3 launches: benchmarks second only to Fable 5, ahead of GPT-5.6 Sol. The first Chinese model in the absolute frontier tier. Full launch day analysis."
 pubDate: 2026-07-16
 updatedDate: 2026-07-16
 tags: ["Kimi", "Kimi K3", "Moonshot AI", "AI Model", "China AI", "Launch"]
