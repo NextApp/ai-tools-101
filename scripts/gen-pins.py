@@ -64,8 +64,7 @@ def generate_pin(article, template_path, output_path):
     html = html.replace('>Article description goes here<', f'>{desc}<')
     html = html.replace('>AI TOOLS<', f'>{badge}<')
 
-    tmp_html = output_path.replace('.png', '.html')
-    with open(tmp_html, 'w') as f:
+    with open(output_path, 'w') as f:
         f.write(html)
 
     print(f"  Generated: {output_path}")
