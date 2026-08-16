@@ -1,6 +1,6 @@
 ---
 title: "DeepSeek V4 Pro GA Review: Better Agent Skills, But the Price Just Went Up 4.5x"
-description: "DeepSeek V4 Pro officially launches with major agent upgrades and Codex integration. But peak pricing hits $3.96/1M output, up 4.5x from preview. Full review and China 3-model comparison."
+description: "DeepSeek V4 Pro GA launches with agent upgrades and Codex integration. But peak pricing hits $3.96/1M output, up 4.5x from preview. Full review and China 3-model comparison."
 pubDate: 2026-08-16
 updatedDate: 2026-08-16
 tags: ["DeepSeek", "DeepSeek V4", "AI Model", "AI Pricing", "China AI", "Review"]
