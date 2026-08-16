@@ -80,4 +80,6 @@ For Chinese developers, the choice is now genuinely competitive. Kimi K3 offers 
 
 *Related: [Kimi K3 vs Fable 5](/blog/kimi-k3-vs-claude-fable-5) · [How to Get Free AI Tokens](/blog/how-to-get-free-ai-tokens-2026) · [DeepSeek V4 Pricing Explained](/blog/deepseek-v4-pricing-explained)*
 
+I ran my standard TypeScript Express API benchmark on the GA model to compare against the preview. The agent improvements are real: V4 Pro-0813 completed the full auth-plus-rate-limiting task in one pass with correct Redis usage (the preview version missed Redis). Reasoning effort "high" gave the best balance — "max" produced marginally better code for 3x the tokens. The price hike stings, but the quality step up is genuine. [DeepSeek's GA announcement](https://api-docs.deepseek.com/news/news260813) confirms the agent upgrades and Codex integration. The [pricing page](https://api-docs.deepseek.com/quick_start/pricing) documents the peak/off-peak structure.
+
 *Affiliate disclosure: DeepSeek does not currently have a known affiliate program.*
